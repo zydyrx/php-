@@ -1,0 +1,3019 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>24.文件系统</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="./asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="./asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="./asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="./asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="./asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="./index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="./001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="./002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="./003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="./004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="./005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="./006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="./007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="./008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="./009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="./010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="./011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="./012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="./013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="./014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="./015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="./016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="./017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="./018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="./019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="./020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="./021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="./022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="./023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter active" data-path="024.文件系统.html">
+        
+        
+        <a href="./024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="./025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="./026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="./027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="./028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="./029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="./030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="./031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="./032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="./033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="./034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="./035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="./036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="./037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="./038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="./038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="./038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="./038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="./038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="./039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="./MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="./MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="./MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="./MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="./MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="./MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="./MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="./MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="./MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="./bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="./bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="./bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="./bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="./bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="./bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="./bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="./bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="./bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="./bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="./bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="./bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="./bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="./bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="./bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="./bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="./bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="./bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="./bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="./es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="./jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="./jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="./jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="./jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="./jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="./jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="./jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="./jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="./jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="./jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="./jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="./jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="./jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="./jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="./jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="./jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="./jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="./jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="./jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="./jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="./jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="./jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="./jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="./jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="./jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="./jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="./jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="./jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="./jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="./jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="./jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="./jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="./jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="./jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="./jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="./jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="./jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="./thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="./thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="./thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="./thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="./thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="./thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="./thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="./thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="./thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="./thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="./thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="./thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="./thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="./thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="./thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="./thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="./thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="./thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="./微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="./微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="./微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="./微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="./微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="./微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="./微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="./微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="./微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="./微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="./微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="./index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> 24.文件系统 </h2>
+                    <div class="post_body"> <p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">24.文件系统</a>
+<ul>
+<li>
+<a href="#toc_1">文件系统概述[了解]</a>
+</li>
+<li>
+<a href="#toc_2">文件类型说明</a>
+</li>
+<li>
+<a href="#toc_3">文件的属性</a>
+</li>
+<li>
+<a href="#toc_4">目录与文件操作</a>
+<ul>
+<li>
+<a href="#toc_5">解析目录路径</a>
+</li>
+<li>
+<a href="#toc_6">遍历目录</a>
+<ul>
+<li>
+<a href="#toc_7">1. 利用指针多次读取</a>
+</li>
+<li>
+<a href="#toc_8">2. glob函数</a>
+</li>
+<li>
+<a href="#toc_9">自写递归函数遍历目录</a>
+</li>
+<li>
+<a href="#toc_10">练习:遍历目录的个数与大小</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">建立删除目录</a>
+<ul>
+<li>
+<a href="#toc_12">练习:写一个函数删除目录及所有子文件</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">复制,移动目录</a>
+<ul>
+<li>
+<a href="#toc_14">练习:写一个复制目录的函数</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">文件内容操作</a>
+<ul>
+<li>
+<a href="#toc_16">文件操作的一些基本函数</a>
+</li>
+<li>
+<a href="#toc_17">文件的打开与关闭</a>
+</li>
+<li>
+<a href="#toc_18">文件的内容操作 读取与写入</a>
+<ul>
+<li>
+<a href="#toc_19">文件的读取</a>
+</li>
+<li>
+<a href="#toc_20">文件的写入</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_21">[练习]简单留言板,用文件存储数据</a>
+</li>
+<li>
+<a href="#toc_22">文件的锁定机制[有练习,给简单留言板加文件锁]</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">文件系统概述[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">在程序运行时,程序本身和数据一般都存在内存中,当程序运行结束后,存放在内存中的数据被释放.<br /></span>
+    <span class="md_line">如果需要长期保存程序运行所需的原始数据,或程序运行产生的结果,就必须以文件形式存储到外部存储介质上.<br /></span>
+    <span class="md_line">文件一般指存储在外部介质上具有名字(文件名)的一组相关数据集合.用文件可长期保存数据,并实现数据共享.<br /></span>
+    <span class="md_line">PHP是以UNIX的文件系统为模型的.因此在WINDOWS系统中我们只能获取&#39;FILE&#39;/&#39;DIR&#39;/或&#39;UNKNOWN&#39;三种文件类型,而在UNIX系统中,我们可以获得block,char,dir fifo file link和unknown七种类型.<br /></span>
+    <span class="md_line">可以使用函数filetype()获取文件的具体类型.</span>
+</p>
+
+
+<h2 id="toc_2">文件类型说明</h2>
+
+<p class="md_block">
+    <span class="md_line">PHP文件系统是以LINUX为文件模型的.分为七种类型.<br /></span>
+    <span class="md_line">block 块设备文件,如某个分区,软驱,光驱等<br /></span>
+    <span class="md_line">char 字符设备是指I/O传输过程中以字符为单位的,如键盘,打印机<br /></span>
+    <span class="md_line">dir  目录,也就是文件夹<br /></span>
+    <span class="md_line">fifo  命名管道,常用于将信息多一个进程传递到另一个进程<br /></span>
+    <span class="md_line">file  普通文件<br /></span>
+    <span class="md_line">link 符号链接,指向文件指针的指针,类似WINDOWS中的快捷方式<br /></span>
+    <span class="md_line">unknown  未知类型</span>
+</p>
+
+
+<h2 id="toc_3">文件的属性</h2>
+
+<p class="md_block">
+    <span class="md_line"> 常用函数介绍<br /></span>
+    <span class="md_line">is_dir();判断一个给定文件名是否是一个目录<br /></span>
+    <span class="md_line">is_file();判断是否为一个正常文件<br /></span>
+    <span class="md_line">is_link();判断是否为一个符号链接(windows下要注意.快捷方式.lnk也是一种普通文件)<br /></span>
+    <span class="md_line">is_readable();判断是否可读<br /></span>
+    <span class="md_line">is_writable();判断是否可写<br /></span>
+    <span class="md_line">is_executable();判断文件是否可执行<br /></span>
+    <span class="md_line">file_exists(); 判断一个目录或文件是否存在<br /></span>
+    <span class="md_line">filesize(); 获得文件大小(默认单位:byte=字节)<br /></span>
+    <span class="md_line">fileatime(); 获取最后访问时间<br /></span>
+    <span class="md_line">filectime();获取创建时间<br /></span>
+    <span class="md_line">filemtime();获取最后修改时间<br /></span>
+    <span class="md_line">stat();获取文件大部分属性(返回数组)</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//[所在目录,绝对路径]</span>
+<span class="k">echo</span> <span class="nb">dirname</span><span class="p">(</span><span class="nb">realpath</span><span class="p">(</span><span class="nv">$filename</span><span class="p">));</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">常用属性获取</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nb">header</span><span class="p">(</span><span class="s2">&quot;content-type:text/html;charset=UTF-8&quot;</span><span class="p">);</span>
+<span class="nb">date_default_timezone_set</span><span class="p">(</span><span class="s2">&quot;PRC&quot;</span><span class="p">);</span>
+
+<span class="nx">getFiles</span><span class="p">(</span><span class="s2">&quot;./editplus.exe&quot;</span><span class="p">);</span>
+<span class="k">function</span> <span class="nf">getFiles</span><span class="p">(</span><span class="nv">$filename</span><span class="p">){</span>
+    <span class="c1">//判断文件是否存在</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+        <span class="k">echo</span> <span class="s2">&quot;文件存在&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;文件不存在&lt;br&gt;&quot;</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">//获取文件类型:(写函数转中文)可能的值有 fifo，char，dir，block，link，file 和 unknown。</span>
+    <span class="nx">myFiletype</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+    <span class="c1">//获取文件大小(写函数转单位)</span>
+    <span class="nx">myFilesize</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+    <span class="c1">//获取文件执行权限,PHP 5.0.0 版起可用于 Windows  拿应用可运行.exe程序去测试</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">is_executable</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+        <span class="k">echo</span> <span class="s2">&quot;文件可执行&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">//获取创建时间</span>
+    <span class="k">echo</span> <span class="s2">&quot;创建时间:&quot;</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s2">&quot;Y-m-d H:i:s&quot;</span><span class="p">,</span><span class="nb">filectime</span><span class="p">(</span><span class="nv">$filename</span><span class="p">))</span><span class="o">.</span><span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+    <span class="c1">//获取最后修改时间</span>
+    <span class="k">echo</span> <span class="s2">&quot;修改时间:&quot;</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s2">&quot;Y-m-d H:i:s&quot;</span><span class="p">,</span><span class="nb">filemtime</span><span class="p">(</span><span class="nv">$filename</span><span class="p">))</span><span class="o">.</span><span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+    <span class="c1">//获取最后访问时间</span>
+    <span class="k">echo</span> <span class="s2">&quot;访问时间:&quot;</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s2">&quot;Y-m-d H:i:s&quot;</span><span class="p">,</span><span class="nb">fileatime</span><span class="p">(</span><span class="nv">$filename</span><span class="p">))</span><span class="o">.</span><span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//把获取文件大小单位转换</span>
+<span class="k">function</span> <span class="nf">myFilesize</span><span class="p">(</span><span class="nv">$filename</span><span class="p">){</span>
+    <span class="nv">$size</span> <span class="o">=</span> <span class="nb">filesize</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+    <span class="nv">$dw</span> <span class="o">=</span> <span class="s2">&quot;byte&quot;</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$size</span> <span class="o">&gt;=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">40</span><span class="p">)){</span>
+        <span class="nv">$size</span> <span class="o">/=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span>
+        <span class="nv">$dw</span> <span class="o">=</span> <span class="s2">&quot;TB&quot;</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">elseif</span><span class="p">(</span><span class="nv">$size</span> <span class="o">&gt;=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">)){</span>
+        <span class="nv">$size</span> <span class="o">/=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">);</span>
+        <span class="nv">$dw</span> <span class="o">=</span> <span class="s2">&quot;GB&quot;</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">elseif</span><span class="p">(</span><span class="nv">$size</span> <span class="o">&gt;=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">)){</span>
+        <span class="nv">$size</span> <span class="o">/=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+        <span class="nv">$dw</span> <span class="o">=</span> <span class="s2">&quot;MB&quot;</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">elseif</span><span class="p">(</span><span class="nv">$size</span> <span class="o">&gt;=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">)){</span>
+        <span class="nv">$size</span> <span class="o">/=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+        <span class="nv">$dw</span> <span class="o">=</span> <span class="s2">&quot;KB&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nv">$size</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nv">$size</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">&quot;文件大小是:</span><span class="si">{</span><span class="nv">$size</span><span class="si">}{</span><span class="nv">$dw</span><span class="si">}</span><span class="s2">&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//获取文件类型,转中文输出</span>
+<span class="k">function</span> <span class="nf">myFiletype</span><span class="p">(</span><span class="nv">$filename</span><span class="p">){</span>
+    <span class="k">switch</span><span class="p">(</span><span class="nb">filetype</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+        <span class="k">case</span> <span class="s2">&quot;file&quot;</span><span class="o">:</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件类型是文件&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s2">&quot;dri&quot;</span><span class="o">:</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件类型是目录&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s2">&quot;char&quot;</span><span class="o">:</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件类型是字节设备&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s2">&quot;block&quot;</span><span class="o">:</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件类型是块设备&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s2">&quot;fifo&quot;</span><span class="o">:</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件类型是队列设备&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="s2">&quot;link&quot;</span><span class="o">:</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件类型是链接&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">default</span><span class="o">:</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件类型未知&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_4">目录与文件操作</h2>
+
+<h3 id="toc_5">解析目录路径</h3>
+
+<ol>
+<li>路径中的分隔符</li>
+</ol>
+
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">在所有PHP程序中,不管是什么操作系统,全使用”/”代表路径分隔符号(php程序中,Apache配置文件中,php配置文件中,只要有目录的情况,全使用”/”)<br /></span>
+    <span class="md_line">常量:(函数参考--&gt;文件系统相关扩展--&gt;目录--&gt;预定义常量),用于夸平台.<br /></span>
+    <span class="md_line">路径分隔符”/”<br /></span>
+    <span class="md_line">目录分割符:DIRECTORY_SEPARATOR<br><br /></span>
+    <span class="md_line">多个路径分割符(比如环境变量:windows用;UNIX用:):PATH_SEPARATOR<br /></span>
+    <span class="md_line">换行符:PHP_EOL</span>
+</p>
+
+
+<ol>
+<li>相对路径与绝对路径</li>
+</ol>
+
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">相对于当前文件的路径:  ./当前止录    ../上级目录<br><br /></span>
+    <span class="md_line">绝对路径:WINDOWS下:c:/aaa/bbb.c    UNIX下:/user/hello/<br /></span>
+    <span class="md_line">做WEB开发,绝对路径有两种.服务端与客户端.</span>
+</p>
+
+
+<ol>
+<li>不同的根路径</li>
+</ol>
+
+<p class="md_block">
+    <span class="md_line">开发的时候会涉及到两个根.文档根目录,操作系统根目录<br /></span>
+    <span class="md_line">PHP代码找根是服务器操作系统的根.<br /></span>
+    <span class="md_line">web浏览器中的根(文档(网站)根目录)<br /></span>
+    <span class="md_line">basename(“路径”[,去掉扩展名]):可以获取文件名<br /></span>
+    <span class="md_line">dirname(“路径”)//获取目录名<br /></span>
+    <span class="md_line">pathinfo(“路径”)//返回一数组,目录 文件名 后缀<br /></span>
+    <span class="md_line">realpath(“路径”)返回规范化的绝对路径</span>
+</p>
+
+
+<h3 id="toc_6">遍历目录</h3>
+
+<h4 id="toc_7">1. 利用指针多次读取</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//参考:函数参考--&gt;文件系统相关扩展--&gt;目录</span>
+<span class="nv">$path</span> <span class="o">=</span> <span class="s2">&quot;./Apache&quot;</span><span class="p">;</span>
+<span class="c1">//打开资源</span>
+<span class="nv">$dir</span> <span class="o">=</span> <span class="nb">opendir</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+<span class="c1">//echo readdir($dir).&#39;&lt;br&gt;&#39;;//第一次读.</span>
+<span class="c1">//echo $filename.&#39;&lt;br&gt;&#39;;//第二次读..</span>
+<span class="c1">//一直读下去,读到没有时输出空;相当于指指式向下读取</span>
+<span class="k">while</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">=</span> <span class="nb">readdir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">)){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;.&quot;</span> <span class="o">&amp;&amp;</span> <span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;..&quot;</span><span class="p">){</span>
+        <span class="c1">//因为是在子录止下,所有无法判断是文件还是止录,要加上下面这句就给个完整相对路径可以判断是文件还是目录</span>
+        <span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$path</span><span class="o">.</span><span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">is_dir</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+            <span class="k">echo</span> <span class="s2">&quot;目录:&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="o">.</span><span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">elseif</span><span class="p">(</span><span class="nb">is_file</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+            <span class="k">echo</span> <span class="s2">&quot;文件:&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="o">.</span><span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//关闭资源</span>
+<span class="nb">closedir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_8">2. glob函数</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//寻找与模式匹配的文件路径</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nb">glob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$filename</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">$filename</span><span class="s2"> size &quot;</span> <span class="o">.</span> <span class="nb">filesize</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//==============================</span>
+<span class="c1">//第一种:glob函数的参数里面是：*.* ,意思是扫描当前目录下的文件,不包括文件夹,返回的是一个数组,以下二种情况一样.</span>
+<span class="nv">$fileList</span><span class="o">=</span><span class="nb">glob</span><span class="p">(</span><span class="s1">&#39;*.*&#39;</span><span class="p">);</span> 
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nb">count</span><span class="p">(</span><span class="nv">$fileList</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="k">echo</span> <span class="nv">$fileList</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span> 
+<span class="p">}</span> 
+<span class="c1">//第二种:glob函数的参数里面是:images/*,是指定目录扫描所有的文件,包括文件夹,也可以扫描指定的文件类型,如：images/*.jpg；注意,如果只输入:images只会返回该文件夹名称,如果只输入:images/则什么也不会返回.</span>
+<span class="nv">$fileList2</span><span class="o">=</span><span class="nb">glob</span><span class="p">(</span><span class="s1">&#39;images/*&#39;</span><span class="p">);</span> 
+  <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nb">count</span><span class="p">(</span><span class="nv">$fileList2</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+<span class="k">echo</span> <span class="nv">$fileList2</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span> 
+<span class="p">}</span> 
+<span class="c1">//第三种:glob函数的参数里面是:*,可以扫描出当前目录下的所有文件、目录及子目录的文件.</span>
+<span class="nv">$fileList3</span><span class="o">=</span><span class="nb">glob</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">);</span> 
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="nb">count</span><span class="p">(</span><span class="nv">$fileList3</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="k">echo</span> <span class="nv">$fileList3</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span> 
+<span class="p">}</span> 
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_9">自写递归函数遍历目录</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="nv">$path</span> <span class="o">=</span> <span class="s2">&quot;Apache&quot;</span><span class="p">;</span>
+    <span class="nx">printdir</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+    <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//调试用</span>
+    <span class="k">function</span> <span class="nf">printdir</span><span class="p">(</span><span class="nv">$path</span><span class="p">){</span>
+        <span class="nv">$dir</span> <span class="o">=</span> <span class="nb">opendir</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+        <span class="k">global</span> <span class="nv">$i</span><span class="p">;</span><span class="c1">//调试用</span>
+        <span class="k">while</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">=</span> <span class="nb">readdir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">)){</span>
+            <span class="k">if</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">!=</span><span class="s2">&quot;.&quot;</span> <span class="o">&amp;&amp;</span> <span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;..&quot;</span><span class="p">){</span>
+                <span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$path</span><span class="o">.</span><span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="p">;</span>
+                <span class="k">if</span><span class="p">(</span><span class="nb">is_dir</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+                    <span class="nx">printdir</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                    <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+                    <span class="k">echo</span> <span class="nv">$i</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="o">.</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">//关闭资源</span>
+        <span class="nb">closedir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">);</span>
+    <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_10">练习:遍历目录的个数与大小</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nb">header</span><span class="p">(</span><span class="s2">&quot;content-type:text/html;charset=UTF-8&quot;</span><span class="p">);</span>
+<span class="nv">$path</span> <span class="o">=</span> <span class="s2">&quot;Apache&quot;</span><span class="p">;</span>
+<span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nv">$allsize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">printdir</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s2">&quot;文件个数:&quot;</span><span class="o">.</span><span class="nv">$i</span><span class="o">.</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s1">&#39;目录大小:&#39;</span><span class="o">.</span><span class="nv">$allsize</span><span class="o">.</span><span class="s1">&#39;byte&lt;br&gt;&#39;</span><span class="p">;</span>
+<span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//调试用</span>
+<span class="nv">$allsize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">function</span> <span class="nf">printdir</span><span class="p">(</span><span class="nv">$path</span><span class="p">){</span>
+    <span class="nv">$dir</span> <span class="o">=</span> <span class="nb">opendir</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+    <span class="k">global</span> <span class="nv">$i</span><span class="p">;</span><span class="c1">//调试用</span>
+    <span class="k">global</span> <span class="nv">$allsize</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">=</span> <span class="nb">readdir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">)){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">!=</span><span class="s2">&quot;.&quot;</span> <span class="o">&amp;&amp;</span> <span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;..&quot;</span><span class="p">){</span>
+            <span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$path</span><span class="o">.</span><span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">is_dir</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+                <span class="nx">printdir</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+                <span class="k">echo</span> <span class="nv">$i</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="o">.</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+                <span class="nv">$allsize</span> <span class="o">+=</span> <span class="nb">filesize</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//关闭资源</span>
+    <span class="nb">closedir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_11">建立删除目录</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">mkdir -  新建目录<br /></span>
+    <span class="md_line">rmdir - 删除目录<br /></span>
+    <span class="md_line">unlink - 删除文件<br /></span>
+    <span class="md_line">//================================<br /></span>
+    <span class="md_line">/**</span>
+</p>
+
+
+<ul>
+<li>fildir用户权限</li>
+<li>用户   组   其它</li>
+<li>rwx  rwx rwx //读 写 执行</li>
+<li>421          //最高权限:777 本用户全部权限,组全部权限,其它用户全部权限</li>
+<li>linux系统设置文件权限:chmod 777 filename</li>
+<li>
+<p class="md_block">
+    <span class="md_line">注意是8进制</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">*/<br /></span>
+    <span class="md_line">//mkdir(&quot;ming&quot;,0777);//创建文件夹<br /></span>
+    <span class="md_line">//rmdir(&quot;ming&quot;);//删除目当,但该目录必须是空的而且要有相应权限,成功返回TRUE.<br /></span>
+    <span class="md_line">//unlink(&quot;filename&quot;); //删除文件.成功返回TRUE.</span>
+</p></li>
+</ul>
+
+<h4 id="toc_12">练习:写一个函数删除目录及所有子文件</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//写一个函数,删除整个文件夹(包括里面的文件)</span>
+<span class="k">function</span> <span class="nf">deldri</span><span class="p">(</span><span class="nv">$dirname</span><span class="p">){</span>
+<span class="c1">//先判断是文夹是否是存</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$dirname</span><span class="p">)){</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">&quot;文件夹不存在!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//如果是文件,则直接删除.</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">is_file</span><span class="p">(</span><span class="nv">$dirname</span><span class="p">)){</span>
+    <span class="nb">unlink</span><span class="p">(</span><span class="nv">$dirname</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//打开目录,记得最后关闭</span>
+<span class="nv">$dir</span> <span class="o">=</span> <span class="nb">opendir</span><span class="p">(</span><span class="nv">$dirname</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">=</span> <span class="nb">readdir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">)){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;.&quot;</span> <span class="o">&amp;&amp;</span> <span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;..&quot;</span><span class="p">){</span>
+        <span class="c1">//需要全路径...</span>
+        <span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$dirname</span><span class="o">.</span><span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="p">;</span>
+        <span class="c1">//判断是目录还是文件,是文件先则直接删除,是目录递归</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">is_dir</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+            <span class="nx">deldri</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="nb">unlink</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nb">closedir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">);</span><span class="c1">//关闭</span>
+<span class="nb">rmdir</span><span class="p">(</span><span class="nv">$dirname</span><span class="p">);</span><span class="c1">//切记这一步,不然只删除里面的文件,所有文件夹存在</span>
+<span class="k">echo</span> <span class="s1">&#39;删除完成!&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">deldri</span><span class="p">(</span><span class="s2">&quot;apache2.4.4&quot;</span><span class="p">);</span><span class="c1">//调用</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_13">复制,移动目录</h3>
+
+<p class="md_block">
+    <span class="md_line">rename 移动或剪切<br /></span>
+    <span class="md_line">copy 复制<br /></span>
+    <span class="md_line">bool rename ( string $oldname , string $newname [, resource $context ] )<br /></span>
+    <span class="md_line">//解决中文<br /></span>
+    <span class="md_line">rename(iconv(&#39;UTF-8&#39;,&#39;GBK&#39;,$dir.$filename), iconv(&#39;UTF-8&#39;,&#39;GBK&#39;,$dir.$newFileName));<br /></span>
+    <span class="md_line">//复制文件<br /></span>
+    <span class="md_line">bool copy ( string $source , string $dest [, resource $context ] )</span>
+</p>
+
+
+<h4 id="toc_14">练习:写一个复制目录的函数</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Content-Type:text/html;charset=utf-8&quot;</span><span class="p">);</span>
+<span class="k">function</span> <span class="nf">copydir</span><span class="p">(</span><span class="nv">$dirsrc</span><span class="p">,</span><span class="nv">$dirto</span><span class="p">){</span>
+    <span class="c1">//如果目标文件存在,是不是一个目录,如果目标不存在,则创建目录</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$dirto</span><span class="p">)){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">is_dir</span><span class="p">(</span><span class="nv">$dirto</span><span class="p">)){</span>
+            <span class="k">echo</span> <span class="s2">&quot;目标不是一个目录,不能COPY进去!&quot;</span><span class="p">;</span>
+            <span class="k">exit</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="nb">mkdir</span><span class="p">(</span><span class="nv">$dirto</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//打开复制源资源...</span>
+    <span class="nv">$dir</span> <span class="o">=</span> <span class="nb">opendir</span><span class="p">(</span><span class="nv">$dirsrc</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">=</span> <span class="nb">readdir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">)){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;.&quot;</span> <span class="o">&amp;&amp;</span> <span class="nv">$filename</span> <span class="o">!=</span> <span class="s2">&quot;..&quot;</span><span class="p">){</span>
+            <span class="nv">$srcfile</span> <span class="o">=</span> <span class="nv">$dirsrc</span><span class="o">.</span><span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="p">;</span><span class="c1">//源文件</span>
+            <span class="nv">$tofile</span> <span class="o">=</span> <span class="nv">$dirto</span><span class="o">.</span><span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="nv">$filename</span><span class="p">;</span><span class="c1">//目标文件</span>
+            <span class="c1">//如果源文件是一个文件夹,则递归,如果是文件,则复制</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">is_dir</span><span class="p">(</span><span class="nv">$srcfile</span><span class="p">)){</span>
+                <span class="nx">copydir</span><span class="p">(</span><span class="nv">$srcfile</span><span class="p">,</span> <span class="nv">$tofile</span><span class="p">);</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="nb">copy</span><span class="p">(</span><span class="nv">$srcfile</span><span class="p">,</span> <span class="nv">$tofile</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//echo &quot;复制完成&quot;;</span>
+    <span class="nb">closedir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">copydir</span><span class="p">(</span><span class="s2">&quot;phpmyadmin4.0.4&quot;</span><span class="p">,</span> <span class="s2">&quot;myadmin&quot;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_15">文件内容操作</h2>
+
+<h3 id="toc_16">文件操作的一些基本函数</h3>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Content-Type:text/html;charset=utf-8&quot;</span><span class="p">);</span>
+<span class="c1">//创建文件</span>
+<span class="nb">touch</span><span class="p">(</span><span class="s2">&quot;huodeming.txt&quot;</span><span class="p">);</span>
+<span class="c1">//复制文件</span>
+<span class="nb">copy</span><span class="p">(</span><span class="s2">&quot;huodeming.txt&quot;</span><span class="p">,</span> <span class="nb">iconv</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="s2">&quot;GBK&quot;</span><span class="p">,</span> <span class="s2">&quot;帅哥.txt&quot;</span><span class="p">));</span>
+<span class="c1">//移动或重命名文件</span>
+<span class="nb">rename</span><span class="p">(</span><span class="nb">iconv</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="s2">&quot;gbk&quot;</span><span class="p">,</span> <span class="s2">&quot;帅哥.txt&quot;</span><span class="p">),</span> <span class="s2">&quot;hdm.txt&quot;</span><span class="p">);</span>
+<span class="c1">//删除文件</span>
+<span class="nb">unlink</span><span class="p">(</span><span class="nb">iconv</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="s2">&quot;gbk&quot;</span><span class="p">,</span><span class="s2">&quot;hdm.txt&quot;</span><span class="p">));</span>
+
+<span class="c1">//截取文件内容</span>
+<span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;huodeming.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r+&quot;</span><span class="p">);</span><span class="c1">//打开以w权限全是空格...</span>
+<span class="nb">ftruncate</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+<span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+
+<span class="c1">//对文件内容的操作</span>
+<span class="c1">//读取文件内容</span>
+<span class="k">echo</span> <span class="s1">&#39;&lt;pre&gt;&#39;</span><span class="p">;</span><span class="c1">//按原格式输出</span>
+<span class="k">echo</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="s2">&quot;huodeming.txt&quot;</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">;</span>
+<span class="c1">//写入文件内容</span>
+<span class="nb">file_put_contents</span><span class="p">(</span><span class="s2">&quot;huodeming.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;aaaaaaaaaaaaaaaaaaaaaaa</span><span class="se">\n</span><span class="s2">aaaaaaaaaaaaaaa&quot;</span><span class="p">);</span>
+<span class="c1">//注意远程文件只能读,不能写,因为没有写的权限...</span>
+<span class="k">echo</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="s2">&quot;http://www.baidu.com&quot;</span><span class="p">);</span>
+<span class="c1">//直接输出读取的文件内容</span>
+<span class="nb">readfile</span><span class="p">(</span><span class="s2">&quot;http://www.baidu.com&quot;</span><span class="p">);</span>
+
+<span class="c1">//读取文件到数组</span>
+<span class="nv">$arr</span> <span class="o">=</span> <span class="nb">file</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arr</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_17">文件的打开与关闭</h3>
+
+<p class="md_block">
+    <span class="md_line">文件的打开是一个资源.用完关闭(在系统下打开关闭一个文件说明)</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//1.使用绝对路径打开一个文件</span>
+<span class="nv">$fs</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s1">&#39;/file.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">);</span>
+<span class="c1">//2.访问文档根目奶下的文件</span>
+<span class="nv">$fs</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s1">&#39;$_SERVER[&#39;</span><span class="nx">DOCUMENT_ROOT</span><span class="s1">&#39;]info.txt,&#39;</span><span class="nx">r</span><span class="s1">&#39;);</span>
+<span class="s1">//3.在windows平台下,可以用反斜线或斜线以二进制组合</span>
+<span class="s1">$fs = fopen(&#39;</span><span class="nx">c</span><span class="o">:</span><span class="nx">\\file</span><span class="o">.</span><span class="nx">gif</span><span class="s1">&#39;,&#39;</span><span class="nx">wb</span><span class="s1">&#39;);</span>
+<span class="s1">//4.相对路径打开</span>
+<span class="s1">$fs = fopen(&#39;</span><span class="o">../</span><span class="nx">info</span><span class="o">.</span><span class="nx">txt</span><span class="s1">&#39;,&#39;</span><span class="nx">r</span><span class="s1">&#39;);</span>
+<span class="s1">//5.打开远程文件</span>
+<span class="s1">$fs = fopen(&#39;</span><span class="nx">http</span><span class="o">://</span><span class="nx">www</span><span class="o">.</span><span class="nx">baidu</span><span class="o">.</span><span class="nx">com</span><span class="s1">&#39;,&#39;</span><span class="nx">r</span><span class="s1">&#39;);</span>
+<span class="s1">6.使用FTP打开远程文件,FTP要求有写权限</span>
+<span class="s1">$fs = open(&#39;</span><span class="nx">ftp</span><span class="s2">&quot;//user:pwd@192.168.31.11/info.txt&#39;,&#39;w&#39;);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">fopen(文件名,打开模式);<br /></span>
+    <span class="md_line">&#39;r&#39; 只读方式打开，将文件指针指向文件头。<br><br /></span>
+    <span class="md_line">&#39;r+&#39; 读写方式打开，将文件指针指向文件头。<br><br /></span>
+    <span class="md_line">&#39;w&#39; 写入方式打开，将文件指针指向文件头并将文件大小截为零。如果文件不存在则尝试创建之。<br><br /></span>
+    <span class="md_line">&#39;w+&#39; 读写方式打开，将文件指针指向文件头并将文件大小截为零。如果文件不存在则尝试创建之。<br><br /></span>
+    <span class="md_line">&#39;a&#39; 写入方式打开，将文件指针指向文件末尾。如果文件不存在则尝试创建之。<br><br /></span>
+    <span class="md_line">&#39;a+&#39; 读写方式打开，将文件指针指向文件末尾。如果文件不存在则尝试创建之。<br><br /></span>
+    <span class="md_line">&#39;x&#39; 创建并以写入方式打开，将文件指针指向文件头。如果文件已存在，则 fopen() 调用失败并返回 FALSE，并生成一条 E_WARNING 级别的错误信息。如果文件不存在则尝试创建之。这和给 底层的 open(2) 系统调用指定 O_EXCL|O_CREAT 标记是等价的。<br><br /></span>
+    <span class="md_line">&#39;x+&#39; 创建并以读写方式打开，其他的行为和 &#39;x&#39; 一样。<br><br /></span>
+    <span class="md_line">&#39;c&#39; 打开文件只供编写。如果该文件不存在，则创建该文件。如果它存在，它既不是截断（相对于“w”），也不是对这个函数的调用失败（如“x”）。文件指针位于文件的开头。这可能是有用的如果是希望得到一个咨询锁（见flock()）在试图修改文件，使用“W”可以截断文件之前得到锁（如果需要ftruncate()截断，即可使用请求的锁）。 <br /></span>
+    <span class="md_line">&#39;c+&#39; 打开读取和写入文件，否则它的行为与“C”相同。  </span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">注意:一般默认是t模式,所以记b就行了,图片视频等用b模式.文本用t模式但不用写.<br /></span>
+    <span class="md_line">注意:Windows 下提供了一个文本转换标记（&#39;t&#39;）可以透明地将 \n 转换为 \r\n。与此对应还可以使用 &#39;b&#39; 来强制使用二进制模式，这样就不会转换数据。要使用这些标记，要么用 &#39;b&#39; 或者用 &#39;t&#39; 作为 mode 参数的最后一个字符。(比如打开图片,视频等存数据库用rb  wb  默认都是t模式,二进制b模式要指定它)</span>
+</p>
+
+
+<h3 id="toc_18">文件的内容操作 读取与写入</h3>
+
+<h4 id="toc_19">文件的读取</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//按字符或行读取文件:</span>
+    <span class="sd">/**</span>
+<span class="sd">     * 文件的内容操作</span>
+<span class="sd">     */</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Content-Typte:text/html;charset=utf-8&quot;</span><span class="p">);</span>
+    <span class="c1">//打开一个资源</span>
+        <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">);</span>
+        <span class="c1">//如果文件未完或未出错,则继续读取输出</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nb">feof</span><span class="p">(</span><span class="nv">$fp</span><span class="p">)){</span>
+            <span class="c1">//echo fgetc($fp);//一次读取一个字符</span>
+            <span class="c1">//echo fgetc($fp).&#39;&lt;/br&gt;&#39;;</span>
+            <span class="k">echo</span> <span class="nb">fgets</span><span class="p">(</span><span class="nv">$fp</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;&lt;/br&gt;&quot;</span><span class="p">;</span><span class="c1">//一次读取一行</span>
+        <span class="p">}</span>
+        <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span><span class="c1">//打开资源用完后记得关闭.</span>
+<span class="c1">//按指定长度读取文件内容:</span>
+    <span class="c1">//echo fread($fp, 10);//按指定长度读取文件.获取文件长度:filesize(&quot;filename&quot;);</span>
+    <span class="k">echo</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nb">filesize</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">));</span>  
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_20">文件的写入</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">fwite</span><span class="p">()</span>  <span class="nx">写入文件</span><span class="p">(</span><span class="nx">可安全用于二进制文件</span><span class="p">)</span>
+<span class="nb">fwrite</span><span class="p">()</span> <span class="nx">把</span> <span class="nx">string</span> <span class="nx">的内容写入</span> <span class="nx">文件指针</span> <span class="nx">handle</span> <span class="nx">处。</span>
+<span class="nx">int</span> <span class="nb">fwrite</span> <span class="p">(</span> <span class="nx">resource</span> <span class="nv">$handle</span> <span class="p">,</span> <span class="nx">string</span> <span class="nv">$string</span> <span class="p">[,</span> <span class="nx">int</span> <span class="nv">$length</span> <span class="p">]</span> <span class="p">)</span>
+<span class="nx">参数</span><span class="o">:</span>
+<span class="nx">handle文件系统指针，是典型地由</span> <span class="nb">fopen</span><span class="p">()</span> <span class="nx">创建的</span> <span class="nx">resource</span><span class="p">(</span><span class="nx">资源</span><span class="p">)</span><span class="nx">。</span>
+<span class="nx">string</span>  <span class="nx">The</span> <span class="nx">string</span> <span class="nx">that</span> <span class="nx">is</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">written</span><span class="o">.</span> 
+<span class="nx">length如果指定了</span> <span class="nx">length，当写入了</span> <span class="nx">length</span> <span class="nx">个字节或者写完了</span> <span class="nx">string</span> <span class="nx">以后，写入就会停止，视乎先碰到哪种情况。</span> 
+<span class="nx">注意如果给出了</span> <span class="nx">length</span> <span class="nx">参数，则</span> <span class="nb">magic_quotes_runtime</span> <span class="nx">配置选项将被忽略，而</span> <span class="nx">string</span> <span class="nx">中的斜线将不会被抽去。</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * 测试文件指针</span>
+<span class="sd"> * ftell 获取当前指针的位置</span>
+<span class="sd"> * fseek 改变当前指针的位置</span>
+<span class="sd"> * int fseek ( resource $handle , int $offset [, int $whence = SEEK_SET ] )</span>
+<span class="sd"> * fseek参数:</span>
+<span class="sd"> *  handle文件系统指针，是典型地由 fopen() 创建的 resource(资源)。</span>
+<span class="sd"> *  offset偏移量。 </span>
+<span class="sd"> *  要移动到文件尾之前的位置，需要给 offset 传递一个负值，并设置 whence 为 SEEK_END。 </span>
+<span class="sd"> *  whencewhence values are: </span>
+<span class="sd"> *  •SEEK_SET - 设定位置等于 offset 字节。</span>
+<span class="sd"> *  •SEEK_CUR - 设定位置为当前位置加上 offset。</span>
+<span class="sd"> *  •SEEK_END - 设定位置为文件尾加上 offset。</span>
+<span class="sd"> */</span>
+ <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">);</span>
+ <span class="k">echo</span> <span class="s2">&quot;当前指针的位置:&quot;</span><span class="o">.</span><span class="nb">ftell</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span><span class="c1">//输出当前指针的位置:0</span>
+ <span class="nb">fseek</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s2">&quot;&lt;/br&gt;改变后指针的位置:&quot;</span><span class="o">.</span><span class="nb">ftell</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span><span class="c1">//输出当前指针的位置:7</span>
+<span class="k">echo</span> <span class="s2">&quot;&lt;/br&gt;&quot;</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">feof</span><span class="p">(</span><span class="nv">$fp</span><span class="p">)){</span>
+    <span class="k">echo</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span><span class="c1">//从第7个字符开始读取15个字符</span>
+<span class="p">}</span>
+<span class="k">echo</span> <span class="s2">&quot;&lt;/br&gt;读取后指针的位置:&quot;</span><span class="o">.</span><span class="nb">ftell</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span><span class="c1">//输出当前指针的位置:7</span>
+<span class="k">echo</span> <span class="s2">&quot;&lt;/br&gt;从末尾读取&lt;/br&gt;&quot;</span><span class="p">;</span>
+<span class="nb">fseek</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="nx">SEEK_END</span><span class="p">);</span><span class="c1">//第三个参数常量,详见帮助文档</span>
+<span class="k">echo</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    
+<span class="c1">//=======================</span>
+<span class="nx">http</span><span class="o">://</span><span class="nx">www</span><span class="o">.</span><span class="nx">kunpeng</span><span class="o">.</span><span class="nx">com</span>
+<span class="nx">http</span><span class="o">://</span><span class="nx">www</span><span class="o">.</span><span class="nx">sykp</span><span class="o">.</span><span class="nx">com</span>
+<span class="nx">http</span><span class="o">://</span><span class="nx">www</span><span class="o">.</span><span class="nx">baidu</span><span class="o">.</span><span class="nx">com</span>
+<span class="mo">000000000</span>
+<span class="nx">aaaa</span>
+<span class="nx">bbbb</span>
+<span class="nx">cccc</span>
+<span class="nx">dddd0</span>
+<span class="nx">输出</span><span class="c1">//==============</span>
+<span class="nx">当前指针的位置</span><span class="o">:</span><span class="mi">0</span>
+<span class="nx">改变后指针的位置</span><span class="o">:</span><span class="mi">7</span>
+<span class="nx">www</span><span class="o">.</span><span class="nx">kunpeng</span><span class="o">.</span><span class="nx">com</span>
+<span class="nx">读取后指针的位置</span><span class="o">:</span><span class="mi">22</span>
+<span class="nx">从末尾读取</span><span class="o">:</span><span class="nx">dd0</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_21">[练习]简单留言板,用文件存储数据</h3>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+    <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;Content-Type:text/html;charset=utf-8&quot;</span><span class="p">);</span>
+    <span class="nb">date_default_timezone_set</span><span class="p">(</span><span class="s2">&quot;PRC&quot;</span><span class="p">);</span><span class="c1">//设置中国时间</span>
+    <span class="sd">/**</span>
+<span class="sd">     * 简单留言板</span>
+<span class="sd">     */</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;enter&#39;</span><span class="p">])){</span>
+        <span class="c1">//echo &quot;是提交留言&quot;;</span>
+        <span class="nv">$msg</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;usr&#39;</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;||&#39;</span><span class="o">.</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;||&#39;</span><span class="o">.</span><span class="nb">time</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;||&#39;</span><span class="o">.</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;[n]&#39;</span><span class="p">;</span>
+        <span class="c1">//echo $msg;</span>
+        <span class="nx">wreteMsg</span><span class="p">(</span><span class="s2">&quot;message.txt&quot;</span><span class="p">,</span><span class="nv">$msg</span><span class="p">);</span>
+        
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="c1">//echo &quot;是刷新&quot;;</span>
+    <span class="p">}</span>
+    <span class="nx">getMsg</span><span class="p">(</span><span class="s2">&quot;message.txt&quot;</span><span class="p">);</span> 
+    
+    <span class="k">function</span> <span class="nf">getMsg</span><span class="p">(</span><span class="nv">$filename</span><span class="p">){</span>
+        <span class="c1">//判断文件是否存在</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+            <span class="nv">$msgs</span> <span class="o">=</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
+            <span class="nv">$msgs</span> <span class="o">=</span> <span class="nb">rtrim</span><span class="p">(</span><span class="nv">$msgs</span><span class="p">,</span><span class="s2">&quot;[n]&quot;</span><span class="p">);</span><span class="c1">//不去最后这分隔符,最后有个空数组</span>
+            <span class="nv">$arr</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;[n]&quot;</span><span class="p">,</span> <span class="nv">$msgs</span><span class="p">);</span>
+            <span class="c1">//print_r($arr);</span>
+            <span class="k">foreach</span><span class="p">(</span><span class="nv">$arr</span> <span class="k">as</span> <span class="nv">$s</span><span class="p">){</span>
+                <span class="k">list</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span><span class="nv">$title</span><span class="p">,</span><span class="nv">$time</span><span class="p">,</span><span class="nv">$content</span><span class="p">)</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;||&quot;</span><span class="p">,</span> <span class="nv">$s</span><span class="p">);</span>
+                
+                <span class="k">echo</span> <span class="s2">&quot;&lt;pre&gt;用户:&quot;</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">主题:&quot;</span><span class="o">.</span><span class="nv">$title</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">时间:&quot;</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s2">&quot;Y-m-d H:i:s&quot;</span><span class="p">,</span><span class="nv">$time</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">内容:&quot;</span><span class="o">.</span><span class="nv">$content</span><span class="o">.</span><span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">;</span>
+                <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;-----------------------&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">function</span> <span class="nf">wreteMsg</span><span class="p">(</span><span class="nv">$filename</span><span class="p">,</span><span class="nv">$msg</span><span class="p">){</span>
+        <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$filename</span><span class="p">,</span> <span class="s2">&quot;a+&quot;</span><span class="p">);</span>
+        <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nv">$msg</span><span class="p">);</span>
+        <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+        
+    <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html&gt;</span>
+<span class="x">    &lt;head&gt;</span>
+<span class="x">        &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">        &lt;title&gt;简单留言板&lt;/title&gt;</span>
+<span class="x">    &lt;/head&gt;</span>
+<span class="x">    &lt;body&gt;</span>
+<span class="x">        &lt;hr /&gt;</span>
+<span class="x">        &lt;form action=&quot;test.php&quot; method=&quot;post&quot;&gt;</span>
+<span class="x">            用户:&lt;input type=&quot;text&quot; name=&quot;usr&quot; id=&quot;usr&quot; value=&quot;&quot; /&gt;&lt;/br&gt;</span>
+<span class="x">            主题:&lt;input type=&quot;text&quot; name=&quot;title&quot; id=&quot;title&quot; value=&quot;&quot; /&gt;&lt;/br&gt;</span>
+<span class="x">            内容:&lt;textarea name=&quot;content&quot; rows=&quot;5&quot; cols=&quot;25&quot;&gt;&lt;/textarea&gt;&lt;/br&gt;</span>
+<span class="x">            &lt;input type=&quot;submit&quot; name=&quot;enter&quot; value=&quot;留 言&quot;/&gt;</span>
+<span class="x">        &lt;/form&gt;</span>
+<span class="x">    &lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_22">文件的锁定机制[有练习,给简单留言板加文件锁]</h3>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nb">flock</span> <span class="nx">—</span> <span class="nx">轻便的咨询文件锁定</span>
+<span class="nx">bool</span> <span class="nb">flock</span> <span class="p">(</span> <span class="nx">resource</span> <span class="nv">$handle</span> <span class="p">,</span> <span class="nx">int</span> <span class="nv">$operation</span> <span class="p">[,</span> <span class="nx">int</span> <span class="o">&amp;</span><span class="nv">$wouldblock</span> <span class="p">]</span> <span class="p">)</span>
+<span class="nx">参数</span><span class="o">:</span>
+<span class="nx">handle文件系统指针，是典型地由</span> <span class="nb">fopen</span><span class="p">()</span> <span class="nx">创建的</span> <span class="nx">resource</span><span class="p">(</span><span class="nx">资源</span><span class="p">)</span><span class="nx">。</span>
+<span class="nx">operationoperation</span> <span class="nx">可以是以下值之一：</span> 
+    <span class="nx">LOCK_SH取得共享锁定（读取的程序）。</span> 
+    <span class="nx">LOCK_EX</span> <span class="nx">取得独占锁定（写入的程序。</span> 
+    <span class="nx">LOCK_UN</span> <span class="nx">释放锁定（无论共享或独占）。</span> 
+<span class="nx">如果不希望</span> <span class="nb">flock</span><span class="p">()</span> <span class="nx">在锁定时堵塞，则是</span> <span class="nx">LOCK_NB（Windows</span> <span class="nx">上还不支持）。</span> 
+<span class="nx">wouldblock如果锁定会堵塞的话（EWOULDBLOCK</span> <span class="nx">错误码情况下），可选的第三个参数会被设置为</span> <span class="k">TRUE</span><span class="nx">。（Windows</span> <span class="nx">上不支持）</span> 
+<span class="nx">返回值</span> <span class="nx">成功时返回</span> <span class="k">TRUE</span><span class="nx">，</span> <span class="nx">或者在失败时返回</span> <span class="k">FALSE</span><span class="nx">。</span>
+<span class="nx">重写上一节写入文件函数</span><span class="p">,</span><span class="nx">加上独占锁</span><span class="o">.</span><span class="nx">写入时让别人不能访问</span><span class="o">.</span><span class="p">(</span><span class="nx">按理说读取时也要加锁</span><span class="p">(</span><span class="nx">共享锁</span><span class="p">),</span><span class="nx">以防正在读取时有写入内容</span><span class="o">.</span><span class="p">),</span><span class="nx">下面重写两函数</span>
+    <span class="k">function</span> <span class="nf">wreteMsg</span><span class="p">(</span><span class="nv">$filename</span><span class="p">,</span><span class="nv">$msg</span><span class="p">){</span>
+        <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$filename</span><span class="p">,</span> <span class="s2">&quot;a+&quot;</span><span class="p">);</span>
+        <span class="c1">//如果文件上锁成功则写入,否则重复操作,用while可能造成死循环</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">flock</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nx">LOCK_EX</span><span class="p">)){</span>
+            <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nv">$msg</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nb">flock</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nx">LOCK_UN</span><span class="p">);</span><span class="c1">//释放锁</span>
+        <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+        
+    <span class="p">}</span>
+<span class="c1">//读取文件函数</span>
+    <span class="k">function</span> <span class="nf">getMsg</span><span class="p">(</span><span class="nv">$filename</span><span class="p">){</span>
+        <span class="c1">//判断文件是否存在</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)){</span>
+<span class="c1">//          $msgs = file_get_contents($filename);</span>
+            <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">);</span>
+            <span class="nb">flock</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nx">LOCK_SH</span><span class="p">);</span><span class="c1">//锁定,共享锁</span>
+            <span class="nv">$msgs</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nb">feof</span><span class="p">(</span><span class="nv">$fp</span><span class="p">)){</span>
+                <span class="nv">$msgs</span> <span class="o">.=</span> <span class="nb">fread</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="mi">1024</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="c1">//echo $msgs;</span>
+            <span class="nb">flock</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nx">LOCK_UN</span><span class="p">);</span><span class="c1">//释放共享锁</span>
+            <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+            <span class="nv">$msgs</span> <span class="o">=</span> <span class="nb">rtrim</span><span class="p">(</span><span class="nv">$msgs</span><span class="p">,</span><span class="s2">&quot;[n]&quot;</span><span class="p">);</span><span class="c1">//不去最后这分隔符,最后有个空数组</span>
+            <span class="nv">$arr</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;[n]&quot;</span><span class="p">,</span> <span class="nv">$msgs</span><span class="p">);</span><span class="c1">//分割成数组</span>
+            <span class="c1">//print_r($arr);</span>
+            <span class="k">foreach</span><span class="p">(</span><span class="nv">$arr</span> <span class="k">as</span> <span class="nv">$s</span><span class="p">){</span>
+                <span class="k">list</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span><span class="nv">$title</span><span class="p">,</span><span class="nv">$time</span><span class="p">,</span><span class="nv">$content</span><span class="p">)</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;||&quot;</span><span class="p">,</span> <span class="nv">$s</span><span class="p">);</span>
+                <span class="k">echo</span> <span class="s2">&quot;&lt;pre&gt;用户:&quot;</span><span class="o">.</span><span class="nv">$name</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">主题:&quot;</span><span class="o">.</span><span class="nv">$title</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">时间:&quot;</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s2">&quot;Y-m-d H:i:s&quot;</span><span class="p">,</span><span class="nv">$time</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">内容:&quot;</span><span class="o">.</span><span class="nv">$content</span><span class="o">.</span><span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">;</span>
+                <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;-----------------------&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end--> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="./asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,3276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>03.ThinkPHP5.0-URL访问与路由</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="../asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="../asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="../asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="../asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="../asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="../index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="../001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="../002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="../003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="../004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="../005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="../006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="../007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="../008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="../009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="../010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="../011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="../012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="../013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="../014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="../015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="../016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="../017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="../018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="../019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="../020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="../021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="../022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="../023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter" data-path="024.文件系统.html">
+        
+        
+        <a href="../024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="../025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="../026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="../027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="../028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="../029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="../030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="../031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="../032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="../033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="../034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="../035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="../036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="../037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="../038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="../038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="../038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="../038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="../038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="../039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="../MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="../MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="../MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="../MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="../MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="../MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="../MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="../MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="../MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="../bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="../bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="../bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="../bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="../bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="../bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="../bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="../bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="../bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="../bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="../bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="../bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="../bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="../bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="../bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="../bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="../bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="../bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="../bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="../es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="../jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="../jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="../jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="../jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="../jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="../jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="../jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="../jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="../jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="../jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="../jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="../jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="../jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="../jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="../jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="../jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="../jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="../jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="../jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="../jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="../jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="../jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="../jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="../jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="../jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="../jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="../jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="../jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="../jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="../jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="../jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="../jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="../jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="../thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="../thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter active" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="../thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="../thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="../thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="../thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="../thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="../thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="../thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="../thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="../thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="../thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="../thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="../thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="../thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="../thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="../thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="../thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="../微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="../微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="../微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="../微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="../微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="../微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="../微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="../微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="../微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="../微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="../微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="../index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> 03.ThinkPHP5.0-URL访问与路由 </h2>
+                    <div class="post_body"> <p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">03.ThinkPHP5.0-URL访问与路由</a>
+<ul>
+<li>
+<a href="#toc_1">URL访问</a>
+<ul>
+<li>
+<a href="#toc_2">URL访问模式与大小写</a>
+</li>
+<li>
+<a href="#toc_3">URL的其它访问模式</a>
+</li>
+<li>
+<a href="#toc_4">PATH_INFO的分隔</a>
+</li>
+<li>
+<a href="#toc_5">顺序传参</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">　路由</a>
+<ul>
+<li>
+<a href="#toc_7">路由的作用：</a>
+</li>
+<li>
+<a href="#toc_8">　路由的三种模式：</a>
+</li>
+<li>
+<a href="#toc_9">动态注册路由</a>
+</li>
+<li>
+<a href="#toc_10">在配置文件中注册路由</a>
+</li>
+<li>
+<a href="#toc_11">路由别名</a>
+</li>
+<li>
+<a href="#toc_12">路由参数 第三个参数</a>
+</li>
+<li>
+<a href="#toc_13">参数变量规则 第四个参数</a>
+</li>
+<li>
+<a href="#toc_14">全局变量规则</a>
+<ul>
+<li>
+<a href="#toc_15">局部变量规则</a>
+</li>
+<li>
+<a href="#toc_16">完整URL规则</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">路由分组 Route::group</a>
+</li>
+<li>
+<a href="#toc_18">MISS路由</a>
+<ul>
+<li>
+<a href="#toc_19">全局MISS路由</a>
+</li>
+<li>
+<a href="#toc_20">分组MISS路由</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_21">路由绑定 Route::bind</a>
+<ul>
+<li>
+<a href="#toc_22">实例:路由绑定,优化整个网站URL</a>
+</li>
+<li>
+<a href="#toc_23">　自动入口绑定 --手册上没说清楚</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_24">资源路由</a>
+</li>
+<li>
+<a href="#toc_25">快捷路由</a>
+</li>
+<li>
+<a href="#toc_26">域名路由</a>
+</li>
+<li>
+<a href="#toc_27">路由的URL生成</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">URL访问</h2>
+
+<p class="md_block">
+    <span class="md_line">ThinkPHP5.0在没有启用路由的情况下典型的URL访问规则是：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>http://serverName/index.php（或者其它应用入口文件）/模块/控制器/操作/[参数名/参数值...] 
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">我们在index模块下创建Index控制器(类),在类下创建index方法与test()方法进行测试</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Index</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是应用目录下的index模块/Index控制器/index方法&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">//test方法带2个参数</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">test</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span><span class="nv">$b</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是Index控制器的test方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$a=&#39;</span><span class="o">.</span><span class="nv">$a</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$b=&#39;</span><span class="o">.</span><span class="nv">$b</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果我们访问index方法,浏览器中URL是:http://tp5.com/index/index/index 如下图:<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../../thinkphp5备课笔记/_image/2018-07-26-10-04-00.jpg';this.onerror=null;"  class="" src="/thinkphp5备课笔记/_image/2018-07-26-10-04-00.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">那我们访问test方法则需要两个参数 http://tp5.com/index/index/index/a/5/b/6<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../../thinkphp5备课笔记/_image/2018-07-26-10-08-11.jpg';this.onerror=null;"  class="" src="/thinkphp5备课笔记/_image/2018-07-26-10-08-11.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">控制器中的方法带可选参数</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//改上面控制器中test方法的参数为可选参数</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">test</span><span class="p">(</span><span class="nv">$a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="nv">$b</span><span class="o">=</span><span class="mi">8</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是Index控制器的test方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$a=&#39;</span><span class="o">.</span><span class="nv">$a</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$b=&#39;</span><span class="o">.</span><span class="nv">$b</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">这时我们URL中的参数也是可选的:<br /></span>
+    <span class="md_line">//不传参数<br /></span>
+    <span class="md_line">http://tp5.com/index/index/test<br /></span>
+    <span class="md_line">//只传a的值<br /></span>
+    <span class="md_line">http://tp5.com/index/index/test/a/200<br /></span>
+    <span class="md_line">//只传b的值<br /></span>
+    <span class="md_line">http://tp5.com/index/index/test/b/200<br /></span>
+    <span class="md_line">//或颠倒两个参数的顺序也可以<br /></span>
+    <span class="md_line">http://tp5.com/index/index/test/b/200/a/1</span>
+</p>
+
+
+<h3 id="toc_2">URL访问模式与大小写</h3>
+
+<p class="md_block">
+    <span class="md_line">在默认配置情况下,URL是不区分大小写的但要注意如果控制器名是大驼峰式命名时要用下划线区分</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 关闭URL中控制器和操作名的自动转换,默认是true</span>
+<span class="s1">&#39;url_convert&#39;</span>    <span class="o">=&gt;</span>  <span class="k">false</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如我们用NewFile控制器:</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span> <span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+ <span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+
+ <span class="k">class</span> <span class="nc">NewFile</span> <span class="k">extends</span> <span class="nx">Controller</span><span class="p">{</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+         <span class="k">echo</span> <span class="s1">&#39;这是index模块下的NewFile控制器下的index方法&#39;</span><span class="p">;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">此时如果&#39;url_convert&#39;=&gt; true,则我们访问的URL是<br /></span>
+    <span class="md_line">http://tp5.com/index/new_file/index<br /></span>
+    <span class="md_line">如果&#39;url_convert&#39;=&gt; false,则我们访问的URL可以是上面的,也可以是<br /></span>
+    <span class="md_line">http://tp5.com/index/NewFile/index<br /></span>
+    <span class="md_line">此时URL区大小写,绝不能写成 http://tp5.com/index/newfile/index  注意在windows首字母可以小写<code>newFile</code>,但linux下则不行,必须写成<code>NewFile</code>.</span>
+</p>
+
+
+<h3 id="toc_3">URL的其它访问模式</h3>
+
+<ol>
+<li>在5.0取消了URL模式的概念，并且普通模式的URL访问不再支持，但参数可以支持普通方式传值，例如： </li>
+</ol>
+
+<pre><code>http://serverName/index.php(或者其它应用入口文件） 模块/控制器/操作?参数名=参数值&amp;... 
+例:
+http://tp5.com/index/index/test?a=33&amp;b=44</code></pre>
+
+<!--block_code_end-->
+<ol>
+<li>如果不支持PATHINFO的服务器可以使用兼容模式访问如下： </li>
+</ol>
+
+<pre><code>http://serverName/index.php（或者其它应用入口文件）?s=/模块/控制器/操作/[参数名/参数值...] 
+例:
+http://tp5.com?s=/index/index/test/a/33/b/44</code></pre>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">注意上面URL中?s是在配置文件是指定的,它默认是s,如下所示,我们改成xx,那么URL变成http://tp5.com/?xx=/index/index/test/a/33/b/44</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//// PATHINFO变量名 用于兼容模式</span>
+<span class="s1">&#39;var_pathinfo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;xx&#39;</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_4">PATH_INFO的分隔</h3>
+
+<p class="md_block">
+    <span class="md_line">ThinkPHP5.0采用PATH_INFO访问地址，其中PATH_INFO的分隔符是可以设置的。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//配置文件位置:应用目录下/config.php,一般不建议修改</span>
+<span class="s1">&#39;pathinfo_depr&#39;</span><span class="o">=&gt;</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果修改配置文件 &#39;pathinfo_depr&#39;=&gt; &#39;_&#39;,<br /></span>
+    <span class="md_line">则URL可写成:http://tp5.com/index_index_test_b_200_a_1<br /></span>
+    <span class="md_line">注意:http://tp5.com/  这些/不参随便写,而后面index_index_test_b_200_a_1 可以写成更改的分隔符,但/分隔符还是可以用.</span>
+</p>
+
+
+<h3 id="toc_5">顺序传参</h3>
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="c1">// URL参数方式 0 按名称成对解析 1 按顺序解析</span>
+    <span class="s1">&#39;url_param_type&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">开启顺序传参数,就不能按键值对传参.如下,50对应a的值,60对应b的值.<br /></span>
+    <span class="md_line">http://tp5.com/index/index/test/50/36</span>
+</p>
+
+
+<h2 id="toc_6">　路由</h2>
+
+<h3 id="toc_7">路由的作用：</h3>
+
+<ol>
+<li>简化URL地址，方便大家记忆 </li>
+<li>有利于搜索引擎的优化，比如可以被百度的爬虫抓取到</li>
+</ol>
+
+<h3 id="toc_8">　路由的三种模式：</h3>
+
+<ol>
+<li>普通模式 :完全使用PASH_INFO来访问，比如http://www.yd.com/index.php/index/index，域名+模块+控制器 </li>
+<li>混合模式 ：可以使用路由也可以不使用(实测只要页面定义过路由,则不能使用PASH_INFO来访问)</li>
+<li>强制模式 ：必须使用路由</li>
+</ol>
+
+<p class="md_block">
+    <span class="md_line">路由相关配置</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//启用路由开关,默认值是true,开启的,如果禁用则不能使用路由模式</span>
+    <span class="c1">// URL参数方式 0 按名称成对解析 1 按顺序解析================</span>
+    <span class="s1">&#39;url_param_type&#39;</span>         <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="c1">// 是否开启路由,如果不开启,则只能用普通模式来访问.</span>
+    <span class="s1">&#39;url_route_on&#39;</span>           <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="c1">// 路由配置文件（支持配置多个）,应用目录下的route.php文件</span>
+    <span class="s1">&#39;route_config_file&#39;</span>      <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;route&#39;</span><span class="p">],</span>
+    <span class="c1">// 是否强制使用路由,一旦开启,就不能用PATH_INFO模式来访问.</span>
+    <span class="s1">&#39;url_route_must&#39;</span>         <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_9">动态注册路由</h3>
+
+<p class="md_block">
+    <span class="md_line">格式</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;路由表达式&#39;</span><span class="p">,</span><span class="s1">&#39;路由地址&#39;</span><span class="p">,</span><span class="s1">&#39;请求类型&#39;</span><span class="p">,</span><span class="s1">&#39;路由参数（数组）&#39;</span><span class="p">,</span><span class="s1">&#39;变量规则（数组）&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//1. 普通路由</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//http://tp5.com/hello =&gt; http://tp5.com/home/index/hello</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span><span class="s1">&#39;home/index/hello&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//2. 不指定参数,但可以传参数</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//http://tp5.com/test =&gt; http://tp5.com/index/index/test</span>
+<span class="c1">//http://tp5.com/test/a/11/b/33 =&gt; http://tp5.com/index/index/test/a/11/b/33</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//3. 强制指定动态请求参数</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//http://tp5.com/test/a/100/b/30 =&gt; http://tp5.com/index/index/test/a/100/b/30</span>
+<span class="c1">//Route::rule(&#39;test/a/:a/b/:b&#39;,&#39;index/index/test&#39;);//不建议使用,/a/b是多余的</span>
+<span class="c1">//顺序传参方式指定动态参数</span>
+<span class="c1">//http://tp5.com/test/22/33 =&gt; http://tp5.com/index/index/test/a/22/b/33</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;test/:a/:b&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//4. 可选请求参数,把参数用[]括起来</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//http://tp5.com/test 或 http://tp5.com/test/22 或 http://tp5.com/test/22/33</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;test/[:a]/[:b]&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//5. 完全匹配模式,以$结尾,限制参数.</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//http://tp5.com/test  如果后面加任何参数都会报错</span>
+<span class="c1">//Route::rule(&#39;test$&#39;,&#39;index/index/test&#39;);//http://tp5.com/test 后面不能用任何参数</span>
+<span class="c1">//Route::rule(&#39;test/[:a]$&#39;,&#39;index/index/test&#39;);//http://tp5.com/test 后面没参数或可以有一个参数 http://tp5.com/test/22 ,如多于一个参数报错</span>
+<span class="c1">//Route::rule(&#39;test/:a$&#39;,&#39;index/index/test&#39;);//http://tp5.com/test/12 必须跟个参数且只能有一个参数</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//6. 额外的参数,加?参数=值&amp;参数=值</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//额外能数,有时候能够起到一定的安全防护作用</span>
+<span class="c1">//http://tp5.com/test  访问此URL时,我们此时默认加上了a=44,b=32的两个参数数进去</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/test?a=44&amp;b=32&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//7. 指定请求类型 -- 不指定的话默认为任何请求类型</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//注意,此时我们index/index/test这个页面只能是POST提交过来才能访问,在浏览器地址栏输入无效.</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">,</span><span class="s1">&#39;POST&#39;</span><span class="p">);</span>
+<span class="c1">//附上控制器两个方法代码,一个是POST提交,一个是接收.===========================</span>
+<span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">Index</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是应用目录下的index模块/Index控制器/index方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="c1">//注意,url助手函数中的值必须是路收指定的第二个值: index/index/test 要求写全,写一部分无效,这是个麻烦</span>
+        <span class="k">echo</span> <span class="s1">&#39;&lt;form action=&quot;&#39;</span><span class="o">.</span><span class="nx">url</span><span class="p">(</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span>
+<span class="s1">                 &lt;input type=&quot;text&quot; name=&quot;a&quot; value=&quot;&quot; /&gt;</span>
+<span class="s1">                 &lt;input type=&quot;submit&quot; value=&quot;提交&quot;/&gt;</span>
+<span class="s1">              &lt;/form&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">test</span><span class="p">(</span><span class="nv">$a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="nv">$b</span><span class="o">=</span><span class="mi">8</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是Index控制器的test方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$a=&#39;</span><span class="o">.</span><span class="nv">$a</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$b=&#39;</span><span class="o">.</span><span class="nv">$b</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">路由请求参数说明.我们常用的只有GET POST  * 三种.</span>
+</p>
+
+<table>
+ <thead><tr><th style="text-align:left">请求类型</th>
+<th style="text-align:left">类型说明</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">GET </td>
+<td style="text-align:left"> GET请求</td>
+</tr>
+<tr><td style="text-align:left">POST </td>
+<td style="text-align:left"> POST请求</td>
+</tr>
+<tr><td style="text-align:left">PUT </td>
+<td style="text-align:left"> PUT请求</td>
+</tr>
+<tr><td style="text-align:left">DELETE </td>
+<td style="text-align:left"> DELETE请求</td>
+</tr>
+<tr><td style="text-align:left">* </td>
+<td style="text-align:left"> 任何请求类型</td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//8. 批量注册路由规则</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">([</span><span class="s1">&#39;index&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/index&#39;</span><span class="p">,</span><span class="s1">&#39;test&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">]);</span>
+<span class="c1">//还可以设置路由参数,后面需要时讲解,要先学路由参数,简单实例</span>
+<span class="c1">//Route::rule([&#39;index&#39;=&gt;&#39;index/index/index&#39;,&#39;test&#39;=&gt;[&#39;index/index/test&#39;,[&#39;method&#39;=&gt;&#39;POST&#39;,&#39;ext&#39;=&gt;&#39;html&#39;]]]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_10">在配置文件中注册路由</h3>
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="c1">// 路由配置文件（支持配置多个）,应用目录下的route.php文件</span>
+    <span class="s1">&#39;route_config_file&#39;</span>      <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;route&#39;</span><span class="p">],</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">详见应用目录下的route.php文件内容</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span>
+<span class="c1">//全局表达式</span>
+    <span class="s1">&#39;__pattern__&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;\w+&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="c1">//分组路由,我们先注释掉</span>
+    <span class="cm">/*&#39;[hello]&#39;     =&gt; [</span>
+<span class="cm">        &#39;:id&#39;   =&gt; [&#39;index/hello&#39;, [&#39;method&#39; =&gt; &#39;get&#39;], [&#39;id&#39; =&gt; &#39;\d+&#39;]],</span>
+<span class="cm">        &#39;:name&#39; =&gt; [&#39;index/hello&#39;, [&#39;method&#39; =&gt; &#39;post&#39;]],</span>
+<span class="cm">    ],*/</span>
+    <span class="c1">//新建的静态规则</span>
+    <span class="s1">&#39;aaa&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/index&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;bbb&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">,</span>
+<span class="p">];</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">此时,我们访问:<br /></span>
+    <span class="md_line">http://tp5.com/aaa  访问的是:http://tp5.com/index/index/index<br><br /></span>
+    <span class="md_line">http://tp5.com/bbb  访问的是:http://tp5.com/index/index/test </span>
+</p>
+
+
+<h3 id="toc_11">路由别名</h3>
+
+<p class="md_block">
+    <span class="md_line">注意:此处别参考手册内容,完全说错.如:</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// user 别名路由到 index/User 控制器</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">alias</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="s1">&#39;index/User&#39;</span><span class="p">);</span><span class="c1">//这里不是: 模块/控制器  而是 : 控制器/方法</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">ThinkPHP5.0.20还非常不稳定,路由别名有BUG. </span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="c1">//&#39;aaa&#39; =&gt; &#39;home/Index/index&#39;,</span>
+    <span class="s1">&#39;bbb&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index/NewFile/index&#39;</span><span class="p">,</span><span class="c1">//用在普通规则时,可以用区分大小写,也可以用下划线模式:index/new_file/index</span>
+    <span class="s1">&#39;__alias__&#39;</span><span class="o">=&gt;</span><span class="p">[</span>
+        <span class="s1">&#39;aaa&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;home/Index/index&#39;</span><span class="p">,</span>
+        <span class="c1">//&#39;bbb&#39; =&gt; &#39;index/NewFile/index&#39;,//用在别名中必须用下划划模式:index/new_file/index</span>
+    <span class="p">],</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_12">路由参数 第三个参数</h3>
+<table>
+ <thead><tr><th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">method </td>
+<td style="text-align:left">请求类型检测，支持多个请求类型</td>
+</tr>
+<tr><td style="text-align:left">ext </td>
+<td style="text-align:left">URL后缀检测，支持匹配多个后缀</td>
+</tr>
+<tr><td style="text-align:left">deny_ext</td>
+<td style="text-align:left"> URL禁止后缀检测，支持匹配多个后缀</td>
+</tr>
+<tr><td style="text-align:left">https</td>
+<td style="text-align:left"> 检测是否https请求</td>
+</tr>
+<tr><td style="text-align:left">domain</td>
+<td style="text-align:left"> 域名检测</td>
+</tr>
+<tr><td style="text-align:left">before_behavior</td>
+<td style="text-align:left"> 前置行为（检测）</td>
+</tr>
+<tr><td style="text-align:left">after_behavior </td>
+<td style="text-align:left">后置行为（执行）</td>
+</tr>
+<tr><td style="text-align:left">callback</td>
+<td style="text-align:left"> 自定义检测方法</td>
+</tr>
+<tr><td style="text-align:left">merge_extra_vars</td>
+<td style="text-align:left"> 合并额外参数</td>
+</tr>
+<tr><td style="text-align:left">bind_model </td>
+<td style="text-align:left">绑定模型（V5.0.1+）</td>
+</tr>
+<tr><td style="text-align:left">cache</td>
+<td style="text-align:left"> 请求缓存（V5.0.1+）</td>
+</tr>
+<tr><td style="text-align:left">param_depr </td>
+<td style="text-align:left">路由参数分隔符（V5.0.2+）</td>
+</tr>
+<tr><td style="text-align:left">ajax</td>
+<td style="text-align:left"> Ajax检测（V5.0.2+）</td>
+</tr>
+<tr><td style="text-align:left">pjax</td>
+<td style="text-align:left"> Pjax检测（V5.0.2+）</td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<h3 id="toc_13">参数变量规则 第四个参数</h3>
+
+<p class="md_block">
+    <span class="md_line">ThinkPHP5.0支持在规则路由中为变量用正则的方式指定变量规则，弥补了动态变量无法限制具体的类型问题，并且支持全局规则设置。使用方式如下：</span>
+</p>
+
+
+<h3 id="toc_14">全局变量规则</h3>
+
+<p class="md_block">
+    <span class="md_line">设置全局变量规则，全部路由有效：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 设置name变量规则（采用正则定义）</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">pattern</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;\w+&#39;</span><span class="p">);</span>
+<span class="c1">// 支持批量添加</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">pattern</span><span class="p">([</span>
+    <span class="s1">&#39;name&#39;</span>  <span class="o">=&gt;</span>  <span class="s1">&#39;\w+&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;id&#39;</span>    <span class="o">=&gt;</span>  <span class="s1">&#39;\d+&#39;</span><span class="p">,</span>
+<span class="mf">7.</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_15">局部变量规则</h4>
+
+<p class="md_block">
+    <span class="md_line">局部变量规则，仅在当前路由有效：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 定义GET请求路由规则 并设置name变量规则</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;new/:name&#39;</span><span class="p">,</span><span class="s1">&#39;News/read&#39;</span><span class="p">,[],[</span><span class="s1">&#39;name&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;\w+&#39;</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果一个变量同时定义了全局规则和局部规则，局部规则会覆盖全局变量的定义。</span>
+</p>
+
+
+<h4 id="toc_16">完整URL规则</h4>
+
+<p class="md_block">
+    <span class="md_line">如果要对整个URL进行规则检查，可以进行__url__ 变量规则，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 定义GET请求路由规则 并设置完整URL变量规则</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;new/:id&#39;</span><span class="p">,</span><span class="s1">&#39;News/read&#39;</span><span class="p">,[],[</span><span class="s1">&#39;__url__&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;new\/\w+$&#39;</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_17">路由分组 Route::group</h3>
+
+<p class="md_block">
+    <span class="md_line">//路由分组数组写法</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span> <span class="nx">Route</span><span class="o">::</span><span class="na">group</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;aaa&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/demo&#39;</span><span class="p">,</span><span class="c1">//URL访问 http://tp5.com/index/bbb =&gt; http://tp5.com/index/index/test</span>
+    <span class="s1">&#39;bbb&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">,</span><span class="c1">//URL访问 http://tp5.com/index/aaa =&gt; http://tp5.com/index/index/index</span>
+<span class="p">));</span> 
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//分组闭包写法</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span> <span class="nx">Route</span><span class="o">::</span><span class="na">group</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(){</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/demo&#39;</span><span class="p">);</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//分组配置文件写法</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span>
+    <span class="c1">//__pattern__表示定义路由变量的全局规则</span>
+    <span class="s1">&#39;__pattern__&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;\w+&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="c1">//分组,如果要访问一个控制器的方法带多种访问方式.则创建分组</span>
+    <span class="s1">&#39;[index]&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;aaa&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index/index/demo&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;bbb&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index/index/test&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">];</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">分组访问URL规则:http://入口/分组名/分组规则名</span>
+</p>
+
+
+<h3 id="toc_18">MISS路由</h3>
+
+<h4 id="toc_19">全局MISS路由</h4>
+
+<p class="md_block">
+    <span class="md_line">如果希望在没有匹配到所有的路由规则后执行一条设定的路由，可以使用MISS路由功能，只需要设定MISS路由规则即可：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Route</span><span class="o">::</span><span class="na">miss</span><span class="p">(</span><span class="s1">&#39;index/index/index&#39;</span><span class="p">);</span><span class="c1">//如果访问不正确的路由,收直接访问主页.</span>
+<span class="c1">//或在配置文件中增加一行</span>
+<span class="s1">&#39;__miss__&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;public/miss&#39;</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_20">分组MISS路由</h4>
+
+<p class="md_block">
+    <span class="md_line">分组支持独立的MISS路由，用上面的分组实例加入miss路由:</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//路由分组数组写法</span>
+ <span class="nx">Route</span><span class="o">::</span><span class="na">group</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;aaa&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/demo&#39;</span><span class="p">,</span><span class="c1">//URL访问 http://tp5.com/index/bbb =&gt; http://tp5.com/index/index/test</span>
+    <span class="s1">&#39;bbb&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">,</span><span class="c1">//URL访问 http://tp5.com/index/aaa =&gt; http://tp5.com/index/index/index</span>
+    <span class="s1">&#39;__miss__&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/index/error&#39;</span><span class="p">,</span>
+<span class="p">));</span> 
+<span class="c1">//分组闭包写法</span>
+ <span class="nx">Route</span><span class="o">::</span><span class="na">group</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(){</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/demo&#39;</span><span class="p">);</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">rule</span><span class="p">(</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="s1">&#39;index/index/test&#39;</span><span class="p">);</span>
+    <span class="nx">Route</span><span class="o">::</span><span class="na">miss</span><span class="p">(</span><span class="s1">&#39;index/index/error&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//分组配置文件写法</span>
+<span class="k">return</span> <span class="p">[</span>
+    <span class="c1">//__pattern__表示定义路由变量的全局规则</span>
+    <span class="s1">&#39;__pattern__&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;\w+&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="c1">//分组,如果要访问一个控制器的方法带多种访问方式.则创建分组</span>
+    <span class="s1">&#39;[index]&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;aaa&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index/index/demo&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;bbb&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;index/index/test&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;__miss__&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;index/index/error&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">];</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_21">路由绑定 Route::bind</h3>
+
+<p class="md_block">
+    <span class="md_line">绑定到模块/控制器/操作<br /></span>
+    <span class="md_line">把当前的URL绑定到模块/控制器/操作，最多支持绑定到操作级别，例如在路由配置文件中添加：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 绑定当前的URL到 index模块</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">bind</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">);</span>
+<span class="c1">// 绑定当前的URL到 index模块的blog控制器</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">bind</span><span class="p">(</span><span class="s1">&#39;index/blog&#39;</span><span class="p">);</span>
+<span class="c1">// 绑定当前的URL到 index模块的blog控制器的read操作</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">bind</span><span class="p">(</span><span class="s1">&#39;index/blog/read&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">该方式针对路由到模块/控制器/操作有效，假如我们绑定到了index模块的blog控制器，那么原来的访问URL从<br /></span>
+    <span class="md_line">http://serverName/index/blog/read/id/5<br /></span>
+    <span class="md_line">可以简化成<br /></span>
+    <span class="md_line">http://serverName/read/id/5</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果定义了路由</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;index/blog/:id&#39;</span><span class="p">,</span><span class="s1">&#39;index/blog/read&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">那么访问URL就变成了<br /></span>
+    <span class="md_line">http://serverName/5</span>
+</p>
+
+
+<h4 id="toc_22">实例:路由绑定,优化整个网站URL</h4>
+
+<p class="md_block">
+    <span class="md_line">前后端分离实现的功能 <br /></span>
+    <span class="md_line">index.php 这个入口文件只能进入前台模块 <br /></span>
+    <span class="md_line">admin.php 这个入口文件只能进入后台模块 <br /></span>
+    <span class="md_line">2）绑定模块 <br /></span>
+    <span class="md_line"> 在index.php添加 define(‘BIND_MODULE’,’index’); 这样http://www.demo.com/index.php/只能访问前台模块。访问不了后台，http://www.yd.com/index.php/index/index <br /></span>
+    <span class="md_line">在admin.php添加 define(‘BIND_MODULE’,’admin’); 这样http://www.demo.com/admin.php只能访问后台模块，访问不了前台，http://www.yd.com/admin.php/index/index <br /></span>
+    <span class="md_line">3) 隐藏入口文件(怎么操作就不写了，可以看下文档里面的URL访问下 的隐藏入口文件 的说明)，这样访问前台模块可以省去index.php，可以用http://www.yd.com/index/index直接访问到</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 定义应用目录</span>
+<span class="nb">define</span><span class="p">(</span><span class="s1">&#39;APP_PATH&#39;</span><span class="p">,</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../application/&#39;</span><span class="p">);</span>
+<span class="c1">// 绑定到index模块</span>
+<span class="nb">define</span><span class="p">(</span><span class="s1">&#39;BIND_MODULE&#39;</span><span class="p">,</span><span class="s1">&#39;index&#39;</span><span class="p">);</span>
+<span class="c1">// 加载框架引导文件</span>
+<span class="k">require</span> <span class="nx">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../thinkphp/start.php&#39;</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_23">　自动入口绑定 --手册上没说清楚</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="c1">// 入口自动绑定模块====实测对index.php入口文件无效=======</span>
+    <span class="s1">&#39;auto_bind_module&#39;</span>       <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">作用:同上优化网站URL:让浏览器URL中不需要输入模块名.直接用: http://入口文件/控制器/方法<br /></span>
+    <span class="md_line">注意: 实测,自动绑定对入口index.php文件无效,admin.php则可以.应是index.php是一个公共入口,要想实现前台绑定,建议前台用home模块,用home.php作为入口文件,或在index.php入口文件中绑定模块define(&#39;BIND_MODULE&#39;,&#39;index&#39;);</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">自动绑定会将入口文件名绑定到对应模块，比如index.php入口文件则绑定到index模块，admin.php入口文件则绑定到admin模块，同时app目录下必须存在对应模块目录，不需要写define(&#39;BIND_MODULE&#39;,&#39;admin&#39;);需要自动绑定到admin模块，在public目录下建立一个admin.php文件。<br /></span>
+    <span class="md_line">在app目录下建立一个admin目录作为模块目录，然后访问admin.php则会自动绑定</span>
+</p>
+
+
+<h3 id="toc_24">资源路由</h3>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;blog&#39;</span><span class="p">,</span><span class="s1">&#39;index/blog&#39;</span><span class="p">);</span><span class="c1">//指向index模块的blog控制器</span>
+<span class="c1">//在配置项中写,写在下标为__rest__的数中组.</span>
+    <span class="c1">// 定义资源路由</span>
+    <span class="s1">&#39;__rest__&#39;</span><span class="o">=&gt;</span><span class="p">[</span>
+        <span class="c1">// 指向index模块的blog控制器</span>
+        <span class="s1">&#39;blog&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;index/blog&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">它的用意是快捷操作一些固定的方法的,如下表所示,控制器中要固定写以下方法,固定的请求类型,才能被访问到.</span>
+</p>
+
+<table>
+ <thead><tr><th style="text-align:left">标识</th>
+<th style="text-align:left">请求类型</th>
+<th style="text-align:left">生成路由规则</th>
+<th style="text-align:left">对应操作方法（默认）</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">index</td>
+<td style="text-align:left"> GET</td>
+<td style="text-align:left"> blog</td>
+<td style="text-align:left"> index</td>
+</tr>
+<tr><td style="text-align:left">create</td>
+<td style="text-align:left"> GET</td>
+<td style="text-align:left"> blog/create</td>
+<td style="text-align:left">create</td>
+</tr>
+<tr><td style="text-align:left">save</td>
+<td style="text-align:left"> POST</td>
+<td style="text-align:left"> blog</td>
+<td style="text-align:left"> save</td>
+</tr>
+<tr><td style="text-align:left">read</td>
+<td style="text-align:left"> GET</td>
+<td style="text-align:left"> blog/:id </td>
+<td style="text-align:left">read</td>
+</tr>
+<tr><td style="text-align:left">edit </td>
+<td style="text-align:left">GET </td>
+<td style="text-align:left">blog/:id/edit</td>
+<td style="text-align:left"> edit</td>
+</tr>
+<tr><td style="text-align:left">update</td>
+<td style="text-align:left"> PUT </td>
+<td style="text-align:left">blog/:id</td>
+<td style="text-align:left">update</td>
+</tr>
+<tr><td style="text-align:left">delete</td>
+<td style="text-align:left"> DELETE</td>
+<td style="text-align:left"> blog/:id</td>
+<td style="text-align:left"> delete</td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">具体指向的控制器由的哪个方法是路由地址决定,如下:<br /></span>
+    <span class="md_line">//不加任何参数,与访问方式,直接在浏览器中输入,则访问的是index/blog/index方法<br /></span>
+    <span class="md_line">http://serverName/blog/<br /></span>
+    <span class="md_line">//用一个ID参数用GET方式访问,则访问的是index/blog/read方法.<br /></span>
+    <span class="md_line">http://serverName/blog/128<br /></span>
+    <span class="md_line">//当你访问加一个GET参数id/edit, URL访问的是edit方法<br /></span>
+    <span class="md_line">http://serverName/blog/28/edit<br /></span>
+    <span class="md_line">//如果用POST方式访问到此页面时,则访问的是save方法,要用表单提交,不演示了</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">//当你访问http://serverName/block/create   URL访问的是create方法<br /></span>
+    <span class="md_line">实例:</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//=========资源路由配置===============</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;blog&#39;</span><span class="p">,</span><span class="s1">&#39;index/index&#39;</span><span class="p">);</span>
+<span class="c1">//==========下面是控制器文件代码================</span>
+<span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Index</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是应用目录下的index模块/Index控制器/index方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="nx">url</span><span class="p">(</span><span class="s1">&#39;blog&#39;</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="c1">//echo &#39;&lt;form action=&quot;&#39;.url(&#39;blog&#39;).&#39;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span>
+        <span class="c1">//注意提交的地址是/blog,为了用POST提交到此路由页面展示访问save()方法.</span>
+        <span class="k">echo</span> <span class="s1">&#39;&lt;form action=&quot;/blog&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span>
+<span class="s1">                 &lt;input type=&quot;text&quot; name=&quot;a&quot; value=&quot;&quot; /&gt;</span>
+<span class="s1">                 &lt;input type=&quot;submit&quot; value=&quot;提交&quot;/&gt;</span>
+<span class="s1">              &lt;/form&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">test</span><span class="p">(</span><span class="nv">$a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="nv">$b</span><span class="o">=</span><span class="mi">8</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是Index控制器的test方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$a=&#39;</span><span class="o">.</span><span class="nv">$a</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">&#39;$b=&#39;</span><span class="o">.</span><span class="nv">$b</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">demo</span><span class="p">(</span><span class="nv">$a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="nv">$b</span><span class="o">=</span><span class="mi">8</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是Index控制器的demo方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">save</span><span class="p">(){</span>
+        <span class="nb">print_r</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">param</span><span class="p">());</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是Index控制器的save方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">edit</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+        <span class="nb">print_r</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">param</span><span class="p">());</span>
+        <span class="k">echo</span> <span class="s1">&#39;这是Index控制器的edit方法&lt;br /&gt;&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_25">快捷路由</h3>
+
+<p class="md_block">
+    <span class="md_line">快捷路由允许你快速给控制器注册路由，并且针对不同的请求类型可以设置方法前缀，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 给User控制器设置快捷路由</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">controller</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="s1">&#39;index/User&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">User控制器定义如下：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">User</span>
+<span class="p">{</span>
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(){</span>
+        <span class="k">echo</span> <span class="s1">&#39;我是User路由的index&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getAA</span><span class="p">(){</span>
+        <span class="k">echo</span> <span class="s2">&quot;我是getAA&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getBB</span><span class="p">(){</span>
+        <span class="k">echo</span> <span class="s2">&quot;我是get的BB&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">postInfo</span><span class="p">()</span>
+    <span class="p">{</span>
+         <span class="k">echo</span> <span class="s2">&quot;我是POST的Info&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">putInfo</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;我是put的Info&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">deleteInfo</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;我是delete的Info&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">我们可以通过下面的URL访问<br /></span>
+    <span class="md_line">1.get http://localhost/user/info  //注意要用GET方式请求<br /></span>
+    <span class="md_line">2.get http://localhost/user/phone//注意要用GET方式请求<br /></span>
+    <span class="md_line">3.post http://localhost/user/info//注意要用POST方式请求<br /></span>
+    <span class="md_line">4.put http://localhost/user/info//注意要用PUT方式请求<br /></span>
+    <span class="md_line">5.delete http://localhost/user/info//注意要用POST方式请求</span>
+</p>
+
+
+<h3 id="toc_26">域名路由</h3>
+
+<p class="md_block">
+    <span class="md_line">ThinkPHP支持完整域名、子域名和IP部署的路由和绑定功能，同时还可以起到简化URL的作用。<br /></span>
+    <span class="md_line">要启用域名部署路由功能，首先需要开启：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="s1">&#39;url_domain_deploy&#39;</span> <span class="o">=&gt;</span>  <span class="k">true</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">定义域名部署规则支持两种方式：动态注册和配置定义。<br /></span>
+    <span class="md_line">动态注册</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">可以在应用的公共文件或者配置文件中动态注册域名部署规则，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// blog子域名绑定到blog模块</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">domain</span><span class="p">(</span><span class="s1">&#39;blog&#39;</span><span class="p">,</span><span class="s1">&#39;blog&#39;</span><span class="p">);</span> <span class="c1">//http://blog.tp5.com  此时我们访问的是blog模块</span>
+<span class="c1">// 完整域名绑定到admin模块</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">domain</span><span class="p">(</span><span class="s1">&#39;admin.thinkphp.cn&#39;</span><span class="p">,</span><span class="s1">&#39;admin&#39;</span><span class="p">);</span>
+<span class="c1">// IP绑定到admin模块</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">domain</span><span class="p">(</span><span class="s1">&#39;114.23.4.5&#39;</span><span class="p">,</span><span class="s1">&#39;admin&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">配置文件写法:</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="c1">//域名部署:如admin.tp5.com 域名指向admin模块,注意先打开域名部署功能&#39;url_domain_deploy&#39; =&gt; true,</span>
+    <span class="s1">&#39;__domain__&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;admin&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">更详细使用参见手册.</span>
+</p>
+
+
+<h3 id="toc_27">路由的URL生成</h3>
+
+<p class="md_block">
+    <span class="md_line">ThinkPHP5.0支持路由URL地址的统一生成，并且支持所有的路由方式，以及完美解决了路由地址的反转解析，无需再为路由定义和变化而改变URL生成。<br /></span>
+    <span class="md_line">URL生成使用 \think\Url::build() 方法或者使用系统提供的助手函数url()，参数一致：<br /></span>
+    <span class="md_line">在控制器或模板中使用url(&#39;路由地址表达式&#39;)来获取启用路由的页面链接地址.方便页面路转及引用等.......<br /></span>
+    <span class="md_line">\think\Url::build() 四个参数:</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Url</span><span class="o">::</span><span class="na">build</span><span class="p">(</span><span class="s1">&#39;地址表达式&#39;</span><span class="p">,[</span><span class="s1">&#39;参数&#39;</span><span class="p">],[</span><span class="s1">&#39;URL后缀&#39;</span><span class="p">],[</span><span class="s1">&#39;域名&#39;</span><span class="p">]);</span><span class="c1">//如果第4个参数为true,则自动生成域名.</span>
+<span class="nx">url</span><span class="p">(</span><span class="s1">&#39;地址表达式&#39;</span><span class="p">,[</span><span class="s1">&#39;参数&#39;</span><span class="p">],[</span><span class="s1">&#39;URL后缀&#39;</span><span class="p">],[</span><span class="s1">&#39;域名&#39;</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">生成锚点:在第一个参数后面#锚点名<br /></span>
+    <span class="md_line">更详细功能参见手册...</span>
+</p> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="../asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

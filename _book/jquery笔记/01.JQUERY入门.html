@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01.JQUERY入门</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="../asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="../asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="../asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="../asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="../asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="../index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="../001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="../002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="../003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="../004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="../005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="../006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="../007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="../008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="../009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="../010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="../011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="../012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="../013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="../014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="../015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="../016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="../017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="../018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="../019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="../020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="../021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="../022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="../023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter" data-path="024.文件系统.html">
+        
+        
+        <a href="../024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="../025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="../026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="../027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="../028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="../029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="../030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="../031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="../032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="../033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="../034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="../035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="../036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="../037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="../038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="../038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="../038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="../038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="../038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="../039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="../MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="../MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="../MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="../MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="../MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="../MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="../MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="../MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="../MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="../bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="../bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="../bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="../bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="../bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="../bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="../bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="../bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="../bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="../bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="../bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="../bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="../bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="../bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="../bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="../bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="../bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="../bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="../bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="../es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter active" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="../jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="../jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="../jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="../jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="../jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="../jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="../jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="../jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="../jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="../jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="../jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="../jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="../jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="../jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="../jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="../jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="../jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="../jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="../jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="../jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="../jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="../jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="../jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="../jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="../jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="../jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="../jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="../jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="../jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="../jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="../jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="../jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="../jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="../thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="../thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="../thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="../thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="../thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="../thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="../thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="../thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="../thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="../thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="../thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="../thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="../thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="../thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="../thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="../thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="../thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="../thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="../微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="../微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="../微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="../微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="../微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="../微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="../微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="../微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="../微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="../微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="../微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="../index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> 01.JQUERY入门 </h2>
+                    <div class="post_body"> <p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">01.JQUERY入门</a>
+<ul>
+<li>
+<a href="#toc_1">一.主旨：以更少的代码、实现更多的功能</a>
+</li>
+<li>
+<a href="#toc_2">二．学习jQuery的条件[了解]</a>
+</li>
+<li>
+<a href="#toc_3">三．jQuery 的版本[了解]</a>
+</li>
+<li>
+<a href="#toc_4">四．jQuery 的功能和优势[了解]</a>
+</li>
+<li>
+<a href="#toc_5">五．其他 JavaScript 库[了解]</a>
+</li>
+<li>
+<a href="#toc_6">六．是否兼容 IE 低版本[了解]</a>
+<ul>
+<li>
+<a href="#toc_7">七．下载及运行 jQuery[重点]</a>
+</li>
+<li>
+<a href="#toc_8">1.各版本下载:</a>
+</li>
+<li>
+<a href="#toc_9">2.安装</a>
+</li>
+<li>
+<a href="#toc_10">3.使用jQuery</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">一.主旨：以更少的代码、实现更多的功能</h2>
+
+<h2 id="toc_2">二．学习jQuery的条件[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">jQuery是JavaScript库，所以jQuery在使用上要比原生的JavaScript要简单，但是对于<br /></span>
+    <span class="md_line">网页编程来说，有些通用的基础知识是必备的：<br /></span>
+    <span class="md_line">1.XHTML或HTML5（含CSS，网页必备的基础技术，XHTML已完结90课）；<br /></span>
+    <span class="md_line">2.JavaScript（虽然jQuery使用比JavaScript简单，但各种语法来自JavaScript，只要掌<br /></span>
+    <span class="md_line">握已出课程的第一季149课即可，并不需要完全精通，只要理解语法和项目中简单的用法即<br /></span>
+    <span class="md_line">可。）；<br /></span>
+    <span class="md_line">3.服务器语言如：PHP（jQuery属于前端技术，那和后端技术是相辅相成、互相呼应的，<br /></span>
+    <span class="md_line">而PHP课程目前出到第四季，而jQuery只需要PHP第一季136课的基础即可。）；</span>
+</p>
+
+
+<h2 id="toc_3">三．jQuery 的版本[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">从 2005 年 8 月开始，进入公共开发阶段，随之而来的新框架于 2006 年 1 月 14 日正<br /></span>
+    <span class="md_line">式以 jQuery 的名称发布。 <br /></span>
+    <span class="md_line">2006 年 8 月发布了 jQuery1.0，第一个稳定版本，具有对 CSS 选择符、事件处理和<br /></span>
+    <span class="md_line">Ajax 交互的支持。<br /></span>
+    <span class="md_line">2007 年 1 月发布了 jQuery1.1，极大的简化 API。合并了许多较少使用的方法。<br /></span>
+    <span class="md_line">2007 年 7 月发布了 jQuery1.1.3，优化了 jQuery 选择符引擎执行的速度。<br /></span>
+    <span class="md_line">2007 年 9 月发布了 jQuery1.2，去掉了 XPath 选择器，新增了命名空间事件。<br /></span>
+    <span class="md_line">2008 年 5 月发布了 jQuery1.2.6，引入了 Dimensions 插件到核心库中。<br /></span>
+    <span class="md_line">2009 年 1 月发布了 jQuery1.3，使用了全新的选择符引擎 Sizzle，性能进一步提升。<br /></span>
+    <span class="md_line">2010 年 1 月发布了 jQuery1.4，进行了一次大规模更新，提供了 DOM 操作，增加了很<br /></span>
+    <span class="md_line">多新的方法或是增强了原有的方法。<br /></span>
+    <span class="md_line">2010 年 2 月发布了 jQuery1.4.2，添加了.delegate()和.undelegate()两个新方法，提升<br /></span>
+    <span class="md_line">了灵活性和浏览器一致性，对事件系统进行了升级。<br /></span>
+    <span class="md_line">2011 年 1 月发布了 jQuery1.5，重写了 AJAX 组件，增强了扩展性和性能。<br /></span>
+    <span class="md_line">2011 年 5 月发布了 jQuery1.6，重写了 Attribute 组件，引入了新对象和方法。<br /></span>
+    <span class="md_line">2011 年 11 月发布了 jQuery1.7，引入了.on()和.off()简介的 API 解决事件绑定及委托容<br /></span>
+    <span class="md_line">易混淆的问题。<br /></span>
+    <span class="md_line">2012 年 3 月发布了 jQuery1.7.2，进行一些优化和升级。<br /></span>
+    <span class="md_line">2012 年 7 月发布了 jQuery1.8，8 月发布了 1.8.1，9 月发布了 1.8.2，重写了选择符引<br /></span>
+    <span class="md_line">擎，修复了一些问题。<br /></span>
+    <span class="md_line">2013 年 1 月发布了 jQuery1.9，CSS 的多属性设置，增强了 CSS3。<br /></span>
+    <span class="md_line">2013 年 5 月发布了 jQuery1.10，增加了一些功能。<br /></span>
+    <span class="md_line">2013 年 4 月发布了 jQuery2.0，5 月发布了 jQuery2.0.2，一个重大更新版本，不在支<br /></span>
+    <span class="md_line">持 IE6/7/8，体积更小，速度更快。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在制作这套课程的时候，我们最新的中文版的 API 文档是 1.8 版本的，有在线和离线两<br /></span>
+    <span class="md_line">种手段查阅：<br /></span>
+    <span class="md_line">1.在线的可以访问：http://t.mb5u.com/jquery/<br /></span>
+    <span class="md_line">2.离线的 AP 文档将打包提供给大家<br /></span>
+    <span class="md_line">3.如果要看最新的文档，英文版的：http://api.jquery.com/ 看不懂可以打开谷歌翻译，虽<br /></span>
+    <span class="md_line">然不是特别准。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">关于版本学习的问题：<br /></span>
+    <span class="md_line">版本的版本号升级主要有三种：第一种是大版本升级，比如 1.x.x 升级到 2.x.x，这种升<br /></span>
+    <span class="md_line">级规模是最大的，改动的地方是最多的，周期也是最长的，jQuery 从 1.x.x 到 2.x.x 用了 7<br /></span>
+    <span class="md_line">年。第二种是小版本更新，比如 1.7 升级到 1.8，改动适中，增加或减少了一些功能，一般<br /></span>
+    <span class="md_line">周期半年到一年左右。第三种是微版本更新，比如 1.8.1 升级到 1.8.2，修复一些 bug 或错误<br /></span>
+    <span class="md_line">之类。<br /></span>
+    <span class="md_line">版本的内容升级主要也有三种：第一种是核心库的升级，比如优化选择符、优化 DOM<br /></span>
+    <span class="md_line">或者 AJAX 等；这种升级不影响开发者的使用。第二种是功能性的升级，比如剔除一些过<br /></span>
+    <span class="md_line">时的方法、新增或增强一些方法等等；这种升级需要了解和学习。第三种就是 BUG 修复之<br /></span>
+    <span class="md_line">类的升级，对开发者使用没有影响。<br /></span>
+    <span class="md_line">学习者有一种担忧，比如学了 1.3 版本的 jQuery，那么以后升级新版本是不是还需要重<br /></span>
+    <span class="md_line">学？没必要，因为并不是每次升级一个版本都会增加或剔除功能的，一半左右都是内部优化，<br /></span>
+    <span class="md_line">升级到新版本并不需要任何学习成本。就算在新的版本增加了一些功能，只需要几分钟了解 <br /></span>
+    <span class="md_line">一下即可使用，无需清零之前的知识，只需后续累加。当然，在早期的 jQuery 版本都创建<br /></span>
+    <span class="md_line">了最常用的功能，而新版本中增加的功能，也不是最常用的，无需立即学习，立马用起。</span>
+</p>
+
+
+<h2 id="toc_4">四．jQuery 的功能和优势[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">jQuery 作为 JavaScript 封装的库，他的目的就是为了简化开发者使用 JavaScript。主要<br /></span>
+    <span class="md_line">功能有以下几点：<br /></span>
+    <span class="md_line">1.像 CSS 那样访问和操作 DOM<br /></span>
+    <span class="md_line">2.修改 CSS 控制页面外观<br /></span>
+    <span class="md_line">3.简化 JavaScript 代码操作<br /></span>
+    <span class="md_line">4.事件处理更加容易<br /></span>
+    <span class="md_line">5.各种动画效果使用方便<br /></span>
+    <span class="md_line">6.让 Ajax 技术更加完美<br /></span>
+    <span class="md_line">7.基于 jQuery 大量插件<br /></span>
+    <span class="md_line">8.自行扩展功能插件<br /></span>
+    <span class="md_line">jQuery 最大的优势，就是特别的方便。比如模仿 CSS 获取 DOM，比原生的 JavaScript<br /></span>
+    <span class="md_line">要方便太多。并且在多个 CSS 设置上的集中处理非常舒服，而最常用的 CSS 功能又封装到<br /></span>
+    <span class="md_line">单独的方法，感觉非常有心。最重要的是 jQuery 的代码兼容性非常好，你不需要总是头疼<br /></span>
+    <span class="md_line">着考虑不同浏览器的兼容问题。</span>
+</p>
+
+
+<h2 id="toc_5">五．其他 JavaScript 库[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">目前除了 jQuery，还有 5 个库较为流行，他们分别是 YUI、Prototype、Mootools、Dojo<br /></span>
+    <span class="md_line">和 ExtJS。<br /></span>
+    <span class="md_line">YUI，是雅虎公司开发的一套完备的、扩展性良好的富交互网页工具集。<br /></span>
+    <span class="md_line">Prototype，是最早成型的 JavaScript 库之一，对 JavaScript 内置对象做了大量的扩展。<br /></span>
+    <span class="md_line">Dojo，Dojo 强大之处在于提供了其他库没有的功能。离线存储、图标组件等等。<br /></span>
+    <span class="md_line">Mootools，轻量、简洁、模块化和面向对象的 JavaScript 框架。<br /></span>
+    <span class="md_line">ExtJS，简称 Ext，原本是对 YUI 的一个扩展，主要创建前端用户界面。(付费的)</span>
+</p>
+
+
+<h2 id="toc_6">六．是否兼容 IE 低版本[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">这次 jQuery 发布了大版本 2.x.x，完全放弃兼容 IE6/7/8。不单单如此，很多国际上的大<br /></span>
+    <span class="md_line">型站点也开始逐步不再支持 IE6/7/8。但对于国内而言，比较大型的网站最多只是抛弃 IE6，<br /></span>
+    <span class="md_line">或者部分功能不支持 IE6 的警示框，还没可能一下子把 IE6/7/8 全面抛弃。这里我们就谈一<br /></span>
+    <span class="md_line">谈你的项目是否有必要兼容 IE6/7/8。<br /></span>
+    <span class="md_line">完全不支持 IE6 的示例：网易云课堂 -- http://study.163.com<br /></span>
+    <span class="md_line">部分功能不支持 IE6 的示例：Q+ -- http://web.qq.com <br /></span>
+    <span class="md_line">完全不支持的做法，就是检测到是否为 IE6 或者 IE6/7/8，然后直接跳转到一个信息错<br /></span>
+    <span class="md_line">误界面，让你更换或升级浏览器，否则无法访问使用。<br /></span>
+    <span class="md_line">部分功能不支持的做法，就是判断你是 IE6 或 IE6/7/8，然后给一个警示条或弹窗，告<br /></span>
+    <span class="md_line">诉你使用此款浏览器性能降低或部分功能使用不正常或不能使用的提示，但还可以访问使<br /></span>
+    <span class="md_line">用。<br /></span>
+    <span class="md_line">虽然大部分国内网站用 IE6 去运行都能基本兼容，但很多细节上还是有些问题，导致不<br /></span>
+    <span class="md_line">能流畅的去使用。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">疑问：我们新做的项目应不应该再兼容 IE6 或 IE6/7/8？<br /></span>
+    <span class="md_line">这个问题争论很久，支持兼容的人会拿国情和使用率来证明。不支持兼容的人会用技术<br /></span>
+    <span class="md_line">落后导致整个落后别国来证明。其实这两种都有商榷的地方。<br /></span>
+    <span class="md_line">首先，传统行业失败率为 97%，而新新的 IT 行业更高达 99%以上（数据可能不精确，<br /></span>
+    <span class="md_line">但可以说明失败率很高）。那么站在更高的角度去看你的项目，你不管是付出 3 倍成本去完<br /></span>
+    <span class="md_line">成一个用户体验一般，但兼容性很好的项目；还是付出正常成本去完成用户体验很好，但不<br /></span>
+    <span class="md_line">兼容低版本浏览器；这两种情况不管是哪一种，最终可能都会失败。那么你愿意选择哪种？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">是否兼容 IE6 或 IE6/7/8 并不单纯是用户基数和国情的问题，而很多项目发起人只一味<br /></span>
+    <span class="md_line">的用这种理由去判定需求，那么失败也在所难免。除了这个方面，我们还应该考虑更多的方<br /></span>
+    <span class="md_line">面：<br /></span>
+    <span class="md_line">1.成本控制<br /></span>
+    <span class="md_line">很多项目往往在 6、12、18、32...个月就会发生财务问题，比如资金紧缩甚至断裂。所<br /></span>
+    <span class="md_line">以，成本控制尤为重要。项目如果不是老站升级，也不是大门户的新闻站，成本控制和尽快<br /></span>
+    <span class="md_line">上线测试才是最重要的。而如果新站一味要求全面兼容，会导致成本加剧（随着功能多少，<br /></span>
+    <span class="md_line">成本倍率增加）。为了锁紧时间，就不停的加班再加班，又导致员工抵触，工作效率降低，<br /></span>
+    <span class="md_line">人员流动开始频繁，新员工又要接手开发一半的项目。这样成本不停的再累加。最终不少项<br /></span>
+    <span class="md_line">目，根本没上线就失败了。<br /></span>
+    <span class="md_line">2.用户选择<br /></span>
+    <span class="md_line">用户一般可以分为两种用户：高质量用户和低质量用户。所谓高质量用户，就是为了一<br /></span>
+    <span class="md_line">款最新的 3D 游戏去升级一块发烧级的显卡，或直接换一台整机。所谓低质量用户，发现不<br /></span>
+    <span class="md_line">能玩最新的 3D 游戏，就放弃了，去玩“植物大战僵尸”解解馋算了。在用户选择上有一个<br /></span>
+    <span class="md_line">很好的案例，就是移动互联网。网易和腾讯在他们的新闻应用上，他们兼容了几乎所有的手<br /></span>
+    <span class="md_line">机平台，比如 IOS、安卓、黑莓、塞班等等，因为新闻应用的核心在新闻，而新闻的用户基<br /></span>
+    <span class="md_line">数巨大，需要兼顾高质量和低质量用户。而腾讯在 IOS 上的几十个应用，除了新闻、QQ、<br /></span>
+    <span class="md_line">浏览器，其他的基本都只有 IOS 和安卓，在塞班和黑莓及其他上就没有了。<br /></span>
+    <span class="md_line">所以，你的应用核心是哪方面？兼容的成本有多大？会不会导致成本控制问题？用户选<br /></span>
+    <span class="md_line">择尤为重要，放弃低质量用户也是一种成本控制。在用户基数庞大的项目上，放弃低质量用<br /></span>
+    <span class="md_line">户就有点愚笨，比如某个新闻站有 1 亿用户，2000 万为使用低版本浏览器的低质量的用户，<br /></span>
+    <span class="md_line">而面对 2000 万用户，你兼容它或单独为 2000 万做个低版本服务，成本虽然可能还是 3 倍，<br /></span>
+    <span class="md_line">但对于庞大的用户基数来看，这种成本又非常低廉。而你的用户基数只有 1000 人，而低质<br /></span>
+    <span class="md_line">量用户有 50 人，那么为了这 50 人去做兼容，那么 3 倍的成本就变得非常的昂贵。<br /></span>
+    <span class="md_line">3.项目侧重点<br /></span>
+    <span class="md_line">你的项目重点在哪里？是为了看新闻？是为了宣传线下产品？那么你其实有必要兼容<br /></span>
+    <span class="md_line">低版本浏览器。首先这种类型的站不需要太好的用户体验，不需要太多的交互操作，只是看，<br /></span>
+    <span class="md_line">而兼容的成本比较低，并且核心在新闻或产品！但如果你的项目有大量的交互、大量的操作， <br /></span>
+    <span class="md_line">比如全球最大的社交网已经不兼容 IE6/7，最大的微博也不再兼容 IE6/7，就是这个原因。所<br /></span>
+    <span class="md_line">以，项目并不是一味的全面兼容，或者全面不兼容，主要看你的项目侧重点在哪里！<br /></span>
+    <span class="md_line">4.用户体验<br /></span>
+    <span class="md_line">如果你的项目在兼容低版本浏览器成本巨大，比如社交网，有大量的 JS 和 AJAX 操作。<br /></span>
+    <span class="md_line">那么兼容 IE6/7 的成本确实很高，如果兼容，用户体验就会很差。兼容有两种，一种是高版<br /></span>
+    <span class="md_line">本浏览器用性能好，体验好的模式；低版本的自动切换到兼容模式。第二种就是，不管高版<br /></span>
+    <span class="md_line">本或低版本都用统一的兼容模式。这两种成本都很高。用户体验好的模式，能增加用户粘度，<br /></span>
+    <span class="md_line">增加付费潜在用户，而用户体验差的总是被用户归纳为心目中的备胎（所谓备胎就是实在没<br /></span>
+    <span class="md_line">有了才去访问，如果有，很容易被抛弃）。<br /></span>
+    <span class="md_line">5.数据支持<br /></span>
+    <span class="md_line">如果对某一种类型的网站项目有一定的研究，那么手头必须有支持的数据分析。有数据<br /></span>
+    <span class="md_line">分析可以更好的进行成本控制，更有魄力的解决高低质量用户的取舍。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">6.教育用户<br /></span>
+    <span class="md_line">很多项目可能是有固定客户群，或者使用该项目人员质量普遍较高。那么，面对零星一<br /></span>
+    <span class="md_line">点的低质量用户，我们不能再去迎合他。因为迎合他，就无法用高质量的用户体验去粘住忠<br /></span>
+    <span class="md_line">实用户，又不能获取到低质量用户的芳心。所以，我们应有的策略是：牢牢把握住高质量的<br /></span>
+    <span class="md_line">忠诚用户，做到他们心目中的第一；教育那部分低质量用户（比如企业级开发项目，可以直<br /></span>
+    <span class="md_line">接做企业培训，安装高版本浏览器等等。互联网项目，就给出提示安装高版本浏览器即可）。<br /></span>
+    <span class="md_line">那么一部分低质量用户被拉拢过来，还有一小撮死性不改的就只有放弃。切不可捡了芝麻丢<br /></span>
+    <span class="md_line">了西瓜，不要贪大求全。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">PS：我们用了这六点讨论了一下是否需要兼容 IE6 或 IE6/7/8，结论就是必须根据实际<br /></span>
+    <span class="md_line">情况，你项目的成本情况、人员情况、用户情况和项目本身类型情况而制定，没有一刀切的<br /></span>
+    <span class="md_line">兼容或不兼容。</span>
+</p>
+
+
+<h3 id="toc_7">七．下载及运行 jQuery[重点]</h3>
+
+<p class="md_block">
+    <span class="md_line">目前最新的版本，是 1.10.1 和 2.0.2，我们下载开发版，可以顺便读一读源代码。如果<br /></span>
+    <span class="md_line">你需要引用到你线上的项目，就必须使用压缩版，去掉了注释和空白，是容量最小。<br /></span>
+    <span class="md_line">本课程使用的软件是：hbuilder 最新版<br /></span>
+    <span class="md_line">使用测试的浏览器为：Firefox Chrome、IE、Opera<br /></span>
+    <span class="md_line">使用的版本为：1.10.1、2.0或以上版本抛弃 IE6/7/8 版本会在单独章节中讲解<br /></span>
+    <span class="md_line">使用的 html 版本为： html5<br /></span>
+    <span class="md_line">使用的调试工具：主要用chrome自带的调试工具</span>
+</p>
+
+
+<h3 id="toc_8">1.各版本下载:</h3>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><a class="md_compiled" href="https://code.jquery.com/">jQuery CDN各稳定版本下载</a></span>
+</p>
+
+
+<h3 id="toc_9">2.安装</h3>
+
+<p class="md_block">
+    <span class="md_line">进入Hbuilder-&gt;创建项目文件夹-&gt;在项目下新建js目录-&gt;复制下载的jquery文件到目录中</span>
+</p>
+
+
+<h3 id="toc_10">3.使用jQuery</h3>
+<div class="codehilite code_lang_html  highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>hello world<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/jquery-3.2.1.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+            <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;hello world!&#39;</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">//单击按钮弹窗<br /></span>
+    <span class="md_line">$(function () {<br /></span>
+    <span class="md_line">$(&#39;input&#39;).click(function () {<br /></span>
+    <span class="md_line">alert(&#39;第一个 jQuery 程序！&#39;);<br /></span>
+    <span class="md_line">});<br /></span>
+    <span class="md_line">});</span>
+</p> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="../asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

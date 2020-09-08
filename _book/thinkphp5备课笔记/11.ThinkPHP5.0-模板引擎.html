@@ -1,0 +1,3369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>11.ThinkPHP5.0-模板引擎</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="../asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="../asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="../asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="../asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="../asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="../index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="../001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="../002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="../003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="../004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="../005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="../006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="../007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="../008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="../009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="../010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="../011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="../012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="../013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="../014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="../015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="../016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="../017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="../018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="../019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="../020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="../021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="../022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="../023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter" data-path="024.文件系统.html">
+        
+        
+        <a href="../024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="../025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="../026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="../027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="../028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="../029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="../030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="../031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="../032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="../033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="../034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="../035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="../036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="../037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="../038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="../038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="../038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="../038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="../038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="../039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="../MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="../MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="../MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="../MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="../MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="../MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="../MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="../MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="../MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="../bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="../bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="../bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="../bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="../bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="../bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="../bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="../bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="../bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="../bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="../bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="../bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="../bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="../bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="../bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="../bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="../bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="../bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="../bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="../es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="../jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="../jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="../jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="../jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="../jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="../jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="../jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="../jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="../jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="../jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="../jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="../jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="../jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="../jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="../jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="../jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="../jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="../jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="../jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="../jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="../jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="../jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="../jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="../jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="../jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="../jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="../jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="../jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="../jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="../jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="../jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="../jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="../jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="../thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="../thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="../thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="../thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="../thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="../thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="../thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="../thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="../thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="../thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter active" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="../thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="../thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="../thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="../thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="../thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="../thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="../thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="../thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="../微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="../微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="../微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="../微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="../微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="../微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="../微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="../微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="../微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="../微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="../微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="../index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> 11.ThinkPHP5.0-模板引擎 </h2>
+                    <div class="post_body"> <p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">11.ThinkPHP5.0-模板引擎</a>
+<ul>
+<li>
+<a href="#toc_1">模板定位</a>
+</li>
+<li>
+<a href="#toc_2">模板标签</a>
+<ul>
+<li>
+<a href="#toc_3">普通标签</a>
+</li>
+<li>
+<a href="#toc_4">标签库标签</a>
+</li>
+<li>
+<a href="#toc_5">变量输出</a>
+</li>
+<li>
+<a href="#toc_6">普通赋值变量</a>
+</li>
+<li>
+<a href="#toc_7">数组</a>
+</li>
+<li>
+<a href="#toc_8">系统变量</a>
+</li>
+<li>
+<a href="#toc_9">请求参数</a>
+</li>
+<li>
+<a href="#toc_10">使用函数</a>
+</li>
+<li>
+<a href="#toc_11">使用默认值</a>
+</li>
+<li>
+<a href="#toc_12">使用运算符</a>
+</li>
+<li>
+<a href="#toc_13">三元运算</a>
+</li>
+<li>
+<a href="#toc_14">原样输出(不替换)</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">模板注释</a>
+</li>
+<li>
+<a href="#toc_16">模板布局</a>
+<ul>
+<li>
+<a href="#toc_17">第一种方式：全局配置方式</a>
+</li>
+<li>
+<a href="#toc_18">第二种方式：模板标签方式</a>
+</li>
+<li>
+<a href="#toc_19">第三种方式：使用layout控制模板布局</a>
+</li>
+<li>
+<a href="#toc_20">模板继承</a>
+</li>
+<li>
+<a href="#toc_21">包含文件</a>
+</li>
+<li>
+<a href="#toc_22">标签库[未备课,下载的完整版中不带标签库,需自己定义]</a>
+</li>
+<li>
+<a href="#toc_23">内置标签库[未备课]</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">模板定位</h2>
+
+<p class="md_block">
+    <span class="md_line">每个模块的模板文件是独立的，为了对模板文件更加有效的管理，ThinkPHP对模板文件进行目录划分，默认的模板文件定义规则是：<br /></span>
+    <span class="md_line md_line_dom_embed"><strong>视图目录/控制器名（小写）/操作名（小写）+模板后缀</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">模板渲染规则<br /></span>
+    <span class="md_line">模板渲染使用\think\View类的fetch方法，渲染规则为：<br /></span>
+    <span class="md_line md_line_dom_embed"><strong>模块@控制器/操作</strong><br /></span>
+    <span class="md_line">模板文件目录默认位于模块的view目录下面，视图类的fetch方法中的模板文件的定位规则如下：<br /></span>
+    <span class="md_line">如果调用没有任何参数的fetch方法：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">return</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">上面代码被定位到:<br /></span>
+    <span class="md_line md_line_dom_embed"><strong>[模板文件目录]/当前控制器名（小写+下划线）/当前操作名（小写）.html</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果（指定模板文件名操作）调用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">return</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">则定位模板文件为：<br /></span>
+    <span class="md_line md_line_dom_embed"><strong>[模板文件目录]/当前控制器名（小写+下划线）/add.html</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果调用控制器的某个模板文件使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">return</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;user/add&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">则定位模板文件为：<br /></span>
+    <span class="md_line md_line_dom_embed"><strong>[模板文件目录]/user/add.html</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">跨模块调用模板</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">return</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;admin@user/add&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">全路径模板调用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">return</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">APP_PATH</span><span class="o">.</span><span class="nx">request</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">module</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;/view/public/header.html&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_2">模板标签</h2>
+
+<p class="md_block">
+    <span class="md_line">模板文件可以包含普通标签和标签库标签，标签的定界符都可以重新配置。</span>
+</p>
+
+
+<h3 id="toc_3">普通标签</h3>
+
+<p class="md_block">
+    <span class="md_line">普通标签用于变量输出和模板注释，普通模板标签默认以{ 和 } 作为开始和结束标识，并且在开始标记紧跟标签的定义，如果之间有空格或者换行则被视为非模板标签直接输出。<br /></span>
+    <span class="md_line"> 例如：<code>{$name}</code> 、<code>{$vo.name}</code> 、<code>{$vo[&#39;name&#39;]|strtoupper}</code> 都属于正确的标签，而<code>{ $name}</code> 、<code>{$vo.name}</code>则不属于(注意定界符内有空格)。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">要更改普通标签的起始标签和结束标签，可以更改下面的配置参数：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="s1">&#39;template&#39;</span>  <span class="o">=&gt;</span> <span class="p">[</span>
+    <span class="c1">// 模板引擎</span>
+    <span class="s1">&#39;type&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;think&#39;</span><span class="p">,</span>
+    <span class="c1">// 普通标签开始标记 </span>
+    <span class="s1">&#39;tpl_begin&#39;</span> <span class="o">=&gt;</span>    <span class="s1">&#39;&lt;{&#39;</span><span class="p">,</span>
+    <span class="c1">// 普通标签结束标记</span>
+    <span class="s1">&#39;tpl_end&#39;</span>   <span class="o">=&gt;</span>    <span class="s1">&#39;}&gt;&#39;</span>        
+<span class="p">],</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">普通标签的定界符就被修改了，原来的<code>{$name}</code> 和<code>{$vo.name}</code>必须使用<code>&lt;{$name}&gt;</code> 和 <code>&lt;{$vo.name}&gt;</code> 才能生效了。</span>
+</p>
+
+
+<h3 id="toc_4">标签库标签</h3>
+
+<p class="md_block">
+    <span class="md_line">标签库标签可以用于模板变量输出、文件包含、条件控制、循环输出等功能，而且完全可以自己扩展功能。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">5.0版本的标签库默认定界符和普通标签一样使用{和}，是为了便于在编辑器里面编辑不至于报错，当然，你仍然可以更改标签库标签的起始和结束标签，修改下面的配置参数：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="s1">&#39;template&#39;</span>      <span class="o">=&gt;</span> <span class="p">[</span>
+    <span class="c1">// 模板引擎</span>
+    <span class="s1">&#39;type&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;Think&#39;</span><span class="p">,</span>
+    <span class="c1">//标签库标签开始标签 </span>
+    <span class="s1">&#39;taglib_begin&#39;</span>  <span class="o">=&gt;</span>  <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span>
+    <span class="c1">//标签库标签结束标记</span>
+    <span class="s1">&#39;taglib_end&#39;</span>    <span class="o">=&gt;</span>  <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span>     
+<span class="p">],</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">原来的</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>{eq name=&quot;name&quot; value=&quot;value&quot;}
+相等
+{else/}
+不相等
+{/eq}
+<span class="c">&lt;!--就需要改成--&gt;</span>
+<span class="p">&lt;</span><span class="nt">eq</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
+相等
+<span class="p">&lt;</span><span class="nt">else</span><span class="p">/&gt;</span>
+不相等
+<span class="p">&lt;/</span><span class="nt">eq</span><span class="p">&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_5">变量输出</h3>
+
+<h3 id="toc_6">普通赋值变量</h3>
+
+<p class="md_block">
+    <span class="md_line">在模板中输出变量的方法很简单，例如，在控制器中我们给模板变量赋值：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$view</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">View</span><span class="p">();</span>
+<span class="nv">$view</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">;</span>
+<span class="k">return</span> <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">然后就可以在模板中使用：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>Hello,{$name}
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">模板编译后的结果就是：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Hello</span><span class="p">,</span><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span><span class="p">(</span><span class="nv">$name</span><span class="p">);</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">这样，运行的时候就会在模板中显示： Hello,ThinkPHP！</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">注意模板标签的{和$之间不能有任何的空格，否则标签无效。所以，下面的标签</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Hello</span><span class="p">,{</span> <span class="nv">$name</span><span class="p">}</span><span class="nx">！</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">将不会正常输出name变量，而是直接保持不变输出： <code>Hello,{ $name}</code>！</span>
+</p>
+
+
+<h3 id="toc_7">数组</h3>
+
+<p class="md_block">
+    <span class="md_line">模板标签的变量输出根据变量类型有所区别，刚才我们输出的是字符串变量，如果是数组变量，</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ThinkPHP&#39;</span><span class="p">;</span>
+<span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;thinkphp@qq.com&#39;</span><span class="p">;</span>
+<span class="nv">$view</span><span class="o">-&gt;</span><span class="na">assign</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="nv">$data</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">那么，在模板中我们可以用下面的方式输出：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>Name：{$data.name}
+Email：{$data.email}
+<span class="c">&lt;!--或者用下面的方式也是有效：--&gt;</span>
+Name：{$data[&#39;name&#39;]}
+Email：{$data[&#39;email&#39;]}
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">当我们要输出多维数组的时候，往往要采用后面一种方式。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果data变量是一个对象（并且包含有name和email两个属性），那么可以用下面的方式输出：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>Name：{$data:name}
+Email：{$data:email}
+<span class="c">&lt;!--或者--&gt;</span>
+Name：{$data-&gt;name}
+Email：{$data-&gt;email}
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_8">系统变量</h3>
+
+<p class="md_block">
+    <span class="md_line">普通的模板变量需要首先赋值后才能在模板中输出，但是系统变量则不需要，可以直接在模板中输出，系统变量的输出通常以<code>$Think</code> 打头，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">server</span><span class="o">.</span><span class="nx">script_name</span><span class="p">}</span> <span class="c1">// 输出$_SERVER[&#39;SCRIPT_NAME&#39;]变量</span>
+<span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">session</span><span class="o">.</span><span class="nx">user_id</span><span class="p">}</span> <span class="c1">// 输出$_SESSION[&#39;user_id&#39;]变量</span>
+<span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">get</span><span class="o">.</span><span class="nx">pageNumber</span><span class="p">}</span> <span class="c1">// 输出$_GET[&#39;pageNumber&#39;]变量</span>
+<span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">cookie</span><span class="o">.</span><span class="nx">name</span><span class="p">}</span>  <span class="c1">// 输出$_COOKIE[&#39;name&#39;]变量</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">支持输出 $_SERVER、$_ENV、 $_POST、 $_GET、 $_REQUEST、$_SESSION和 $_COOKIE变量。<br /></span>
+    <span class="md_line">常量输出</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">const</span><span class="o">.</span><span class="nx">APP_PATH</span><span class="p">}</span>
+<span class="c1">//或者直接使用</span>
+<span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">APP_PATH</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">配置输出(配置文件中参数)</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">config</span><span class="o">.</span><span class="nx">default_module</span><span class="p">}</span>
+<span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">config</span><span class="o">.</span><span class="nx">default_controller</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">语言变量</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">lang</span><span class="o">.</span><span class="nx">page_error</span><span class="p">}</span>
+<span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">lang</span><span class="o">.</span><span class="nx">var_error</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_9">请求参数</h3>
+
+<p class="md_block">
+    <span class="md_line">模板支持直接输出Request请求对象的方法参数，用法如下：<br /></span>
+    <span class="md_line md_line_dom_embed"><strong>$Request.方法名.参数</strong><br /></span>
+    <span class="md_line">例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">get</span><span class="o">.</span><span class="nx">id</span><span class="p">}</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">param</span><span class="o">.</span><span class="nx">name</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">以$Request.开头的变量输出会认为是系统Request请求对象的参数输出。<br /></span>
+    <span class="md_line">支持Request类的大部分方法，但只支持方法的第一个参数。<br /></span>
+    <span class="md_line">下面都是有效的输出：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 调用Request对象的get方法 传入参数为id</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">get</span><span class="o">.</span><span class="nx">id</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的param方法 传入参数为name</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">param</span><span class="o">.</span><span class="nx">name</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的param方法 传入参数为user.nickname</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">param</span><span class="o">.</span><span class="nx">user</span><span class="o">.</span><span class="nx">nickname</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的root方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">root</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的root方法，并且传入参数true</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">root</span><span class="o">.</span><span class="k">true</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的path方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">path</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的module方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">module</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的controller方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">controller</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的action方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">action</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的ext方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">ext</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的host方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">host</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的ip方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nx">ip</span><span class="p">}</span>
+<span class="c1">// 调用Request对象的header方法</span>
+<span class="p">{</span><span class="nv">$Request</span><span class="o">.</span><span class="nb">header</span><span class="o">.</span><span class="nx">accept</span><span class="o">-</span><span class="nx">encoding</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">更多请求参数请参见第4章,<code>请求与向应</code>部分</span>
+</p>
+
+
+<h3 id="toc_10">使用函数</h3>
+
+<p class="md_block">
+    <span class="md_line">我们往往需要对模板输出变量使用函数，可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$data</span><span class="o">.</span><span class="nx">name</span><span class="o">|</span><span class="nb">md5</span><span class="p">}</span> 
+<span class="c1">//编译后的结果是：</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="p">(</span><span class="nb">md5</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]));</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果函数有多个参数需要调用，则使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$create_time</span><span class="o">|</span><span class="nb">date</span><span class="o">=</span><span class="s2">&quot;y-m-d&quot;</span><span class="p">,</span><span class="c1">###}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">表示date函数传入两个参数，每个参数用逗号分割，这里第一个参数是y-m-d，第二个参数是前面要输出的create_time变量，因为该变量是第二个参数，因此需要用###标识变量位置，编译后的结果是：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="p">(</span><span class="nb">date</span><span class="p">(</span><span class="s2">&quot;y-m-d&quot;</span><span class="p">,</span><span class="nv">$create_time</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果前面输出的变量在后面定义的函数的第一个参数，则可以直接使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$data</span><span class="o">.</span><span class="nx">name</span><span class="o">|</span><span class="nb">substr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="c1">//表示输出</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="p">(</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">虽然也可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$data</span><span class="o">.</span><span class="nx">name</span><span class="o">|</span><span class="nb">substr</span><span class="o">=</span><span class="c1">###,0,3}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">但完全没用这个必要。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">还可以支持多个函数过滤，多个函数之间用“|”分割即可，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$name</span><span class="o">|</span><span class="nb">md5</span><span class="o">|</span><span class="nb">strtoupper</span><span class="o">|</span><span class="nb">substr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="c1">//编译后的结果是：</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="p">(</span><span class="nb">substr</span><span class="p">(</span><span class="nb">strtoupper</span><span class="p">(</span><span class="nb">md5</span><span class="p">(</span><span class="nv">$name</span><span class="p">)),</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">函数会按照从左到右的顺序依次调用。<br /></span>
+    <span class="md_line">如果你觉得这样写起来比较麻烦，也可以直接这样写：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="o">:</span><span class="nb">substr</span><span class="p">(</span><span class="nb">strtoupper</span><span class="p">(</span><span class="nb">md5</span><span class="p">(</span><span class="nv">$name</span><span class="p">)),</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">变量输出使用的函数可以支持内置的PHP函数或者用户自定义函数，甚至是静态方法。</span>
+</p>
+
+
+<h3 id="toc_11">使用默认值</h3>
+
+<p class="md_block">
+    <span class="md_line">我们可以给变量输出提供默认值，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$user</span><span class="o">.</span><span class="nx">nickname</span><span class="o">|</span><span class="k">default</span><span class="o">=</span><span class="s2">&quot;这家伙很懒，什么也没留下&quot;</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">对系统变量依然可以支持默认值输出，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">get</span><span class="o">.</span><span class="nx">name</span><span class="o">|</span><span class="k">default</span><span class="o">=</span><span class="s2">&quot;名称为空&quot;</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">默认值和函数可以同时使用，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$Think</span><span class="o">.</span><span class="nx">get</span><span class="o">.</span><span class="nx">name</span><span class="o">|</span><span class="nx">getName</span><span class="o">|</span><span class="k">default</span><span class="o">=</span><span class="s2">&quot;名称为空&quot;</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_12">使用运算符</h3>
+
+<p class="md_block">
+    <span class="md_line">我们可以对模板输出使用运算符，包括对+ - * / 和“%”的支持。</span>
+</p>
+
+<table>
+ <thead><tr><th style="text-align:left">运算符</th>
+<th style="text-align:left">使用示例</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">+ </td>
+<td style="text-align:left"> {$a+$b}</td>
+</tr>
+<tr><td style="text-align:left">- </td>
+<td style="text-align:left"> {$a-$b}</td>
+</tr>
+<tr><td style="text-align:left">* </td>
+<td style="text-align:left"> {$a*$b}</td>
+</tr>
+<tr><td style="text-align:left">/ </td>
+<td style="text-align:left"> {$a/$b}</td>
+</tr>
+<tr><td style="text-align:left">% </td>
+<td style="text-align:left"> {$a%$b}</td>
+</tr>
+<tr><td style="text-align:left">加加 </td>
+<td style="text-align:left">  {$a++} 或 {++$a}</td>
+</tr>
+<tr><td style="text-align:left">减减  </td>
+<td style="text-align:left"> {$a--} 或 {--$a}</td>
+</tr>
+<tr><td style="text-align:left">综合运算 </td>
+<td style="text-align:left"> {$a+$b*10+$c}</td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<h3 id="toc_13">三元运算</h3>
+
+<p class="md_block">
+    <span class="md_line">模板可以支持三元运算符，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$status</span><span class="o">?</span> <span class="s1">&#39;正常&#39;</span> <span class="o">:</span> <span class="s1">&#39;错误&#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="nv">$info</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="o">?</span> <span class="nv">$info</span><span class="p">[</span><span class="s1">&#39;msg&#39;</span><span class="p">]</span> <span class="o">:</span> <span class="nv">$info</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]}</span>
+<span class="p">{</span><span class="nv">$info</span><span class="o">.</span><span class="nx">status</span><span class="o">?</span> <span class="nv">$info</span><span class="o">.</span><span class="nx">msg</span> <span class="o">:</span> <span class="nv">$info</span><span class="o">.</span><span class="nx">error</span> <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">5.0版本还支持如下的写法：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$varname</span><span class="o">.</span><span class="nx">aa</span> <span class="o">??</span> <span class="s1">&#39;xxx&#39;</span><span class="p">}</span>
+<span class="c1">//表示如果有设置$varname则输出$varname,否则输出&#39;xxx&#39;。 解析后的代码为： </span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$varname</span><span class="p">[</span><span class="s1">&#39;aa&#39;</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$varname</span><span class="p">[</span><span class="s1">&#39;aa&#39;</span><span class="p">]</span> <span class="o">:</span> <span class="s1">&#39;默认值&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end--><div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$varname</span><span class="o">?=</span><span class="s1">&#39;xxx&#39;</span><span class="p">}</span> 
+<span class="c1">//表示$varname为真时才输出xxx。 解析后的代码为： </span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$name</span><span class="p">))</span> <span class="k">echo</span> <span class="s1">&#39;xxx&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end--><div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$varname</span> <span class="o">?:</span> <span class="s1">&#39;no&#39;</span><span class="p">}</span>
+<span class="c1">//表示如果$varname为真则输出$varname，否则输出no。解析后的代码为：</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$varname</span> <span class="o">?</span> <span class="nv">$varname</span> <span class="o">:</span> <span class="s1">&#39;no&#39;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<!--block_code_end--><div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nv">$a</span><span class="o">==</span><span class="nv">$b</span> <span class="o">?</span> <span class="s1">&#39;yes&#39;</span> <span class="o">:</span> <span class="s1">&#39;no&#39;</span><span class="p">}</span>
+<span class="c1">//前面的表达式为真输出yes,否则输出no， 条件可以是==、===、!=、!==、&gt;=、&lt;=</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_14">原样输出(不替换)</h3>
+
+<p class="md_block">
+    <span class="md_line">可以使用literal标签来防止模板标签被解析，例如：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>{literal}
+    Hello,{$name}！
+{/literal}
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">上面的{$name}标签被literal标签包含，因此并不会被模板引擎解析，而是保持原样输出。<br /></span>
+    <span class="md_line">literal标签还可以用于页面的JS代码外层，确保JS代码中的某些用法和模板引擎不产生混淆。<br /></span>
+    <span class="md_line">总之，所有可能和内置模板引擎的解析规则冲突的地方都可以使用literal标签处理。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">需要注意的是配置‘view_replace_str’替换参数，会替换掉literal标签内的内容，可以配置‘template.tpl_replace_string’避免替换掉literal标签内的内容。<br /></span>
+    <span class="md_line">注意:在5.0中,view_replace_str 与 template中tpl_replace_string配置用法基本一样,但在5.1中好像废弃了view_replace_str</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//附上配置</span>
+    <span class="s1">&#39;template&#39;</span>               <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="c1">//......不相关的配置项在此省略...</span>
+        <span class="c1">//模板输出字符串替换</span>
+        <span class="s1">&#39;tpl_replace_string&#39;</span><span class="o">=&gt;</span><span class="p">[</span>
+            <span class="s1">&#39;PUBLIC_DIR&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;./public/static/&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">],</span>
+    <span class="c1">// 视图输出字符串内容替换</span>
+    <span class="s1">&#39;view_replace_str&#39;</span>       <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">&#39;__PUBLIC__&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;./public/static/&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">设置如上配置后,不管是用$this-&gt;fetch()渲染模板 还是用$this-&gt;display()渲染字符串,不管在不在{literal}{/literal}中,都能成功替换出值.</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>    <span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+    {literal}
+    PUBLIC:{__PUBLIC__}
+    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+    PUBLIC:{PUBLIC_DIR}
+    {/literal}
+    <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+    PUBLIC:{__PUBLIC__}
+    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+    PUBLIC:{PUBLIC_DIR}
+    <span class="c">&lt;!-- 不管上面代码在模板中用$this-&gt;fetch()还是上面代码在控制器方法中的字符串用$this-&gt;display(字符串变量名);去渲染,在5.0中都替换成如下格式 --&gt;</span>
+    PUBLIC:{./public/static/} 
+    PUBLIC:{./public/static/}
+    PUBLIC:{./public/static/} 
+    PUBLIC:{./public/static/}
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_15">模板注释</h2>
+
+<p class="md_block">
+    <span class="md_line">模板支持注释功能，该注释文字在最终页面不会显示，仅供模板制作人员参考和识别。<br /></span>
+    <span class="md_line">单行注释</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="cm">/* 注释内容 */</span> <span class="p">}</span> <span class="nx">或</span> <span class="p">{</span><span class="c1">// 注释内容 } </span>
+<span class="p">{</span><span class="c1">// 这是模板注释内容 }</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">注意{和注释标记之间不能有空格。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">多行注释<br /></span>
+    <span class="md_line">支持多行注释，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="cm">/* 这是模板</span>
+<span class="cm">注释内容*/</span> <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">模板注释支持多行，模板注释在生成编译缓存文件后会自动删除，这一点和Html的注释不同。</span>
+</p>
+
+
+<h2 id="toc_16">模板布局</h2>
+
+<p class="md_block">
+    <span class="md_line">ThinkPHP的模板引擎内置了布局模板功能支持，可以方便的实现模板布局以及布局嵌套功能。<br /></span>
+    <span class="md_line">有三种布局模板的支持方式：</span>
+</p>
+
+
+<h3 id="toc_17">第一种方式：全局配置方式</h3>
+
+<p class="md_block">
+    <span class="md_line">这种方式仅需在项目配置文件中添加相关的布局模板配置，就可以简单实现模板布局功能，比较适用于全站使用相同布局的情况，需要配置开启layout_on 参数（默认不开启），并且设置布局入口文件名layout_name（默认为layout）。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="s1">&#39;template&#39;</span>  <span class="o">=&gt;</span>  <span class="p">[</span>
+    <span class="s1">&#39;layout_on&#39;</span>     <span class="o">=&gt;</span>  <span class="k">true</span><span class="p">,</span>
+    <span class="s1">&#39;layout_name&#39;</span>   <span class="o">=&gt;</span>  <span class="s1">&#39;layout&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">开启layout_on后，我们的模板渲染流程就有所变化，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+
+<span class="k">Class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">()</span> 
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">);</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">在不开启layout_on布局模板之前，会直接渲染 application/index/view/user/add.html 模板文件,开启之后，首先会渲染application/index/view/layout.html 模板，布局模板的写法和其他模板的写法类似，本身也可以支持所有的模板标签以及包含文件，区别在于有一个特定的输出替换变量<code>{__CONTENT__}</code>，例如，下面是一个典型的layout.html模板的写法：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;public/header&quot;</span> <span class="o">/</span><span class="p">}</span>
+ <span class="p">{</span><span class="nx">__CONTENT__</span><span class="p">}</span>
+<span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;public/footer&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">读取layout模板之后，会再解析user/add.html 模板文件，并把解析后的内容替换到layout布局模板文件的{CONTENT} 特定字符串。<br /></span>
+    <span class="md_line">当然可以通过设置来改变这个特定的替换字符串，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="s1">&#39;template&#39;</span>  <span class="o">=&gt;</span>  <span class="p">[</span>
+    <span class="s1">&#39;layout_on&#39;</span>     <span class="o">=&gt;</span>  <span class="k">true</span><span class="p">,</span>
+    <span class="s1">&#39;layout_name&#39;</span>   <span class="o">=&gt;</span>  <span class="s1">&#39;layout&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;layout_item&#39;</span>   <span class="o">=&gt;</span>  <span class="s1">&#39;{__REPLACE__}&#39;</span><span class="p">,</span><span class="c1">//改变布局中的 替换变量</span>
+<span class="p">]</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">一个布局模板同时只能有一个特定替换字符串。<br /></span>
+    <span class="md_line">采用这种布局方式的情况下，一旦user/add.html 模板文件或者layout.html布局模板文件发生修改，都会导致模板重新编译。<br /></span>
+    <span class="md_line">如果需要指定其他位置的布局模板，可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="s1">&#39;template&#39;</span>  <span class="o">=&gt;</span>  <span class="p">[</span>
+    <span class="s1">&#39;layout_on&#39;</span>     <span class="o">=&gt;</span>  <span class="k">true</span><span class="p">,</span>
+    <span class="s1">&#39;layout_name&#39;</span>   <span class="o">=&gt;</span>  <span class="s1">&#39;layout/layoutname&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;layout_item&#39;</span>   <span class="o">=&gt;</span>  <span class="s1">&#39;{__REPLACE__}&#39;</span>
+<span class="p">]</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">就表示采用application/index/view/layout/layoutname.html作为布局模板。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果某些页面不需要使用布局模板功能，可以在模板文件开头加上 {__NOLAYOUT__} 字符串。<br /></span>
+    <span class="md_line">如果上面的user/add.html 模板文件里面包含有{__NOLAYOUT__}，则即使当前开启布局模板，也不会进行布局模板解析。</span>
+</p>
+
+
+<h3 id="toc_18">第二种方式：模板标签方式</h3>
+
+<p class="md_block">
+    <span class="md_line">这种布局模板不需要在配置文件中设置任何参数，也不需要开启layout_on，直接在模板文件中指定布局模板即可，相关的布局模板调整也在模板中进行。<br /></span>
+    <span class="md_line">以前面的输出模板为例，这种方式的入口还是在user/add.html 模板，但是我们可以修改下add模板文件的内容，在头部增加下面的布局标签（记得首先关闭前面的layout_on设置，否则可能出现布局循环）：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//写在模板文件的第一行</span>
+<span class="p">{</span><span class="nx">layout</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;layout&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">表示当前模板文件需要使用layout.html 布局模板文件，而布局模板文件的写法和上面第一种方式是一样的。当渲染user/add.html 模板文件的时候，如果读取到layout标签，则会把当前模板的解析内容替换到layout布局模板的{CONTENT} 特定字符串。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">一个模板文件中只能使用一个布局模板，如果模板文件中没有使用任何layout标签则表示当前模板不使用任何布局。<br /></span>
+    <span class="md_line">如果需要使用其他的布局模板，可以改变layout的name属性，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//写在模板文件的第一行</span>
+<span class="p">{</span><span class="nx">layout</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;newlayout&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">还可以在layout标签里面指定要替换的特定字符串：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nx">layout</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;Layout/newlayout&quot;</span> <span class="nx">replace</span><span class="o">=</span><span class="s2">&quot;[__REPLACE__]&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_19">第三种方式：使用layout控制模板布局</h3>
+
+<p class="md_block">
+    <span class="md_line">使用内置的layout方法可以更灵活的在程序中控制模板输出的布局功能，尤其适用于局部需要布局或者关闭布局的情况，这种方式也不需要在配置文件中开启layout_on。例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">()</span> 
+     <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="o">-&gt;</span><span class="na">engine</span><span class="o">-&gt;</span><span class="na">layout</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">);</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">表示当前的模板输出启用了布局模板，并且采用默认的layout布局模板。<br /></span>
+    <span class="md_line">如果当前输出需要使用不同的布局模板，可以动态的指定布局模板名称，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">()</span> 
+     <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="o">-&gt;</span><span class="na">engine</span><span class="o">-&gt;</span><span class="na">layout</span><span class="p">(</span><span class="s1">&#39;Layout/newlayout&#39;</span><span class="p">);</span>
+         <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">display</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">);</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">或者使用layout方法动态关闭当前模板的布局功能（这种用法可以配合第一种布局方式，例如全局配置已经开启了布局，可以在某个页面单独关闭）：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\controller</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Controller</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="nf">add</span><span class="p">()</span> 
+     <span class="p">{</span>
+        <span class="c1">// 临时关闭当前模板的布局功能</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">view</span><span class="o">-&gt;</span><span class="na">engine</span><span class="o">-&gt;</span><span class="na">layout</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> 
+         <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">display</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">);</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">三种模板布局方式中，第一种和第三种是在程序中配置实现模板布局，第二种方式则是单纯通过模板标签在模板中使用布局。具体选择什么方式，需要根据项目的实际情况来了。</span>
+</p>
+
+
+<h3 id="toc_20">模板继承</h3>
+
+<p class="md_block">
+    <span class="md_line">模板继承是一项更加灵活的模板布局方式，模板继承不同于模板布局，甚至来说，应该在模板布局的上层。模板继承其实并不难理解，就好比类的继承一样，模板也可以定义一个基础模板（或者是布局），并且其中定义相关的区块（block），然后继承（extend）该基础模板的子模板中就可以对基础模板中定义的区块进行重载。<br /></span>
+    <span class="md_line">因此，模板继承的优势其实是设计基础模板中的区块（block）和子模板中替换这些区块。<br /></span>
+    <span class="md_line">每个区块由<code>{block} {/block}</code>标签组成。 下面就是基础模板中的一个典型的区块设计（用于设计网站标题）：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nx">block</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="p">}</span><span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">网站标题</span><span class="o">&lt;/</span><span class="nx">title</span><span class="o">&gt;</span><span class="p">{</span><span class="o">/</span><span class="nx">block</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">block标签必须指定name属性来标识当前区块的名称，这个标识在当前模板中应该是唯一的，block标签中可以包含任何模板内容，包括其他标签和变量，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nx">block</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="p">}</span><span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="p">{</span><span class="nv">$web_title</span><span class="p">}</span><span class="o">&lt;/</span><span class="nx">title</span><span class="o">&gt;</span><span class="p">{</span><span class="o">/</span><span class="nx">block</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">你甚至还可以在区块中加载外部文件：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nx">block</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;include&quot;</span><span class="p">}{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;Public:header&quot;</span> <span class="o">/</span><span class="p">}{</span><span class="o">/</span><span class="nx">block</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">一个模板中可以定义任意多个名称标识不重复的区块，例如下面定义了一个base.html基础模板：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{block name=&quot;title&quot;}标题{/block}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+{block name=&quot;menu&quot;}菜单{/block}
+{block name=&quot;left&quot;}左边分栏{/block}
+{block name=&quot;main&quot;}主内容{/block}
+{block name=&quot;right&quot;}右边分栏{/block}
+{block name=&quot;footer&quot;}底部{/block}
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">然后我们在子模板（其实是当前操作的入口模板）中使用继承：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>{extend name=&quot;base&quot; /}
+{block name=&quot;title&quot;}{$title}{/block}
+{block name=&quot;menu&quot;}
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span> <span class="p">&gt;</span>首页<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/info/&quot;</span> <span class="p">&gt;</span>资讯<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/bbs/&quot;</span> <span class="p">&gt;</span>论坛<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+{/block}
+{block name=&quot;left&quot;}{/block}
+{block name=&quot;main&quot;}
+{volist name=&quot;list&quot; id=&quot;vo&quot;}
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/new/{$vo.id}&quot;</span><span class="p">&gt;</span>{$vo.title}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+{$vo.content}
+{/volist}
+{/block}
+{block name=&quot;right&quot;}
+最新资讯：
+{volist name=&quot;news&quot; id=&quot;new&quot;}
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/new/{$new.id}&quot;</span><span class="p">&gt;</span>{$new.title}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+{/volist}
+{/block}
+{block name=&quot;footer&quot;}
+{__block__}
+@ThinkPHP 版权所有
+{/block}
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">上例中，我们可以看到在子模板中使用了extend标签来继承了base模板。<br /></span>
+    <span class="md_line"> 在子模板中，可以对基础模板中的区块进行重载定义，如果没有重新定义的话，则表示沿用基础模板中的区块定义，如果定义了一个空的区块，则表示删除基础模板中的该区块内容。 上面的例子，我们就把left区块的内容删除了，其他的区块都进行了重载(重新定义内容)。而</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>{block name=&quot;footer&quot;}
+{__block__}@ThinkPHP 版权所有
+{/block}
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">这一区块中有{_block_}这个标签，当区块中有这个标记时，就不只是直接重载这个区块，它表示引用所继承模板对应区块的内容到这个位置，最终这个区块是合并后的内容。所以这里footer区块最后的内容是： 底部@ThinkPHP 版权所有</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">extend标签的用法和include标签一样，你也可以加载其他模板：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nx">extend</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;Public:base&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">或者使用绝对文件路径加载</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="nx">extend</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;./Template/Public/base.html&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">在当前子模板中，只能定义区块而不能定义其他的模板内容，否则将会直接忽略，并且只能定义基础模板中已经定义的区块。<br /></span>
+    <span class="md_line">例如，如果采用下面的定义：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span>{block name=&quot;title&quot;}<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{$title}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>{/block}
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span> <span class="p">&gt;</span>首页<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/info/&quot;</span> <span class="p">&gt;</span>资讯<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/bbs/&quot;</span> <span class="p">&gt;</span>论坛<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">导航部分将是无效的，不会显示在模板中。<br /></span>
+    <span class="md_line">模板可以多级继承，比如B继承了A，而C又继承了B，最终C中的区块会覆盖B和A中的同名区块，但C和B中的区块必须是A中已定义过的。<br /></span>
+    <span class="md_line">子模板中的区块定义顺序是随意的，模板继承的用法关键在于基础模板如何布局和设计规划了，如果结合原来的布局功能，则会更加灵活。</span>
+</p>
+
+
+<h3 id="toc_21">包含文件</h3>
+
+<p class="md_block">
+    <span class="md_line">在当前模版文件中包含其他的模版文件使用include标签，标签用法：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s1">&#39;模版文件1,模版文件2,...&#39;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">包含的模板文件中不能再使用模板布局或者模板继承。<br /></span>
+    <span class="md_line">使用模版表达式<br /></span>
+    <span class="md_line">模版表达式的定义规则为：<strong>模块@控制器/操作</strong><br /></span>
+    <span class="md_line">例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;public/header&quot;</span> <span class="o">/</span><span class="p">}</span> <span class="c1">// 包含头部模版header</span>
+<span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;public/menu&quot;</span> <span class="o">/</span><span class="p">}</span> <span class="c1">// 包含菜单模版menu</span>
+<span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;blue/public/menu&quot;</span> <span class="o">/</span><span class="p">}</span> <span class="c1">// 包含blue主题下面的menu模版</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">可以一次包含多个模版，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;public/header,public/menu&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">注意，包含模版文件并不会自动调用控制器的方法，也就是说包含的其他模版文件中的变量赋值需要在当前操作中完成。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">使用模版文件<br /></span>
+    <span class="md_line">可以直接包含一个模版文件名（包含完整路径），例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;../application/view/default/public/header.html&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">路径以 项目目录/public/ 路径下为起点</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">传入参数<br /></span>
+    <span class="md_line">无论你使用什么方式包含外部模板，Include标签支持在包含文件的同时传入参数，例如，下面的例子我们在包含header模板的时候传入了title和keywords参数：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="p">{</span><span class="k">include</span> <span class="nb">file</span><span class="o">=</span><span class="s2">&quot;Public/header&quot;</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">$title</span><span class="s2">&quot;</span> <span class="nx">keywords</span><span class="o">=</span><span class="s2">&quot;开源WEB开发框架&quot;</span> <span class="o">/</span><span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">就可以在包含的header.html文件里面使用title和keywords变量，如下：</span>
+</p>
+
+<div class="codehilite code_lang_html  highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>[title]<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;[keywords]&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">上面title参数传入的是个变量<code>$title</code>，模板内的<code>[title]</code>最终会替换成<code>$title</code>的值，当然<code>$title</code>这个变量必须要存在。<br /></span>
+    <span class="md_line">包含文件中可以再使用include标签包含别的文件，但注意不要形成A包含A，或者A包含B而B又包含A这样的死循环。</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意：由于模板解析的特点，从入口模板开始解析，如果外部模板有所更改，模板引擎并不会重新编译模板，除非在调试模式下或者缓存已经过期。如果部署模式下修改了包含的外部模板文件后，需要把模块的缓存目录清空，否则无法生效。</span>
+</p>
+
+</blockquote>
+
+<h3 id="toc_22">标签库[未备课,下载的完整版中不带标签库,需自己定义]</h3>
+
+<p class="md_block">
+    <span class="md_line">下载的5.0.20完整版中没有其它标签库.此处就省略不讲了.</span>
+</p>
+
+
+<h3 id="toc_23">内置标签库[未备课]</h3>
+
+<p class="md_block">
+    <span class="md_line">标签库分为内置和扩展标签库，内置标签库是Cx标签库。参见:<strong>/think50/thinkphp/library/think/template/taglib/Cx.php</strong>文件<br /></span>
+    <span class="md_line">更多参见手册:</span>
+</p> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="../asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

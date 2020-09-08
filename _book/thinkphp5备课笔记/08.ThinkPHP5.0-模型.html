@@ -1,0 +1,3499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ThinkPHP5.0-模型</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="../asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="../asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="../asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="../asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="../asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="../index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="../001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="../002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="../003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="../004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="../005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="../006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="../007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="../008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="../009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="../010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="../011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="../012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="../013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="../014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="../015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="../016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="../017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="../018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="../019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="../020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="../021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="../022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="../023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter" data-path="024.文件系统.html">
+        
+        
+        <a href="../024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="../025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="../026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="../027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="../028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="../029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="../030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="../031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="../032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="../033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="../034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="../035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="../036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="../037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="../038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="../038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="../038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="../038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="../038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="../039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="../MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="../MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="../MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="../MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="../MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="../MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="../MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="../MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="../MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="../bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="../bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="../bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="../bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="../bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="../bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="../bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="../bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="../bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="../bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="../bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="../bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="../bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="../bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="../bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="../bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="../bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="../bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="../bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="../es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="../jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="../jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="../jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="../jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="../jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="../jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="../jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="../jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="../jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="../jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="../jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="../jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="../jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="../jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="../jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="../jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="../jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="../jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="../jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="../jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="../jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="../jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="../jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="../jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="../jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="../jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="../jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="../jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="../jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="../jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="../jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="../jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="../jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="../thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="../thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="../thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="../thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="../thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="../thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="../thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter active" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="../thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="../thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="../thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="../thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="../thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="../thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="../thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="../thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="../thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="../thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="../thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="../微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="../微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="../微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="../微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="../微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="../微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="../微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="../微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="../微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="../微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="../微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="../index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> ThinkPHP5.0-模型 </h2>
+                    <div class="post_body"> <p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">ThinkPHP5.0-模型</a>
+<ul>
+<li>
+<a href="#toc_1">模型定义与使用</a>
+</li>
+<li>
+<a href="#toc_2">助手函数 model();</a>
+</li>
+<li>
+<a href="#toc_3">模型初始化 initialize( )</a>
+</li>
+<li>
+<a href="#toc_4">通过模型操作数据</a>
+<ul>
+<li>
+<a href="#toc_5">新增 save()</a>
+<ul>
+<li>
+<a href="#toc_6">获取自增ID</a>
+</li>
+<li>
+<a href="#toc_7">数据过滤 allowField()</a>
+</li>
+<li>
+<a href="#toc_8">添加多条数据 saveAll();</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">更新 save()</a>
+<ul>
+<li>
+<a href="#toc_10">批量更新saveAll()</a>
+</li>
+<li>
+<a href="#toc_11">便用update()方法更新</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_12">更新与新增自动识别</a>
+</li>
+<li>
+<a href="#toc_13">删除 delete() destroy()</a>
+</li>
+<li>
+<a href="#toc_14">查询 get() find() select()</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">获取器 与 修改器</a>
+<ul>
+<li>
+<a href="#toc_16">获取器</a>
+</li>
+<li>
+<a href="#toc_17">修改器</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_18">时间戳[了解]</a>
+</li>
+<li>
+<a href="#toc_19">只读字段</a>
+</li>
+<li>
+<a href="#toc_20">软删除[了解]</a>
+</li>
+<li>
+<a href="#toc_21">类型转换[了解]</a>
+</li>
+<li>
+<a href="#toc_22">数据完成[了解]</a>
+</li>
+<li>
+<a href="#toc_23">查询结果对象与数组转换</a>
+</li>
+<li>
+<a href="#toc_24">JSON序列化</a>
+</li>
+<li>
+<a href="#toc_25">关联模型[后来需要再来写日记]</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">模型定义与使用</h2>
+
+<p class="md_block">
+    <span class="md_line">模型(model),MVC中的C层.用于操作数据库.在ThinkPHP中,默认一个表对应一个模型类.<br /></span>
+    <span class="md_line">在TP5中,模型写在:应用目录/模块目录/model目录下/模型名.php<br /></span>
+    <span class="md_line">关于文件名与类名规则:</span>
+</p>
+
+<table>
+ <thead><tr><th style="text-align:left">数据库表名</th>
+<th style="text-align:left">文件名</th>
+<th style="text-align:left">类名</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">think_user </td>
+<td style="text-align:left"> User.php </td>
+<td style="text-align:left"> User</td>
+</tr>
+<tr><td style="text-align:left">think_member </td>
+<td style="text-align:left"> Member </td>
+<td style="text-align:left"> Member</td>
+</tr>
+<tr><td style="text-align:left">think_member_card </td>
+<td style="text-align:left"> MemberCard </td>
+<td style="text-align:left"> MemberCard</td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意:文件名:就是不包含前缀的表名且首字母大写,类名与文件名一样.如果表名有_下划线,类文件名与类名用驼峰式命名.</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">实例:自定义模型:在数据库中有一张member的表.我们创建相关模型:Member.php ,文件内容如下:</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\model</span><span class="p">;</span><span class="c1">//定义命名空间</span>
+<span class="k">use</span> <span class="nx">think\Model</span><span class="p">;</span><span class="c1">//引入模型基类</span>
+
+<span class="k">class</span> <span class="nc">Member</span> <span class="k">extends</span> <span class="nx">Model</span><span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">我们在控制器中使用模型查询表中数据</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span><span class="c1">//要注意,通过模型查询出来的数据是对象.我们一般要进行遍历并转换成数组输出</span>
+        <span class="c1">//dump($data);//太多内容了,看不太懂</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$data</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">){</span>
+            <span class="nx">dump</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">());</span>
+        <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_2">助手函数 model();</h2>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//使用model助手函数实例化User模型,我们在控制器方法中如下</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">model</span><span class="p">(</span><span class="s1">&#39;Member&#39;</span><span class="p">);</span><span class="c1">//等同于 $user = new Member();</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_3">模型初始化 initialize( )</h2>
+
+<p class="md_block">
+    <span class="md_line">作用：创建模型对象之前做的预处理工作。<br /></span>
+    <span class="md_line">注意:模型初始化，绝大多数情况下会自动完成，并不需要我们去做。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Member</span> <span class="k">extends</span> <span class="nx">Model</span><span class="p">{</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">initialize</span><span class="p">(){</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">initialized</span><span class="p">();</span><span class="c1">//初始化父类</span>
+        <span class="c1">//$this-&gt;huodeming = &#39;霍德明&#39;;//测试用,让数对象创建出来后多一个属性,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_4">通过模型操作数据</h2>
+
+<h3 id="toc_5">新增 save()</h3>
+
+<p class="md_block">
+    <span class="md_line">save方法新增数据返回的是写入的记录数。<br /></span>
+    <span class="md_line">添加一条数据</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">uname</span> <span class="o">=</span> <span class="s1">&#39;鲲鹏IT&#39;</span><span class="p">;</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span> <span class="o">=</span> <span class="s1">&#39;kpit@qq.com&#39;</span><span class="p">;</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">age</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="c1">//INSERT INTO `think_member` (`uname` , `email` , `age`) VALUES (&#39;鲲鹏IT&#39; , &#39;kpit@qq.com&#39; , 20);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">通过save()方法传参赋值</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;邵阳鲲鹏&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;sykp@qq.com&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="o">=&gt;</span><span class="mi">3</span><span class="p">];</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+        <span class="c1">//INSERT INTO `think_member` (`uname` , `email` , `age`) VALUES (&#39;邵阳鲲鹏&#39; , &#39;sykp@qq.com&#39; , 3)</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">通过创建模型对象时赋值</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">(</span> <span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;邵阳鲲鹏&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;sykp@qq.com&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="o">=&gt;</span><span class="mi">3</span><span class="p">]);</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="c1">//INSERT INTO `think_member` (`uname` , `email` , `age`) VALUES (&#39;邵阳鲲鹏&#39; , &#39;sykp@qq.com&#39; , 3)</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">也可以使用data方法赋值：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">([</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;鲲鹏霍老&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;sykph@qq.com&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">]);</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="c1">//INSERT INTO `think_member` (`uname` , `email` , `age`) VALUES (&#39;鲲鹏霍老&#39; , &#39;sykph@qq.com&#39; , 30)</span>
+        
+        <span class="c1">//也可以写成</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$data</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;鲲鹏老霍&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;sykph@qq.com&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="o">=&gt;</span><span class="mi">36</span><span class="p">];</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="c1">//INSERT INTO `think_member` (`uname` , `email` , `age`) VALUES (&#39;鲲鹏老霍&#39; , &#39;sykph@qq.com&#39; , 36)</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">注意不要在同一个实例里面多次新增数据，如果确实需要多次新增，那么可以用下面的方式：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">uname</span>     <span class="o">=</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span>    <span class="o">=</span> <span class="s1">&#39;thinkphp@qq.com&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">uname</span>     <span class="o">=</span> <span class="s1">&#39;onethink&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span>    <span class="o">=</span> <span class="s1">&#39;onethink@qq.com&#39;</span><span class="p">;</span>
+<span class="c1">// 第二次开始必须使用下面的方式新增:isUpdate(false),在学完用模型更新数据后统一讲解</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">isUpdate</span><span class="p">(</span><span class="k">false</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_6">获取自增ID</h4>
+
+<p class="md_block">
+    <span class="md_line">如果要获取新增数据的自增ID，可以使用下面的方式：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$data</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;鲲鹏老霍&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;sykph@qq.com&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="o">=&gt;</span><span class="mi">36</span><span class="p">];</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span><span class="c1">//id为自增ID主键字段名</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_7">数据过滤 allowField()</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="c1">//如果提供的数据中有非数据表字段.就会报错,这时我们可以过滤</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$data</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;鲲鹏老霍&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;sykph@qq.com&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="o">=&gt;</span><span class="mi">35</span><span class="p">,</span><span class="s1">&#39;sex&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;男&#39;</span><span class="p">];</span>
+        <span class="c1">//$user-&gt;data($data)-&gt;save();////如果提供的数据中有非数据表字段.就会报错,这时我们可以过滤,比如登陆注册过滤掉多余非数据库字段 $user = new User($_POST);</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">allowField</span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span><span class="c1">//INSERT INTO `think_member` (`uname` , `email` , `age`) VALUES (&#39;鲲鹏老霍&#39; , &#39;sykph@qq.com&#39; , 35)</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">还可以用过滤方法指定字段过滤</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">allowField</span><span class="p">([</span><span class="s1">&#39;uname&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span><span class="c1">//这时age字段也不会插入数据</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_8">添加多条数据 saveAll();</h4>
+
+<p class="md_block">
+    <span class="md_line">支持批量新增，可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+<span class="nv">$list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;thinkphp&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;thinkphp@qq.com&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;onethink&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;onethink@qq.com&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">saveAll</span><span class="p">(</span><span class="nv">$list</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">saveAll方法新增数据返回的是包含新增模型（带自增ID）的数据集（数组）。<br /></span>
+    <span class="md_line">saveAll方法新增数据默认会自动识别数据是需要新增还是更新操作，当数据中存在主键的时候会认为是更新操作，如果你需要带主键数据批量新增，可以使用下面的方式：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+<span class="nv">$list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;thinkphp&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;thinkphp@qq.com&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;onethink&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;onethink@qq.com&#39;</span><span class="p">],</span>
+<span class="p">];</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">saveAll</span><span class="p">(</span><span class="nv">$list</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span><span class="c1">//用第二个参数false,表示插入数据</span>
+<span class="c1">//还可以遍历数组来插入</span>
+<span class="k">foreach</span><span class="p">(</span><span class="nv">$list</span> <span class="k">as</span> <span class="nv">$data</span><span class="p">){</span>
+    <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span><span class="k">true</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isUpdate</span><span class="p">(</span><span class="k">false</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span><span class="c1">//isUpdate(false)表示插入(非修改)</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">静态方法 ::create()<br /></span>
+    <span class="md_line">直接静态调用create方法创建并写入,和save方法不同的是，create方法返回的是当前模型的对象实例。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">create</span><span class="p">([</span>
+    <span class="s1">&#39;uname&#39;</span>  <span class="o">=&gt;</span>  <span class="s1">&#39;thinkphp&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span>  <span class="s1">&#39;thinkphp@qq.com&#39;</span>
+<span class="p">]);</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">id</span><span class="p">;</span> <span class="c1">// 获取自增ID</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_9">更新 save()</h3>
+
+<p class="md_block">
+    <span class="md_line">直接更新数据,可以直接带更新条件来更新数据</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+<span class="c1">// save方法第二个参数为更新条件</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">([</span>
+    <span class="s1">&#39;uname&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp@qq.com&#39;</span>
+<span class="p">],[</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">查找并更新<br /></span>
+    <span class="md_line">在取出数据后，更改字段内容后更新数据。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">Member</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="c1">//查询出ID为1的那条数据</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">uname</span>     <span class="o">=</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">uemail</span>    <span class="o">=</span> <span class="s1">&#39;thinkphp@qq.com&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">上面两种方式更新数据，如果需要过滤非数据表字段的数据，可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+<span class="c1">// 过滤post数组中的非数据表字段数据</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">allowField</span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">,[</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">]);</span><span class="c1">//获取POST中数据进行过滤</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_10">批量更新saveAll()</h4>
+
+<p class="md_block">
+    <span class="md_line">批量更新与save()方法不同,它仅能根据主键值进行更新，其它情况请使用foreach遍历更新。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+        <span class="nv">$list</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;thinkphp&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;thinkphp@qq.com&#39;</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="mi">23</span><span class="p">,</span> <span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;onethink&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;onethink@qq.com&#39;</span><span class="p">]</span>
+            <span class="p">];</span>
+        <span class="c1">//$user-&gt;saveAll($list);//这种方式有点容易混淆,建议用遍历+isUpdate(true)</span>
+        <span class="k">foreach</span><span class="p">(</span><span class="nv">$list</span> <span class="k">as</span> <span class="nv">$data</span><span class="p">){</span>
+            <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span><span class="k">true</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">isUpdate</span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_11">便用update()方法更新</h4>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//必要的时候，你也可以使用数据库对象来直接更新数据，但这样就无法使用模型的事件功能。</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s1">&#39;uname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">]);</span>
+<span class="c1">//或者使用：</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;uname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">]);</span>
+<span class="c1">//果传入update的数据包含主键的话，可以无需使用where方法。</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">模型支持静态方法直接更新数据，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Member</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s1">&#39;uname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">]);</span>
+<span class="c1">//或者使用：</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">update</span><span class="p">([</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;uname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">闭包更新<br /></span>
+    <span class="md_line">可以通过闭包函数使用更复杂的更新条件，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">;</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">([</span><span class="s1">&#39;uname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">],</span><span class="k">function</span><span class="p">(</span><span class="nv">$query</span><span class="p">){</span>
+            <span class="c1">// 更新age值为13 并且id大于10的数据</span>
+            <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+        <span class="p">});</span>
+        <span class="c1">//UPDATE `think_member` SET `uname`=&#39;thinkphp&#39; WHERE ( `age` = 13 AND `id` &gt; 10 )</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_12">更新与新增自动识别</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">自动识别<br /></span>
+    <span class="md_line">我们已经看到，模型的新增和更新方法都是save方法，系统有一套默认的规则来识别当前的数据需要更新还是新增。</span>
+</p>
+
+
+<ul>
+<li>实例化模型后调用save方法表示新增；</li>
+<li>查询数据后调用save方法表示更新；</li>
+<li>调用模型的save方法后表示更新；</li>
+</ul>
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">如果你的数据操作比较复杂，可以显式的指定当前调用save方法是新增操作还是更新操作。<br /></span>
+    <span class="md_line">isUpdate(false) //表示新增<br /></span>
+    <span class="md_line">isUpdate(true) //表示修改</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意:如果你调用save方法进行多次数据写入的时候，需要注意，第二次save方法的时候必须使用isUpdate(false)，否则会视为更新数据。</span>
+</p>
+
+</blockquote>
+
+<h3 id="toc_13">删除 delete() destroy()</h3>
+
+<p class="md_block">
+    <span class="md_line">删除模型数据，可以在实例化后调用delete方法。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>        <span class="nv">$user</span> <span class="o">=</span> <span class="nx">Member</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span><span class="c1">//SELECT * FROM `think_member` WHERE `id` = 22</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span><span class="c1">//DELETE FROM `think_member` WHERE `id` = 22</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">根据主键删除<br /></span>
+    <span class="md_line">或者直接调用静态方法</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Member</span><span class="o">::</span><span class="na">destroy</span><span class="p">(</span><span class="mi">21</span><span class="p">);</span>
+<span class="c1">// 支持批量删除多个数据</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">destroy</span><span class="p">(</span><span class="s1">&#39;1,2,3&#39;</span><span class="p">);</span>
+<span class="c1">// 或者</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">destroy</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">使用数组进行条件删除，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 删除age为0的数据</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">destroy</span><span class="p">([</span><span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">]);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">还支持使用闭包删除，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Member</span><span class="o">::</span><span class="na">destroy</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$query</span><span class="p">){</span>
+    <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">或者通过数据库类的查询条件删除</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Member</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_14">查询 get() find() select()</h3>
+
+<p class="md_block">
+    <span class="md_line">获取单个数据</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//取出主键为1的数据</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">Member</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+
+<span class="c1">// 使用数组查询</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">Member</span><span class="o">::</span><span class="na">get</span><span class="p">([</span><span class="s1">&#39;uname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">]);</span>
+
+<span class="c1">// 使用闭包查询</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">Member</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$query</span><span class="p">){</span>
+    <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;uname&#39;</span><span class="p">,</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">获取多条数据</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 根据主键获取多个数据</span>
+<span class="nv">$list</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">all</span><span class="p">(</span><span class="s1">&#39;1,2,3&#39;</span><span class="p">);</span>
+<span class="c1">// 或者使用数组</span>
+<span class="nv">$list</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">all</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>
+<span class="k">foreach</span><span class="p">(</span><span class="nv">$list</span> <span class="k">as</span> <span class="nv">$key</span><span class="o">=&gt;</span><span class="nv">$user</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// 使用数组查询</span>
+<span class="nv">$list</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">all</span><span class="p">([</span><span class="s1">&#39;status&#39;</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">]);</span>
+<span class="c1">// 使用闭包查询</span>
+<span class="nv">$list</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">all</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$query</span><span class="p">){</span>
+    <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">order</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;asc&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="k">foreach</span><span class="p">(</span><span class="nv">$list</span> <span class="k">as</span> <span class="nv">$key</span><span class="o">=&gt;</span><span class="nv">$user</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">PS:数组方式和闭包方式的数据查询的区别在于，数组方式只能定义查询条件，闭包方式可以支持更多的连贯操作，包括排序、数量限制等。</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">在实例化模型后调用查询方法</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+<span class="c1">// 查询数据集</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;uname&#39;</span><span class="p">,</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">order</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;desc&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">获取某个字段或者某个列的值</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 获取某个用户的积分</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">value</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
+<span class="c1">// 获取某个列的所有值,返回索引数组</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">column</span><span class="p">(</span><span class="s1">&#39;uname&#39;</span><span class="p">);</span>
+<span class="c1">// 以id为数组下标,值为uname字段</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">column</span><span class="p">(</span><span class="s1">&#39;uname&#39;</span><span class="p">,</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">注意value和column方法返回的不再是一个模型对象实例，而是单纯的值或者某个列的数组。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">支持动态查询方法，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 根据name字段查询用户</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">getByName</span><span class="p">(</span><span class="s1">&#39;thinkphp&#39;</span><span class="p">);</span>
+
+<span class="c1">// 根据email字段查询用户</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">getByEmail</span><span class="p">(</span><span class="s1">&#39;thinkphp@qq.com&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">通过Query类查询<br /></span>
+    <span class="md_line">或者使用数据库的查询方法进行更复杂的查询：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">Member</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
+<span class="nx">Member</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;uname&#39;</span><span class="p">,</span><span class="s1">&#39;thinkphp&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">可以在模型中直接使用所有数据库的链式操作方法。<br /></span>
+    <span class="md_line">返回的查询结果是当前模型对应的对象或者包含模型对象的数据集。<br /></span>
+    <span class="md_line">数据分批处理</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">模型也可以支持对返回的数据分批处理，这在处理大量数据的时候非常有用，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">User</span><span class="o">::</span><span class="na">chunk</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="k">function</span><span class="p">(</span><span class="nv">$users</span><span class="p">){</span>
+   <span class="k">foreach</span><span class="p">(</span><span class="nv">$users</span> <span class="k">as</span> <span class="nv">$user</span><span class="p">){</span>
+       <span class="c1">// 处理user模型对象</span>
+   <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">聚合</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在模型中也可以调用数据库的聚合方法进行查询，例如：</span>
+</p>
+
+<table>
+ <thead><tr><th style="text-align:left">方法</th>
+<th style="text-align:left">说明</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">Count </td>
+<td style="text-align:left"> 统计数量，参数是要统计的字段名（可选）</td>
+</tr>
+<tr><td style="text-align:left">Max </td>
+<td style="text-align:left"> 获取最大值，参数是要统计的字段名（必须）</td>
+</tr>
+<tr><td style="text-align:left">Min </td>
+<td style="text-align:left"> 获取最小值，参数是要统计的字段名（必须）</td>
+</tr>
+<tr><td style="text-align:left">Avg </td>
+<td style="text-align:left"> 获取平均值，参数是要统计的字段名（必须）</td>
+</tr>
+<tr><td style="text-align:left">Sum </td>
+<td style="text-align:left"> 获取总分，参数是要统计的字段名（必须）</td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">静态调用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">User</span><span class="o">::</span><span class="na">count</span><span class="p">();</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">avg</span><span class="p">(</span><span class="s1">&#39;score&#39;</span><span class="p">);</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">max</span><span class="p">(</span><span class="s1">&#39;score&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">动态调用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">avg</span><span class="p">(</span><span class="s1">&#39;score&#39;</span><span class="p">);</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">max</span><span class="p">(</span><span class="s1">&#39;score&#39;</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_15">获取器 与 修改器</h2>
+
+<h3 id="toc_16">获取器</h3>
+
+<p class="md_block">
+    <span class="md_line">获取器的作用是在获取数据的字段值后自动进行处理，例如，我们需要对状态值进行转换，可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Member</span> <span class="k">extends</span> <span class="nx">Model</span><span class="p">{</span> 
+    <span class="c1">//获取器,在查询数据时对age字段进行修改</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getAgeAttr</span><span class="p">(</span><span class="nv">$value</span><span class="p">){</span>
+        <span class="k">return</span> <span class="nv">$value</span><span class="o">.</span><span class="s1">&#39;岁&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">又见另一实例,用户状态中文提示</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span>    <span class="k">public</span> <span class="k">function</span> <span class="nf">getStatusAttr</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$status</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span><span class="s1">&#39;删除&#39;</span><span class="p">,</span><span class="mi">0</span><span class="o">=&gt;</span><span class="s1">&#39;禁用&#39;</span><span class="p">,</span><span class="mi">1</span><span class="o">=&gt;</span><span class="s1">&#39;正常&#39;</span><span class="p">,</span><span class="mi">2</span><span class="o">=&gt;</span><span class="s1">&#39;待审核&#39;</span><span class="p">];</span>
+        <span class="k">return</span> <span class="nv">$status</span><span class="p">[</span><span class="nv">$value</span><span class="p">];</span>
+    <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">获取器还可以定义数据表中不存在的字段，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//获取器方法的第二个参数传入的是当前的所有数据数组。</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getAgeTextAttr</span><span class="p">(</span><span class="nv">$value</span><span class="p">,</span><span class="nv">$data</span><span class="p">){</span>
+        <span class="k">return</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="s1">&#39;岁&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">//在控制器方法中调用实例,直接打印出并没有age_test属性.但调它用的属性名可以输出</span>
+        <span class="nv">$data</span> <span class="o">=</span> <span class="nx">Member</span><span class="o">::</span><span class="na">all</span><span class="p">();</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$data</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">){</span>
+            <span class="nx">dump</span><span class="p">(</span><span class="nv">$row</span><span class="o">-&gt;</span><span class="na">age_text</span><span class="p">);</span>
+        <span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">获取原始数据 getData()<br /></span>
+    <span class="md_line">如果你定义了获取器的情况下，希望获取数据表中的原始数据，可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">Member</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="c1">// 通过获取器获取字段</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">());</span><span class="c1">//是对象,转换成数组后是获取器中修改过的数据</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">age</span><span class="p">;</span><span class="c1">//获取修改后的数据</span>
+<span class="c1">// 获取原始字段数据</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span><span class="c1">//获取原始数据</span>
+<span class="c1">// 获取全部原始数据</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">());</span><span class="c1">//获取原始数据数组</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_17">修改器</h3>
+
+<p class="md_block">
+    <span class="md_line">修改器的作用是可以在数据赋值(修改,新增)的时候自动进行转换处理,用法与读取器差不多，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//在模型中定义修改器</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setAgeAttr</span><span class="p">(</span><span class="nv">$value</span><span class="p">){</span>
+        <span class="k">return</span> <span class="nv">$value</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="c1">//中国人的习惯,把年龄用虚岁</span>
+    <span class="p">}</span>
+<span class="c1">//在控制器中测试</span>
+        <span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Member</span><span class="p">();</span>
+        <span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uname&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;修改器&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;xgq@163.com&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="o">=&gt;</span><span class="mi">10</span><span class="p">];</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">isUpdate</span><span class="p">(</span><span class="k">false</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+        <span class="c1">//INSERT INTO `think_member` (`uname` , `email` , `age`) VALUES (&#39;修改器&#39; , &#39;xgq@163.com&#39; , 11)</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">uname</span> <span class="o">=</span> <span class="s1">&#39;修改器KK&#39;</span><span class="p">;</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">age</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+        <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">isUpdate</span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+        <span class="c1">//UPDATE `think_member` SET `uname`=&#39;修改器KK&#39;,`age`=21 WHERE `id` = 25</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_18">时间戳[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">系统支持自动写入创建和更新的时间戳字段，有两种方式配置支持。不需要数据库时间戳支持.我们用的Mysql是支持它的,所以了解下就行了.</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">第一种方式，是在数据库配置文件中添加全局设置：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 开启自动写入时间戳字段</span>
+<span class="s1">&#39;auto_timestamp&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">第二种是直接在单独的模型类里面设置：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">protected</span> <span class="nv">$autoWriteTimestamp</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果这两个地方设置为true，默认识别为整型int类型，如果你的时间字段不是int类型的话，例如使用datetime类型的话，可以这样设置：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 开启自动写入时间戳字段</span>
+<span class="s1">&#39;auto_timestamp&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
+<span class="c1">//或者</span>
+<span class="k">protected</span> <span class="nv">$autoWriteTimestamp</span> <span class="o">=</span> <span class="s1">&#39;datetime&#39;</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">字段名默认创建时间字段为create_time，更新时间字段为update_time，支持的字段类型包括timestamp/datetime/int。<br /></span>
+    <span class="md_line">写入数据的时候，系统会自动写入create_time和update_time字段，而不需要定义修改器，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">//所以只需在数据表中创建两个字段就行了 : create_time update_time</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">();</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;THINKPHP&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">create_time</span><span class="p">;</span> <span class="c1">// 输出类似 1462545582</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">update_time</span><span class="p">;</span> <span class="c1">// 输出类似 1462545582</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">时间戳字段输出的时候一样支持获取器。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果你的数据表字段不是默认值的话，可以按照下面的方式定义：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span> 
+<span class="p">{</span>
+    <span class="c1">// 定义时间戳字段名</span>
+    <span class="k">protected</span> <span class="nv">$createTime</span> <span class="o">=</span> <span class="s1">&#39;create_at&#39;</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$updateTime</span> <span class="o">=</span> <span class="s1">&#39;update_at&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果你只需要使用create_time字段而不需要自动写入update_time，则可以单独设置关闭某个字段，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span> 
+<span class="p">{</span>
+    <span class="c1">// 关闭自动写入update_time字段</span>
+    <span class="k">protected</span> <span class="nv">$updateTime</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果不需要任何自动写入的时间戳字段的话，可以关闭时间戳自动写入功能，设置如下：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span> 
+<span class="p">{</span>
+    <span class="c1">// 关闭自动写入时间戳</span>
+    <span class="k">protected</span> <span class="nv">$autoWriteTimestamp</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">如果是关闭全局的自动时间写入，则可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 关闭全局自动写入时间字段</span>
+<span class="s1">&#39;auto_timestamp&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_19">只读字段</h2>
+
+<p class="md_block">
+    <span class="md_line">只读字段用来保护某些特殊的字段值不被更改，这个字段的值一旦写入，就无法更改。 要使用只读字段的功能，我们只需要在模型中定义readonly属性：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Model</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$readonly</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">例如，上面定义了当前模型的name和email字段为只读字段，不允许被更改。也就是说当执行更新方法之前会自动过滤到只读字段的值，避免更新到数据库。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">下面举个例子说明下：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="c1">// 更改某些字段的值</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;TOPThink&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">email</span> <span class="o">=</span> <span class="s1">&#39;Topthink@gmail.com&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">address</span> <span class="o">=</span> <span class="s1">&#39;上海静安区&#39;</span><span class="p">;</span>
+<span class="c1">// 保存更改后的用户数据</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">事实上，由于我们对name和email字段设置了只读，因此只有address字段的值被更新了，而name和email的值仍然还是更新之前的值。</span>
+</p>
+
+
+<h2 id="toc_20">软删除[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">在实际项目中，对数据频繁使用删除操作会导致性能问题，软删除的作用就是把数据加上删除标记，而不是真正的删除，同时也便于需要的时候进行数据的恢复。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">要使用软删除功能，需要引入SoftDelete trait，例如User模型按照下面的定义就可以使用软删除功能：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">traits\model\SoftDelete</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">SoftDelete</span><span class="p">;</span><span class="c1">// 开启软删除</span>
+    <span class="c1">//5.0.2版本之前deleteTime属性必须使用static定义。</span>
+    <span class="k">protected</span> <span class="nv">$deleteTime</span> <span class="o">=</span> <span class="s1">&#39;delete_time&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">PS:deleteTime属性用于定义你的软删除标记字段，ThinkPHP5的软删除功能使用时间戳类型（数据表默认值为Null），用于记录数据的删除时间。</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">定义好模型后，我们就可以使用：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="c1">// 软删除</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">destroy</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="c1">// 真实删除</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">destroy</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="k">true</span><span class="p">);</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="c1">// 软删除</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+<span class="c1">// 真实删除</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_21">类型转换[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">支持给字段设置类型自动转换，会在写入和读取的时候自动进行类型转换处理，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span> 
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$type</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;status&#39;</span>    <span class="o">=&gt;</span>  <span class="s1">&#39;integer&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;score&#39;</span>     <span class="o">=&gt;</span>  <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;birthday&#39;</span>  <span class="o">=&gt;</span>  <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;info&#39;</span>      <span class="o">=&gt;</span>  <span class="s1">&#39;array&#39;</span><span class="p">,</span>
+    <span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">数据库查询默认取出来的数据都是字符串类型，如果需要转换为其他的类型，需要设置，支持的类型包括如下类型：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">integer<br /></span>
+    <span class="md_line">设置为integer（整型）后，该字段写入和输出的时候都会自动转换为整型。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">float<br /></span>
+    <span class="md_line">该字段的值写入和输出的时候自动转换为浮点型。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">boolean<br /></span>
+    <span class="md_line">该字段的值写入和输出的时候自动转换为布尔型。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">array<br /></span>
+    <span class="md_line">如果设置为强制转换为array类型，系统会自动把数组编码为json格式字符串写入数据库，取出来的时候会自动解码。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">object<br /></span>
+    <span class="md_line">该字段的值在写入的时候会自动编码为json字符串，输出的时候会自动转换为stdclass对象。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">serialize<br /></span>
+    <span class="md_line">指定为序列化类型的话，数据会自动序列化写入，并且在读取的时候自动反序列化。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">json<br /></span>
+    <span class="md_line">指定为json类型的话，数据会自动json_encode写入，并且在读取的时候自动json_decode处理。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">timestamp<br /></span>
+    <span class="md_line">指定为时间戳字段类型的话，该字段的值在写入时候会自动使用strtotime生成对应的时间戳，输出的时候会自动转换为dateFormat属性定义的时间字符串格式，默认的格式为Y-m-d H:i:s，如果希望改变其他格式，可以定义：&#39;timestamp:Y/m/d&#39;</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">datetime<br /></span>
+    <span class="md_line">和timestamp类似，区别在于写入和读取数据的时候都会自动处理成时间字符串Y-m-d H:i:s的格式。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">默认情况下查询的数据不包含软删除数据，如果需要包含软删除的数据，可以使用下面的方式查询：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nx">User</span><span class="o">::</span><span class="na">withTrashed</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">();</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">withTrashed</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
+<span class="c1">//如果仅仅需要查询软删除的数据，可以使用：</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">onlyTrashed</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">();</span>
+<span class="nx">User</span><span class="o">::</span><span class="na">onlyTrashed</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_22">数据完成[了解]</h2>
+
+<p class="md_block">
+    <span class="md_line">相当于数据表字段的默认值功能,配合模型的修改器,功能不错.<br /></span>
+    <span class="md_line">数据自动完成指在不需要手动赋值的情况下对字段的值进行处理后写入数据库。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">系统支持auto、insert和update三个属性，可以分别在写入、新增和更新的时候进行字段的自动完成机制，auto属性自动完成包含新增和更新操作，例如我们定义User模型类如下：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">namespace</span> <span class="nx">app\index\model</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">think\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Model</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$auto</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;ip&#39;</span><span class="p">];</span>
+    <span class="k">protected</span> <span class="nv">$insert</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">];</span>  
+    <span class="k">protected</span> <span class="nv">$update</span> <span class="o">=</span> <span class="p">[];</span>  
+    <span class="c1">//修改器</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">setNameAttr</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">strtolower</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//修改器</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">setIpAttr</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">request</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">ip</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">在新增数据的时候，会对name、ip和 status 字段自动完成或者处理。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;ThinkPHP&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="c1">// thinkphp</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">status</span><span class="p">;</span> <span class="c1">// 1</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">在保存操作的时候，会自动处理name字段的值及完成ip字段的赋值。</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;THINKPHP&#39;</span><span class="p">;</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span> <span class="c1">// thinkphp</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">ip</span><span class="p">;</span> <span class="c1">// 127.0.0.1</span>
+</pre></div>
+
+<!--block_code_end-->
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意: 自动完成并非修改器,与修改器也没什么关系.开发者需自己理清它们之间的关系.</span>
+</p>
+
+</blockquote>
+
+<h2 id="toc_23">查询结果对象与数组转换</h2>
+
+<p class="md_block">
+    <span class="md_line">模型对象支持数组方式访问，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span> <span class="p">;</span> <span class="c1">// 有效</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="c1">// 同样有效</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">;</span> <span class="c1">// 有效</span>
+<span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;thinkphp&#39;</span><span class="p">;</span> <span class="c1">// 同样有效</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">转换为数组<br /></span>
+    <span class="md_line">可以使用toArray方法将当前的模型实例输出为数组，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">());</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">支持设置不输出的字段属性：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">hidden</span><span class="p">([</span><span class="s1">&#39;create_time&#39;</span><span class="p">,</span><span class="s1">&#39;update_time&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">());</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">数组输出的字段值会经过获取器的处理，也可以支持追加其它获取器定义（不在数据表字段列表中）的字段，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">append</span><span class="p">([</span><span class="s1">&#39;status_text&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">());</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">支持设置允许输出的属性，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">dump</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">visible</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">());</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_24">JSON序列化</h2>
+
+<p class="md_block">
+    <span class="md_line">可以调用模型的toJson方法进行JSON序列化</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">toJson</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">可以设置无需输出的字段，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">hidden</span><span class="p">([</span><span class="s1">&#39;create_time&#39;</span><span class="p">,</span><span class="s1">&#39;update_time&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">toJson</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">或者追加其它的字段：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">append</span><span class="p">([</span><span class="s1">&#39;status_text&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">toJson</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">设置允许输出的属性：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">visible</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">toJson</span><span class="p">();</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">模型对象可以直接被JSON序列化，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">输出结果类似于：<br /></span>
+    <span class="md_line">{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;status&quot;:&quot;1&quot;,&quot;update_time&quot;:&quot;1430409600&quot;,&quot;score&quot;:&quot;90.5&quot;}</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">或者也可以直接echo 一个模型对象，例如：</span>
+</p>
+
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="k">echo</span> <span class="nx">User</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">输出的结果和上面是一样的。</span>
+</p>
+
+
+<h2 id="toc_25">关联模型[后来需要再来写日记]</h2> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="../asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

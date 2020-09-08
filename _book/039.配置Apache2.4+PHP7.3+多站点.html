@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>039.配置Apache2.4+PHP7.3+多站点</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="./asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="./asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="./asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="./asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="./asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="./index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="./001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="./002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="./003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="./004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="./005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="./006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="./007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="./008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="./009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="./010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="./011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="./012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="./013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="./014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="./015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="./016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="./017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="./018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="./019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="./020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="./021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="./022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="./023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter" data-path="024.文件系统.html">
+        
+        
+        <a href="./024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="./025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="./026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="./027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="./028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="./029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="./030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="./031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="./032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="./033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="./034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="./035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="./036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="./037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="./038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="./038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="./038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="./038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="./038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter active" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="./039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="./MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="./MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="./MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="./MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="./MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="./MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="./MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="./MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="./MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="./bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="./bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="./bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="./bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="./bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="./bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="./bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="./bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="./bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="./bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="./bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="./bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="./bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="./bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="./bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="./bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="./bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="./bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="./bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="./es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="./jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="./jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="./jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="./jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="./jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="./jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="./jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="./jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="./jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="./jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="./jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="./jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="./jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="./jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="./jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="./jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="./jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="./jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="./jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="./jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="./jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="./jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="./jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="./jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="./jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="./jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="./jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="./jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="./jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="./jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="./jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="./jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="./jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="./jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="./jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="./jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="./jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="./thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="./thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="./thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="./thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="./thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="./thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="./thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="./thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="./thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="./thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="./thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="./thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="./thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="./thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="./thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="./thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="./thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="./thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="./微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="./微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="./微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="./微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="./微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="./微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="./微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="./微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="./微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="./微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="./微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="./index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> 039.配置Apache2.4+PHP7.3+多站点 </h2>
+                    <div class="post_body"> <h1 id="toc_0">039.配置Apache2.4+PHP7.3+多站点</h1>
+
+<p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">039.配置Apache2.4+PHP7.3+多站点</a>
+<ul>
+<li>
+<a href="#toc_1">下载最新版本Apache  我下载的是2.4.39</a>
+<ul>
+<li>
+<a href="#toc_2">下载Apache</a>
+</li>
+<li>
+<a href="#toc_3">下载PHP[框架要求版本较新,不能低于5.6版本]</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_4">Apache+PHP的安装与配置</a>
+<ul>
+<li>
+<a href="#toc_5">配置全局FCGI</a>
+</li>
+<li>
+<a href="#toc_6">配置多站点</a>
+</li>
+<li>
+<a href="#toc_7">配置SSL,也就是支持HTTPS协议</a>
+</li>
+<li>
+<a href="#toc_8">[了解内容]apache 配置服务器http重定向到https</a>
+</li>
+<li>
+<a href="#toc_9">安装phpmyadmin ,多站点配置下并让每个站点可以共享访问</a>
+<ul>
+<li>
+<a href="#toc_10">方法1,一次配置永远有效</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">1. [上面apache配置过] 10.配置文件末尾加一行,这个配置是安装phpmyadmin的,后面用(要结合phpmyadmin.conf用.),注意不要把这行配置写在<IfModule></IfModule>中,否则不生效.</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_12">方法2:为每个站点单独配置,配置的有效,未配置的无效.</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">phpmyadmin下载安装与配置</a>
+</li>
+<li>
+<a href="#toc_14">安装Apache[第一章有介结]</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">PHP7.3.6的配置</a>
+</li>
+<li>
+<a href="#toc_16">安装MariaDB最新稳定版10.3.15</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">下载最新版本Apache  我下载的是2.4.39</h2>
+
+<h3 id="toc_2">下载Apache</h3>
+
+<p class="md_block">
+    <span class="md_line">进入Apache官网,选择windows版本下载<br /></span>
+    <span class="md_line">    <img onerror="this.src='../_image/2019-06-11-15-05-10.jpg';this.onerror=null;"  class="" src="/_image/2019-06-11-15-05-10.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">各种Windows版本,基本都是三方集成版,以ApacheHaus为例:<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-06-11-15-05-59.jpg';this.onerror=null;"  class="" src="/_image/2019-06-11-15-05-59.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">来到<a class="md_compiled" href="https://www.apachehaus.com/cgi-bin/download.plx">https://www.apachehaus.com/cgi-bin/download.plx</a>,可跳过前面两步,直接到此下载,找相应的版本,我是win7_x64系统,安装了VC15运行库,所以我选了64位基于VC15的版本.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-06-11-15-09-37.jpg';this.onerror=null;"  class="" src="/_image/2019-06-11-15-09-37.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">在这个页面往下看,顺便把FCGI扩展给下载了,注意版本对应<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-06-11-15-11-13.jpg';this.onerror=null;"  class="" src="/_image/2019-06-11-15-11-13.jpg" alt="" title="" ></span>
+</p>
+
+
+<h3 id="toc_3">下载PHP[框架要求版本较新,不能低于5.6版本]</h3>
+
+<p class="md_block">
+    <span class="md_line">下载PHP最新版,目前最新版是7.3.6<a class="md_compiled" href="https://windows.php.net/download/">https://windows.php.net/download/</a><br /></span>
+    <span class="md_line">可以选择线程安全与非线程安全版本.我下载了非线程安全的版本<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-06-11-15-15-22.jpg';this.onerror=null;"  class="" src="/_image/2019-06-11-15-15-22.jpg" alt="" title="" ></span>
+</p>
+
+
+<h2 id="toc_4">Apache+PHP的安装与配置</h2>
+
+<p class="md_block">
+    <span class="md_line">1.把Apache与PHP分别解压到本地,注意路径不要有中文,空格.我解压到D:\phpservers  目录中,全程以此为讲解.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-06-11-15-20-38.jpg';this.onerror=null;"  class="" src="/_image/2019-06-11-15-20-38.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">2.解压刚才与Apache一起下载的mod_fcgid-2.3.9a-2.4.x-x64-vc14.zip文件,把里面的Apache24文件夹(复制-粘贴)覆盖到D:\phpservers 中,与Apache24目录合并.</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">3.配置Apache<br /></span>
+    <span class="md_line">编辑D:\phpservers\Apache24\conf\httpd.conf文件,建议用NotePad++等软件,方便些</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 1.改第38行:为Apache指定根目录</span>
+Define SRVROOT <span class="s2">&quot;/Apache24&quot;</span> 
+<span class="c1"># 改为 </span>
+Define SRVROOT <span class="s2">&quot;D:/phpservers/Apache24&quot;</span>
+
+<span class="c1"># 2.去掉第80行注释:让Apache2.4兼容2.2的配置 如Apache2.2版本中的Order、Allow等命令在新版本中也可以得到兼容</span>
+LoadModule access_compat_module modules/mod_access_compat.so
+
+<span class="c1"># 3.去掉第166行注释:让Apache支持.htaccess文件重写</span>
+LoadModule rewrite_module modules/mod_rewrite.so
+
+
+<span class="c1"># 4.在190行处插入一行(我插入在181行处):就是刚才下载并覆盖的FCGI模块</span>
+LoadModule fcgid_module modules/mod_fcgid.so
+
+<span class="c1"># 5. 找到,也可以把注释的两行去掉注释,但这是apache2.2的语法,我注释掉了.</span>
+&lt;Directory /&gt;
+    AllowOverride none
+    Require all denied
+&lt;/Directory&gt;
+<span class="c1"># 改成</span>
+&lt;Directory /&gt;
+    Options +Indexes +FollowSymLinks +ExecCGI
+    AllowOverride All
+<span class="c1">#    Order allow,deny</span>
+<span class="c1">#    Allow from all</span>
+    Require all granted
+&lt;/Directory&gt;
+
+<span class="c1"># 6. 找到并修改:默认主页文件顺序</span>
+&lt;IfModule dir_module&gt;
+    DirectoryIndex index.html
+&lt;/IfModule&gt;
+<span class="c1"># 改成</span>
+&lt;IfModule dir_module&gt;
+    DirectoryIndex index.php index.html l.php
+&lt;/IfModule&gt;
+
+<span class="c1"># 7.查找下面值,并去掉注释:打开虚拟主机配置,支持多站点</span>
+Include conf/extra/httpd-vhosts.conf
+
+<span class="c1"># 8.增加一行配置,建议放在&lt;IfModule&gt;&lt;/IfModule&gt;的末尾(失败不报错),当然放在配置文件的末尾也行(失败报错)</span>
+Include conf/extra/httpd-fcgid.conf
+
+<span class="c1"># 9.让重写模块生效(就是.htaccess),与第4条修改结合用,查找文件中所有的 AllowOverride None 改成</span>
+AllowOverride All
+
+<span class="c1"># 10.配置文件末尾加一行,这个配置是安装phpmyadmin的,后面用(要结合phpmyadmin.conf用.)</span>
+Include conf/phpmyadmin.conf
+
+<span class="c1"># 11.去掉175,178,180,538行注释:配置HTTPS协议,记得开443端口</span>
+LoadModule socache_dbm_module modules/mod_socache_dbm.so
+LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+LoadModule ssl_module modules/mod_ssl.so
+Include conf/extra/httpd-ahssl.conf
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_5">配置全局FCGI</h3>
+
+<p class="md_block">
+    <span class="md_line">修改FCGI配置文件:D:\phpservers\Apache24\conf\extra\httpd-fcgid.conf</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 1. 修改第9行,第10行,指向PHP所在目录</span>
+    FcgidInitialEnv PHPRC <span class="s2">&quot;D:\\phpservers\\php-7.3.6-nts-Win32-VC15-x64&quot;</span>
+    FcgidInitialEnv PATH <span class="s2">&quot;D:\\phpservers\\php-7.3.6-nts-Win32-VC15-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;&quot;</span>
+    
+<span class="c1"># 2.在36行处增加一行,是某些版本不能上传文件(指定可上传文件大小是100MB),但7.3好像不需要,我就注释了,我还是记录下</span>
+<span class="c1">#   FcgidMaxRequestLen 104857600</span>
+
+<span class="c1"># 3.修改第43行,为FCGI指定处理程序</span>
+ FcgidWrapper <span class="s2">&quot;D:/phpservers/php-7.3.6-nts-Win32-VC15-x64/php-cgi.exe&quot;</span> .php
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_6">配置多站点</h3>
+
+<p class="md_block">
+    <span class="md_line">要修改两个配置文件<br /></span>
+    <span class="md_line">1.修改D:\phpservers\Apache24\conf\httpd.conf</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 1. [上面apache配置过] 7.查找下面值,并去掉注释:打开虚拟主机配置,支持多站点</span>
+Include conf/extra/httpd-vhosts.conf
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">2.修改D:\phpservers\Apache24\conf\extra\httpd-vhosts.conf文件,可以把原内容清掉,重新写入,每个<VirtualHost ></VirtualHost>就是一个站点.</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>&lt;VirtualHost _default_:80&gt;
+DocumentRoot <span class="s2">&quot;D:/phpservers/Apache24/htdocs&quot;</span>
+<span class="c1">#   Alias /phpmyadmin &quot;D:/phpservers/phpMyAdmin&quot;</span>
+    FcgidInitialEnv PHPRC <span class="s2">&quot;D:/phpservers/php-7.3.6-nts-Win32-VC15-x64&quot;</span>
+    AddHandler fcgid-script .php
+    FcgidWrapper <span class="s2">&quot;D:/phpservers/php-7.3.6-nts-Win32-VC15-x64/php-cgi.exe&quot;</span> .php
+&lt;Directory <span class="s2">&quot;D:/phpservers/Apache24/htdocs&quot;</span>&gt;
+    Options -Indexes +FollowSymLinks +ExecCGI
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    Require all granted
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+
+
+&lt;VirtualHost *:80&gt;
+    <span class="c1">#指定站点根目录</span>
+    DocumentRoot <span class="s2">&quot;D:\phpservers\Apache24\htdocs\tp5.com&quot;</span>
+    <span class="c1">#指定域名</span>
+    ServerName tp5.com
+    <span class="c1">#域名别名,没有留空,可以多个用空格隔开,多级域名可以用*.xxx.com</span>
+    ServerAlias 
+    <span class="c1"># 设置子目录别名,就是子目录指向别处</span>
+<span class="c1">#   Alias /phpmyadmin &quot;D:/phpservers/phpMyAdmin&quot;</span>
+    <span class="c1"># 下面三行是为本站点用FCGI指定PHP版本.</span>
+    FcgidInitialEnv PHPRC <span class="s2">&quot;D:/phpservers/php-7.3.6-nts-Win32-VC15-x64&quot;</span>
+    AddHandler fcgid-script .php
+    FcgidWrapper <span class="s2">&quot;D:/phpservers/php-7.3.6-nts-Win32-VC15-x64/php-cgi.exe&quot;</span> .php
+    <span class="c1">#下面是为目录设置访问权限</span>
+  &lt;Directory <span class="s2">&quot;D:\phpservers\Apache24\htdocs\tp5.com&quot;</span>&gt;
+      Options FollowSymLinks ExecCGI
+      AllowOverride All
+      Order allow,deny
+      Allow from all
+     Require all granted
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_7">配置SSL,也就是支持HTTPS协议</h3>
+
+<p class="md_block">
+    <span class="md_line">1.修改Apache主配置文件</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 1. [上面apache配置过]  11.去掉175,178,180,538行注释:配置HTTPS协议,记得开443端口</span>
+LoadModule socache_dbm_module modules/mod_socache_dbm.so
+LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+LoadModule ssl_module modules/mod_ssl.so
+Include conf/extra/httpd-ahssl.conf
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">2.修改extra文件夹下面的 httpd-ahssl.conf,直接清除原内容用下面内容取代,因注释太多了（我想用httpd-ssl.conf，但怎么试apache都启动不了,只好放弃）</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>Listen <span class="m">443</span> https
+
+&lt;IfDefine ENABLE_TLS13&gt;
+  SSLProtocol -all +TLSv1.2 +TLSv1.3
+  SSLCipherSuite SSL ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-CHACHA20-POLY1305:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:!RC4:!LOW:!MD5:!aNULL:!eNULL:!3DES:!EXP:!PSK:!SRP:!DSS
+  SSLCipherSuite TLSv1.3 TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384:TLS_AES_128_GCM_SHA256 
+&lt;/IfDefine&gt;
+
+&lt;IfDefine !ENABLE_TLS13&gt;
+SSLProtocol -all +TLSv1.1 +TLSv1.2
+SSLCipherSuite ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-CHACHA20-POLY1305:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:!RC4:!LOW:!MD5:!aNULL:!eNULL:!3DES:!EXP:!PSK:!SRP:!DSS
+SSLProxyCipherSuite ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-CHACHA20-POLY1305:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:!RC4:!LOW:!MD5:!aNULL:!eNULL:!3DES:!EXP:!PSK:!SRP:!DSS
+&lt;/IfDefine&gt;
+
+SSLHonorCipherOrder On
+
+SSLPassPhraseDialog  <span class="nb">builtin</span>
+
+SSLSessionCache        <span class="s2">&quot;shmcb:</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/logs/ssl_scache(512000)&quot;</span>
+SSLSessionCacheTimeout  300
+
+AddType application/x-x509-ca-cert .crt
+AddType application/x-pkcs7-crl    .crl
+
+&lt;FilesMatch <span class="s2">&quot;\.(cgi|shtml|phtml|php)</span>$<span class="s2">&quot;</span>&gt;
+    SSLOptions +StdEnvVars
+&lt;/FilesMatch&gt;
+&lt;Directory <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/cgi-bin&quot;</span>&gt;
+    SSLOptions +StdEnvVars
+&lt;/Directory&gt;
+
+BrowserMatch <span class="s2">&quot;MSIE [2-5]&quot;</span> <span class="se">\</span>
+         nokeepalive ssl-unclean-shutdown <span class="se">\</span>
+         downgrade-1.0 force-response-1.0
+
+CustomLog <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/logs/ssl_request.log&quot;</span> <span class="se">\</span>
+          <span class="s2">&quot;%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \&quot;%r\&quot; %b&quot;</span> <span class="nv">env</span><span class="o">=</span>HTTPS
+
+<span class="c1">##</span>
+<span class="c1">## SSL Virtual Host Context</span>
+<span class="c1">##</span>
+
+&lt;VirtualHost _default_:443&gt;
+  SSLEngine on
+  ServerName localhost:443
+  SSLCertificateFile <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/conf/ssl/server.crt&quot;</span>
+  SSLCertificateKeyFile <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/conf/ssl/server.key&quot;</span>
+  DocumentRoot <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/htdocs&quot;</span>
+<span class="c1"># DocumentRoot access handled globally in httpd.conf</span>
+    CustomLog <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/logs/ssl_request.log&quot;</span> <span class="se">\</span>
+          <span class="s2">&quot;%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \&quot;%r\&quot; %b&quot;</span>
+    &lt;Directory <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/htdocs&quot;</span>&gt;
+        Options Indexes Includes FollowSymLinks
+        AllowOverride AuthConfig Limit FileInfo
+    Require all granted
+    &lt;/Directory&gt;
+&lt;/virtualhost&gt;
+
+&lt;VirtualHost *:443&gt;
+  SSLEngine on
+  ServerName tp5.com
+  SSLCertificateFile <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/conf/ssl/serverone.crt&quot;</span>
+  SSLCertificateKeyFile <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/conf/ssl/serverone.key&quot;</span>
+  DocumentRoot <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/htdocs/tp5.com&quot;</span>
+  FcgidInitialEnv PHPRC <span class="s2">&quot;D:/phpservers/php-7.3.6-nts-Win32-VC15-x64&quot;</span>
+  AddHandler fcgid-script .php
+  FcgidWrapper <span class="s2">&quot;D:/phpservers/php-7.3.6-nts-Win32-VC15-x64/php-cgi.exe&quot;</span> .php
+    CustomLog <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/logs/ssl_request.log&quot;</span> <span class="se">\</span>
+          <span class="s2">&quot;%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \&quot;%r\&quot; %b&quot;</span>
+    &lt;Directory <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SRVROOT</span><span class="si">}</span><span class="s2">/htdocs/tp5.com&quot;</span>&gt;
+        Options Indexes Includes FollowSymLinks ExecCGI
+        AllowOverride AuthConfig Limit FileInfo
+        Require all granted
+    &lt;/Directory&gt;
+&lt;/virtualhost&gt;
+
+<span class="c1"># 这样写也是可以的,很简单</span>
+<span class="c1"># &lt;VirtualHost *:443&gt;</span>
+<span class="c1">#   DocumentRoot &quot;${SRVROOT}/htdocs/tp5.com&quot;</span>
+<span class="c1">#   ServerName tp5.com</span>
+<span class="c1">#   SSLEngine on</span>
+<span class="c1">#   SSLCertificateFile &quot;${SRVROOT}/conf/ssl/serverone.crt&quot;</span>
+<span class="c1">#   SSLCertificateKeyFile &quot;${SRVROOT}/conf/ssl/serverone.key&quot;</span>
+<span class="c1"># &lt;/VirtualHost&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_8">[了解内容]apache 配置服务器http重定向到https</h3>
+
+<pre><code>未测试,此配置来自互联网
+修改apache 配置文件httpd.conf
+
+1.去掉LoadModule rewrite_module modules/mod_rewrite.so 前面的#号
+
+2.找到
+Directory "/var/www/html/app/src/htdocs_www"&gt;
+# Possible values for the Options directive are "None", "All",
+# or any combination of:
+# Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+#
+# Note that "MultiViews" must be named *explicitly* --- "Options All"
+# doesn't give it to you.
+#
+# The Options directive is both complicated and important. Please see
+# http://httpd.apache.org/docs/2.2/mod/core.html#options
+# for more information.
+#
+Options Indexes FollowSymLinks
+#
+# AllowOverride controls what directives may be placed in .htaccess files.
+# It can be "All", "None", or any combination of the keywords:
+# Options FileInfo AuthConfig Limit
+#
+#
+AllowOverride All
+#
+# Controls who can get stuff from this server.
+#
+Order allow,deny
+Allow from all
+# 新增
+RewriteEngine on
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^(.*)?$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+&lt;/Directory&gt;
+按照这个来配置的，结果就是当前服务器下所有的项目都会强制跳转，如果你的服务器上只挂了一个项目，那就没问题，如果是多个，并且有http不想跳转https 就要利用.htaccess 文件
+
+3.Apache 配置 单个项目 http重定向到https
+
+1.还是和上面一样，在httpd.conf去掉下面这一句的#
+LoadModule rewrite_module modules/mod_rewrite.so
+
+2.新建.htaccess文件(windows系统就是新建 .htaccess. 文件，后面加个 . 就可以创建了)
+
+然后输入如下规则
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.domain.com [NC]
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
+上面的作用就是 开启url重写，当 域名是www.domain.com ，并且端口不是 443 就进行永久重定向到https://www.domain.com/............(参数省略)
+
+这个domain根据自己的网址修改。
+
+修改好以后把 .htaccess 文件 放到你的项目的根目录下（比如我是www/myproject， 我就放到myproject文件夹里），重启apache 即可实现重定向。</code></pre>
+
+<!--block_code_end-->
+<h3 id="toc_9">安装phpmyadmin ,多站点配置下并让每个站点可以共享访问</h3>
+
+<p class="md_block">
+    <span class="md_line">要修改两个配置文件,提供2种方法.</span>
+</p>
+
+
+<h4 id="toc_10">方法1,一次配置永远有效</h4>
+
+<p class="md_block">
+    <span class="md_line">1.修改apache主配置文件D:\phpservers\Apache24\conf\httpd.conf<br /></span>
+    <span class="md_line">```shell</span>
+</p>
+
+
+<h1 id="toc_11">1. [上面apache配置过] 10.配置文件末尾加一行,这个配置是安装phpmyadmin的,后面用(要结合phpmyadmin.conf用.),注意不要把这行配置写在<IfModule></IfModule>中,否则不生效.</h1>
+
+<p class="md_block">
+    <span class="md_line">Include conf/phpmyadmin.conf<br /></span>
+    <span class="md_line">```</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">2.用记事本创建一个文件:D:\phpservers\Apache24\conf\phpmyadmin.conf 内容如下:</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">这个收集于互联网,注释部分是某些老版本支持,在PHP7.3中会报错.所以注释掉了.</span>
+</p>
+
+</blockquote>
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>Alias /phpmyadmin <span class="s2">&quot;D:/phpservers/phpMyAdmin&quot;</span>
+&lt;Directory <span class="s2">&quot;D:/phpservers/phpMyAdmin&quot;</span>&gt;
+    Options +Indexes +FollowSymLinks +ExecCGI
+    AllowOverride All
+<span class="c1">#    Order allow,deny</span>
+<span class="c1">#    Allow from all</span>
+    Require all granted
+<span class="c1">#   php_admin_value upload_max_filesize 128M</span>
+<span class="c1">#   php_admin_value post_max_size 128M</span>
+<span class="c1">#   php_admin_value max_execution_time 360</span>
+<span class="c1">#   php_admin_value max_input_time 360</span>
+&lt;/Directory&gt;
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_12">方法2:为每个站点单独配置,配置的有效,未配置的无效.</h4>
+
+<p class="md_block">
+    <span class="md_line">修改多站点配置文件D:\phpservers\Apache24\conf\extra\httpd-vhosts.conf</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 在每个站点中增加一行,上面示例文件我写进去了,但进行了注释,去掉注释就行了.</span>
+<span class="c1">#   Alias /phpmyadmin &quot;D:/phpservers/phpMyAdmin&quot;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_13">phpmyadmin下载安装与配置</h3>
+
+<ol>
+<li>下载最新版本:https://www.phpmyadmin.net/  目前最新版本是4.9.0.1,直接下载,自带所有语言包.</li>
+<li>
+<p class="md_block">
+    <span class="md_line">解压到如下路径:</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">D:\phpservers\phpMyAdmin</span>
+</p></li>
+<li>
+<p class="md_block">
+    <span class="md_line">重命名D:\phpservers\phpMyAdmin\config.sample.inc.php 为 config.inc.php,并修改里面内容:</span>
+</p></li>
+</ol>
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">phpMyAdmin当然也可以进入配置向导进行配置,但过程繁锁不建议,具体是配好访问路径,用浏览器访问setup目录就行.如:http://localhost/phpmyadmin/setup,按提示操作即可.</span>
+</p>
+
+</blockquote>
+<div class="codehilite code_lang_php  highlight"><pre><span></span><span class="nv">$cfg</span><span class="p">[</span><span class="s1">&#39;blowfish_secret&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="c1">//值随便给个字符串就行,如下</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">&#39;blowfish_secret&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;c4ca4238a0b923820dcc509a6f75899a&#39;</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_14">安装Apache[第一章有介结]</h3>
+
+<p class="md_block">
+    <span class="md_line">安装Apache:以管理员身份启动DOS,进入到D:\phpservers\Apache24\bin目录,输入:httpd -k install (由于我安装了多次,为了服务名不重复 用了 -n 服务名参数) 等待安装完成.如果报错,重装.提示“The &#39;Apache2.4&#39; service is successfully installed.”，说明安装成功,失败删除服务重装(sc delete apache24)</span>
+</p>
+
+
+<h2 id="toc_15">PHP7.3.6的配置</h2>
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">1.修改PHP目录下的配置文件名<br /></span>
+    <span class="md_line">D:\phpservers\php-7.3.6-nts-Win32-VC15-x64\php.ini-development 重命名为:php.ini<br /></span>
+    <span class="md_line">2.修改里面内容</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">配置文件中用到的三个扩展下载,打开下载页找相应版本即可:<br /></span>
+    <span class="md_line">1.xdebug用于PHP代码调式: https://xdebug.org/download.php<br /></span>
+    <span class="md_line">2.memcache用于session缓存: https://github.com/nono303/PHP7-memcache-dll<br /></span>
+    <span class="md_line">3.redis,本地数据库,可取代memcache: https://windows.php.net/downloads/pecl/snaps/redis/4.2.0/</span>
+</p>
+
+</blockquote>
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 1.指定扩展目录753行:</span>
+<span class="p">;</span><span class="nv">extension_dir</span> <span class="o">=</span> <span class="s2">&quot;ext&quot;</span>
+<span class="c1"># 去掉注释并改为如下:路径要对哦.....里面一堆DLL文件.</span>
+<span class="nv">extension_dir</span> <span class="o">=</span> <span class="s2">&quot;D:\phpservers\php-7.3.6-nts-Win32-VC15-x64\ext&quot;</span>
+
+<span class="c1"># 2.找到905行,开始改,打开常用扩展.没有的下载</span>
+<span class="nv">extension</span><span class="o">=</span>bz2
+<span class="nv">extension</span><span class="o">=</span>curl
+<span class="nv">extension</span><span class="o">=</span>fileinfo
+<span class="nv">extension</span><span class="o">=</span>gd2
+<span class="nv">extension</span><span class="o">=</span>mbstring
+<span class="nv">extension</span><span class="o">=</span>mysqli
+<span class="nv">extension</span><span class="o">=</span>openssl
+<span class="nv">extension</span><span class="o">=</span>pdo_mysql
+<span class="nv">extension</span><span class="o">=</span>php-7.3.x_memcache.dll <span class="c1">#需自己下载:https://github.com/nono303/PHP7-memcache-dll</span>
+<span class="nv">extension</span><span class="o">=</span>php_redis <span class="c1">#需自己下载https://windows.php.net/downloads/pecl/snaps/redis/4.2.0/</span>
+<span class="nv">extension</span><span class="o">=</span>sockets
+<span class="nv">extension</span><span class="o">=</span>sqlite3
+
+<span class="c1"># 3.设置时区为东8区,就是中国时间:</span>
+date.timezone <span class="o">=</span> PRC
+
+<span class="c1"># 4.如果打开了sqlite3扩展,就去掉注释</span>
+sqlite3.defensive <span class="o">=</span> 1
+
+<span class="c1"># 5.设置session文件目录</span>
+session.save_path <span class="o">=</span> <span class="s2">&quot;D:\phpservers\php-7.3.6-nts-Win32-VC15-x64\tmp&quot;</span>
+
+<span class="c1"># 6.配置Xdebug,放在配置文件的最后,xdebug需自己下载:https://xdebug.org/download.php</span>
+<span class="o">[</span>XDebug<span class="o">]</span>
+xdebug.profiler_output_dir<span class="o">=</span><span class="s2">&quot;D:\phpservers\php-7.3.6-nts-Win32-VC15-x64\tmp\xdebug&quot;</span>
+xdebug.trace_output_dir<span class="o">=</span><span class="s2">&quot;D:\phpservers\php-7.3.6-nts-Win32-VC15-x64\tmp\xdebug&quot;</span>
+<span class="nv">zend_extension</span><span class="o">=</span><span class="s2">&quot;D:\phpservers\php-7.3.6-nts-Win32-VC15-x64\ext\php_xdebug-2.7.2-7.3-vc15-nts-x86_64.dll&quot;</span>
+xdebug.remote_enable <span class="o">=</span> On
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_16">安装MariaDB最新稳定版10.3.15</h2>
+
+<p class="md_block">
+    <span class="md_line">下载安装超简单https://downloads.mariadb.org 按说明说最新版是10.4,但提示是测试版,不建议用于生产坏境,所以我下载了10.3.15稳定版本.可以下载windows下安装版或压缩版.两个都可以试下.<br /></span>
+    <span class="md_line">下面页面:https://downloads.mariadb.org/mariadb/10.3.15/<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-06-11-20-18-21.jpg';this.onerror=null;"  class="" src="/_image/2019-06-11-20-18-21.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">直接用压缩版.解压到D:\phpservers\mariadb-10.3.15-winx64进行安装<br /></span>
+    <span class="md_line">附上my.ini配置文件内容,这是我用安装包得到的,可以放在D:\phpservers\mariadb-10.3.15-winx64根目录下或D:\phpservers\mariadb-10.3.15-winx64\data目录下好像都行.但建议放根目录.<br /></span>
+    <span class="md_line">安装: </span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 第一步:用客理员身份进行命令提示符,进行如下操作:</span>
+<span class="nb">cd</span> /d D:<span class="se">\p</span>hpservers<span class="se">\m</span>ariadb-10.3.15-winx64
+mysqld --install MariaDB
+<span class="c1"># 第二步:修改初始密码</span>
+<span class="c1">#命令示例：</span>
+mysql -uroot -p
+<span class="c1"># (直接回车，默认密码为空)</span>
+<span class="nb">set</span> password <span class="k">for</span> <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> <span class="o">=</span> password<span class="o">(</span><span class="s1">&#39;root&#39;</span><span class="o">)</span><span class="p">;</span>
+<span class="c1"># 我的设置过root可以远程访问,所以是</span>
+<span class="c1"># set password for &#39;root&#39;@&#39;%&#39; = password(&#39;root&#39;);</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">提供配置文件my.ini</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="o">[</span>mysqld<span class="o">]</span>
+<span class="nv">datadir</span><span class="o">=</span>D:/phpservers/mariadb-10.3.15-winx64/data
+<span class="nv">port</span><span class="o">=</span>3306
+<span class="nv">innodb_buffer_pool_size</span><span class="o">=</span>1009M
+<span class="c1"># default-storage-engine=MyISAM # CSV,MRG_MyISAM,MEMORY,MyISAM,SEQUENCE,InnoDB,Aria,PERFORMANCE_SCHEMA</span>
+character-set-server<span class="o">=</span>utf8
+<span class="o">[</span>client<span class="o">]</span>
+<span class="nv">port</span><span class="o">=</span>3306
+plugin-dir<span class="o">=</span>D:/phpservers/mariadb-10.3.15-winx64/lib/plugin
+default-character-set<span class="o">=</span>utf8
+</pre></div>
+
+<!--block_code_end--> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="./asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
