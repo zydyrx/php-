@@ -1,0 +1,3941 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>028.版本控制-GIT</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="./asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="./asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="./asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="./asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="./asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="./index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="./001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="./002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="./003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="./004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="./005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="./006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="./007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="./008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="./009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="./010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="./011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="./012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="./013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="./014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="./015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="./016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="./017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="./018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="./019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="./020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="./021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="./022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="./023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter" data-path="024.文件系统.html">
+        
+        
+        <a href="./024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="./025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="./026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="./027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter active" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="./028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="./029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="./030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="./031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="./032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="./033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="./034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="./035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="./036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="./037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="./038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="./038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="./038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="./038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="./038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="./039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="./MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="./MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="./MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="./MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="./MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="./MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="./MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="./MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="./MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="./ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="./bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="./bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="./bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="./bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="./bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="./bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="./bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="./bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="./bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="./bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="./bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="./bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="./bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="./bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="./bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="./bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="./bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="./bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="./bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="./es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="./jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="./jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="./jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="./jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="./jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="./jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="./jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="./jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="./jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="./jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="./jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="./jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="./jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="./jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="./jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="./jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="./jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="./jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="./jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="./jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="./jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="./jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="./jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="./jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="./jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="./jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="./jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="./jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="./jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="./jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="./jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="./jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="./jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="./jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="./jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="./jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="./jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="./jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="./thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="./thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="./thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="./thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="./thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="./thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="./thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="./thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="./thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="./thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="./thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="./thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="./thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="./thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="./thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="./thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="./thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="./thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="./thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="./微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="./微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="./微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="./微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="./微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="./微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="./微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="./微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="./微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="./微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="./微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="./index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> 028.版本控制-GIT </h2>
+                    <div class="post_body"> <p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">028.版本控制-GIT</a>
+<ul>
+<li>
+<a href="#toc_1">版本控制工具应该具备的功能</a>
+</li>
+<li>
+<a href="#toc_2">版本控制简介</a>
+</li>
+<li>
+<a href="#toc_3">Git 简史</a>
+</li>
+<li>
+<a href="#toc_4">Git 的优势</a>
+</li>
+<li>
+<a href="#toc_5">下载安装</a>
+<ul>
+<li>
+<a href="#toc_6">安装总结:在WINDOWS下除了第二步(设置安装路径),别的都直接下一步就好了.</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">Git结构界绍</a>
+</li>
+<li>
+<a href="#toc_8">Git 和代码托管中心</a>
+</li>
+<li>
+<a href="#toc_9">本地库和远程库</a>
+</li>
+<li>
+<a href="#toc_10">Git 命令行操作</a>
+<ul>
+<li>
+<a href="#toc_11">几个常用的Linux命令</a>
+<ul>
+<li>
+<a href="#toc_12">进入指定目录:cd 目录名</a>
+</li>
+<li>
+<a href="#toc_13">删除文件 rm 文件名</a>
+</li>
+<li>
+<a href="#toc_14">查看文件结构 ls</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">清屏 clear</a>
+<ul>
+<li>
+<a href="#toc_16">显示当前路径:pwd</a>
+</li>
+<li>
+<a href="#toc_17">查看文件内容:cat 文件名</a>
+</li>
+<li>
+<a href="#toc_18">vim编辑器</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_19">本地库初始化</a>
+</li>
+<li>
+<a href="#toc_20">设置签名</a>
+</li>
+<li>
+<a href="#toc_21">基本操作</a>
+<ul>
+<li>
+<a href="#toc_22">状态查看</a>
+</li>
+<li>
+<a href="#toc_23">添加到暂存区</a>
+<ul>
+<li>
+<a href="#toc_24">思考,如果项目中新增了多个文件,怎么操作:</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_25">清除暂存区</a>
+</li>
+<li>
+<a href="#toc_26">提交</a>
+</li>
+<li>
+<a href="#toc_27">查看历史记录</a>
+</li>
+<li>
+<a href="#toc_28">版本回退</a>
+<ul>
+<li>
+<a href="#toc_29">基于索引值操作[推荐]</a>
+</li>
+<li>
+<a href="#toc_30">使用^符号：只能后退</a>
+</li>
+<li>
+<a href="#toc_31">使用~符号：只能后退</a>
+</li>
+<li>
+<a href="#toc_32">reset 命令的三个参数对比 -- 以删除错误的提交举例</a>
+<ul>
+<li>
+<a href="#toc_33">删除文件并找回,用git reset --hard [指针位置]</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_34">比较文件差异</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_35">分支管理</a>
+<ul>
+<li>
+<a href="#toc_36">什么是分支</a>
+</li>
+<li>
+<a href="#toc_37">分支的好处</a>
+</li>
+<li>
+<a href="#toc_38">4.4.3   分支操作</a>
+<ul>
+<li>
+<a href="#toc_39">创建分支</a>
+</li>
+<li>
+<a href="#toc_40">查看分支</a>
+</li>
+<li>
+<a href="#toc_41">切换分支</a>
+</li>
+<li>
+<a href="#toc_42">合并分支</a>
+</li>
+<li>
+<a href="#toc_43">解决冲突</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_44">Git 基本原理[了解]</a>
+</li>
+<li>
+<a href="#toc_45">GitHub</a>
+<ul>
+<li>
+<a href="#toc_46">账号信息</a>
+</li>
+<li>
+<a href="#toc_47">创建远程库</a>
+</li>
+<li>
+<a href="#toc_48">在本地设置远程地址别名</a>
+</li>
+<li>
+<a href="#toc_49">把本地项目推送到远程</a>
+</li>
+<li>
+<a href="#toc_50">本地分支与远程分支建议关联</a>
+</li>
+<li>
+<a href="#toc_51">克隆远程版本库项目</a>
+</li>
+<li>
+<a href="#toc_52">团队合作,Github邀请开发成员.</a>
+</li>
+<li>
+<a href="#toc_53">拉取</a>
+</li>
+<li>
+<a href="#toc_54">解决冲突</a>
+</li>
+<li>
+<a href="#toc_55">跨团队协作[麻烦些]</a>
+<ul>
+<li>
+<a href="#toc_56">Fork</a>
+</li>
+<li>
+<a href="#toc_57">pull request</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_58">SSH 登录</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_59">GPG设置防伪造签名</a>
+<ul>
+<li>
+<a href="#toc_60">生成GPG</a>
+</li>
+<li>
+<a href="#toc_61">查看公,私钥(内容是一样的)</a>
+</li>
+<li>
+<a href="#toc_62">得到密钥内容填入Github</a>
+</li>
+<li>
+<a href="#toc_63">本地git配置</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_64">自己搭建远程GIT服务器.</a>
+<ul>
+<li>
+<a href="#toc_65">前提[JAVA运行环境],也是补充知识</a>
+</li>
+<li>
+<a href="#toc_66">下载安装Gitblit</a>
+</li>
+<li>
+<a href="#toc_67">配置gitblit</a>
+</li>
+<li>
+<a href="#toc_68">启动gitblit</a>
+</li>
+<li>
+<a href="#toc_69">把gitblit安装成操作系统服务</a>
+<ul>
+<li>
+<a href="#toc_70">如果启不动服务</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_71">sourcetree 使用</a>
+<ul>
+<li>
+<a href="#toc_72">下载安装</a>
+</li>
+<li>
+<a href="#toc_73">离线安装免配置文件</a>
+<ul>
+<li>
+<a href="#toc_74">　添加 accounts.json 文件</a>
+</li>
+<li>
+<a href="#toc_75">修改文件user.config</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_76">配置</a>
+</li>
+<li>
+<a href="#toc_77">操作(演示及操作)</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">版本控制工具应该具备的功能</h2>
+
+<p class="md_block">
+    <span class="md_line">协同修改<br /></span>
+    <span class="md_line">多人并行不悖的修改服务器端的同一个文件。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">数据备份<br /></span>
+    <span class="md_line">不仅保存目录和文件的当前状态，还能够保存每一个提交过的历史状态。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">版本管理<br /></span>
+    <span class="md_line">在保存每一个版本的文件信息的时候要做到不保存重复数据，以节约存储空间，提高运行效率。这方面 SVN采用的是增量式管理的方式，而 Git 采取了文件系统快照的方式。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">权限控制<br /></span>
+    <span class="md_line">对团队中参与开发的人员进行权限控制。<br /></span>
+    <span class="md_line">对团队外开发者贡献的代码进行审核——Git 独有。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">历史记录<br /></span>
+    <span class="md_line">查看修改人、修改时间、修改内容、日志信息。<br /></span>
+    <span class="md_line">将本地文件恢复到某一个历史状态。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">分支管理<br /></span>
+    <span class="md_line">允许开发团队在工作过程中多条生产线同时推进任务，进一步提高效率。</span>
+</p>
+
+
+<h2 id="toc_2">版本控制简介</h2>
+
+<p class="md_block">
+    <span class="md_line">版本控制<br /></span>
+    <span class="md_line">工程设计领域中使用版本控制管理工程蓝图的设计过程。在 IT 开发过程中也可以<br /></span>
+    <span class="md_line">使用版本控制思想管理代码的版本迭代。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">版本控制工具<br /></span>
+    <span class="md_line">思想：版本控制<br /></span>
+    <span class="md_line">实现：版本控制工具<br /></span>
+    <span class="md_line">集中式版本控制工具：CVS、SVN、VSS……<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-09-51-51.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-09-51-51.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">分布式版本控制工具:Git、Mercurial、Bazaar、Darcs……每一台电脑上都有....<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-09-52-16.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-09-52-16.jpg" alt="" title="" ></span>
+</p>
+
+
+<h2 id="toc_3">Git 简史</h2>
+
+<p class="md_block">
+    <span class="md_line">同生活中的许多伟大事物一样，Git 诞生于一个极富纷争大举创新的年代。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">Linux 内核开源项目有着为数众多的参与者。 绝大多数的 Linux 内核维护工作都花在了提交补丁和保存归档的繁琐事务上（1991－2002年间）。 到 2002 年，整个项目组开始启用一个专有的分布式版本控制系统 BitKeeper 来管理和维护代码。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">到了 2005 年，开发 BitKeeper 的商业公司同 Linux 内核开源社区的合作关系结束，他们收回了 Linux 内核社区免费使用 BitKeeper 的权力。 这就迫使 Linux 开源社区（特别是 Linux 的缔造者 Linus Torvalds）基于使用 BitKeeper 时的经验教训，开发出自己的版本系统。 他们对新的系统制订了若干目标：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">速度<br /></span>
+    <span class="md_line">简单的设计<br /></span>
+    <span class="md_line">对非线性开发模式的强力支持（允许成千上万个并行开发的分支）<br /></span>
+    <span class="md_line">完全分布式<br /></span>
+    <span class="md_line">有能力高效管理类似 Linux 内核一样的超大规模项目（速度和数据量）</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。 它的速度飞快，极其适合管理大项目，有着令人难以置信的非线性分支管理系统.</span>
+</p>
+
+
+<h2 id="toc_4">Git 的优势</h2>
+
+<p class="md_block">
+    <span class="md_line">大部分操作在本地完成，不需要联网<br /></span>
+    <span class="md_line">完整性保证<br /></span>
+    <span class="md_line">尽可能添加数据而不是删除或修改数据<br /></span>
+    <span class="md_line">分支操作非常快捷流畅<br /></span>
+    <span class="md_line">操作命令与 Linux 命令全面兼容</span>
+</p>
+
+
+<h2 id="toc_5">下载安装</h2>
+
+<p class="md_block">
+    <span class="md_line">下载最新WINDOWS版本:https://git-scm.com/download/win</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">安装:图片收集自网络.<br /></span>
+    <span class="md_line">第一步 直接下一步<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/3deb90d9ef8dbe243356979c8f494ff8_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/3deb90d9ef8dbe243356979c8f494ff8_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第二步 选择安装位置,注意路径不能有中文,不能用空格<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/ebd0171f026a3fd9c97e7af4b2b50ead_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/ebd0171f026a3fd9c97e7af4b2b50ead_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第三步 组件 推荐选择默认组件，桌面图标看个人。<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2f8b39ba8de29cd9bf75c50b2c99c1a3_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/2f8b39ba8de29cd9bf75c50b2c99c1a3_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第四步 新版本跳过了,创建开始菜单,部分操作系统没有显示...<br /></span>
+    <span class="md_line">第五步 选择git使用的编辑器,这个用默认的VIM就行,应是Linux遗留问题,选别的要求先安装.从上往下依次是Nano，Vim ，Notepad++ ，Visual Studio Code，Visual Studio Code insiders，Sublime Text，atom，以上选项点击蓝色字体可以进入对应官网。最后一项是查找本地编辑器，选好之后测试一下会弹出测试结果<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-10-01-24.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-10-01-24.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">第六步 配置环境 推荐选择前两个第一个最安全第二个比较安全,默认是选择第二个,如果要选择第一个,建议自己去配置操作系统的PATH环境,不然后续不好使用.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/7e1dd2993dd78def160cc11f448ab636_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/7e1dd2993dd78def160cc11f448ab636_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第七步 git传输方式:默认是openssl库,下一步.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/0ea880f9dddf5090a05d7d09306cd3d1_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/0ea880f9dddf5090a05d7d09306cd3d1_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第八步 配置行结束转换 git在检出文本文件和提交文本文件时的转换方式。Windows和Unix行尾结束符是不一样的前者是\n\r后者是\n，第一项就是检出成Windows文件，提交成Linux文件，第二项是提交Linux文件。<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/a3a1a3ab9a4d39c4e4daaaf301c52a60_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/a3a1a3ab9a4d39c4e4daaaf301c52a60_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第九步 配置git Bash终端模拟器 推荐默认值MinTTY<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/78b3bef4e85d493e6c3468b6bcdc1bb1_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/78b3bef4e85d493e6c3468b6bcdc1bb1_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第十步 额外配置 默认就好<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/a1730e0592fcf89f3bfe3bde8a3643d8_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png';this.onerror=null;"  class="" src="/_image/a1730e0592fcf89f3bfe3bde8a3643d8_watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDkzNzUyNw==,size_16,color_FFFFFF,t_70.png" alt="" title="" ><br /></span>
+    <span class="md_line">第十二步 安装完成之后测试是否安装成功,是否配置了操作系统PATH.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-10-09-34.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-10-09-34.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">第十三步 配置全局的用户名和邮箱<br /></span>
+    <span class="md_line">修改用户名、邮箱命令<br /></span>
+    <span class="md_line">$ git config --global user.name “xxxx”<br /></span>
+    <span class="md_line">$ git config --global user.email &quot;xxxxx@xxx.com&quot;</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">查看用户名、邮箱命令<br /></span>
+    <span class="md_line">$ git config user.name<br /></span>
+    <span class="md_line">$ git config user.email<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-10-11-03.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-10-11-03.jpg" alt="" title="" ></span>
+</p>
+
+
+<h3 id="toc_6">安装总结:在WINDOWS下除了第二步(设置安装路径),别的都直接下一步就好了.</h3>
+
+<h2 id="toc_7">Git结构界绍</h2>
+
+<p class="md_block">
+    <span class="md_line">Git创建的版本控制直接在项目的目录中,所以要了解下结构.<br /></span>
+    <span class="md_line">本地库:版本库管理,各种历史版本<br /></span>
+    <span class="md_line">暂存区:临时存储区,等待提交内容<br /></span>
+    <span class="md_line">工作区:写代码的地方</span>
+</p>
+
+
+<h2 id="toc_8">Git 和代码托管中心</h2>
+
+<p class="md_block">
+    <span class="md_line">代码托管中心的任务：维护远程库</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">局域网环境下<br /></span>
+    <span class="md_line">GitLab 或 Gitblit等 服务器(后面安装个)</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">外网环境下<br /></span>
+    <span class="md_line">GitHub(国外)<br /></span>
+    <span class="md_line">码云(国内)</span>
+</p>
+
+
+<h2 id="toc_9">本地库和远程库</h2>
+
+<p class="md_block">
+    <span class="md_line">团队内部协作</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_img">
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-10-36-51.png';this.onerror=null;"  class="" src="/_image/2019-05-25-10-36-51.png" alt="" title="" ><br /></span>
+    <span class="md_line">跨团队协作</span>
+</p>
+
+<img onerror="this.src='../_image/2019-05-25-10-37-29.png';this.onerror=null;"  class="" src="/_image/2019-05-25-10-37-29.png" alt="" title="" >
+<h2 id="toc_10">Git 命令行操作</h2>
+
+<h3 id="toc_11">几个常用的Linux命令</h3>
+
+<p class="md_block">
+    <span class="md_line">因git bash用的都是linux命令,我们先学几个常用的linux命令</span>
+</p>
+
+
+<h4 id="toc_12">进入指定目录:cd 目录名</h4>
+
+<p class="md_block">
+    <span class="md_line">cd 目录/<br /></span>
+    <span class="md_line">这个命令与Windows一样,进入到指定文件夹中去, 但有几个参数我们学习下,</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># cd ~     #  或 cd ~/  是进入到用户目录</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_13">删除文件 rm 文件名</h4>
+
+<h4 id="toc_14">查看文件结构 ls</h4>
+
+<p class="md_block">
+    <span class="md_line">在Windows下用的是dir命令</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>ls  <span class="c1"># 显示目录结构</span>
+ls -a <span class="c1">#显示隐藏文件</span>
+ls -l <span class="c1">#显示读写权限,用户,时间  部分版本可以写成  ll 命令</span>
+ls -lA <span class="c1">#显示隐藏文件,比ls -la少显示当前目录与上级目录..看起来好看些</span>
+ls -lA<span class="p">|</span>less <span class="c1">#进入多屏显示,进入后操作方法如下</span>
+<span class="c1">#----------------------------------------------</span>
+<span class="c1"># 多屏显示控制方式：</span>
+<span class="c1"># 空格向下翻页</span>
+<span class="c1"># b 向上翻页</span>
+<span class="c1"># q 退出</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_15">清屏 clear</h3>
+
+<h4 id="toc_16">显示当前路径:pwd</h4>
+
+<h4 id="toc_17">查看文件内容:cat 文件名</h4>
+
+<h4 id="toc_18">vim编辑器</h4>
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 1.打开文件</span>
+vim 文件名 <span class="c1">#打开文件</span>
+:set nu <span class="c1">#显示行号</span>
+
+<span class="c1"># 2.编辑文本</span>
+    i   <span class="c1">#进入到编辑文本模式  新手记得这个就行</span>
+    <span class="c1"># 更多介绍</span>
+        <span class="c1"># i:切换到插入模式，并在当前光标位置之前开始插入（插入）</span>
+        <span class="c1"># I:将光标移至当前行的开头位置，并切换至插入模式</span>
+        <span class="c1"># a:切换到插入模式，并在当前光标位置之后开始插入（附加）</span>
+        <span class="c1"># A:将光标移至当前行的结尾位置，并切换至插入模式</span>
+        <span class="c1"># R:从光标下的字符开始，切换到插入模式。处于插入模式时，不会插入文本，此时输入的每个字符均将替换掉当前文档的字符。（vim和vi也具有更多更强大的替换命令，详细见第三章第8节）</span>
+        <span class="c1"># o:在当前行的下方新打开一个行，并切换到插入模式</span>
+        <span class="c1"># O:在当前行的上方新打开一个行，并切换到插入模式 </span>
+
+<span class="c1"># 3.编辑完成后操作</span>
+    <span class="c1"># 3.1.先按键盘esc键,退出编辑状态. 也可以在退出编辑状态后使用更多快捷键.比如光标定位</span>
+        <span class="c1"># h光标向左移动一个位置</span>
+        <span class="c1"># l光标向右移动一个位置</span>
+        <span class="c1"># j光标向下移动一行</span>
+        <span class="c1"># k光标向上移动一行</span>
+        <span class="c1"># ^移至当前行的开头位置</span>
+        <span class="c1"># $移至当前行的结尾位置</span>
+        <span class="c1"># gg移至文档的第一行</span>
+        <span class="c1"># G移至文档的最后一行</span>
+        
+    <span class="c1">#3.2.进行如下相关操作</span>
+        :wq  <span class="c1">#保存并退出当前文件</span>
+        :w   <span class="c1">#保存当前文件并留在编辑器中</span>
+        :w！ <span class="c1">#若文本为只读模式，强制保存</span>
+        :q   <span class="c1">#退出当前文件（仅在没有未保存更改的情况下）</span>
+        :q!  <span class="c1">#退出当前文件，忽略任何未保存的修改</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_19">本地库初始化</h3>
+
+<p class="md_block">
+    <span class="md_line">命令：git init<br /></span>
+    <span class="md_line">效果:<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-15-39-14.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-15-39-14.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">注意：.git 目录中存放的是本地库相关的子目录和文件，不要删除，也不要胡乱修改。</span>
+</p>
+
+
+<h3 id="toc_20">设置签名</h3>
+
+<p class="md_block">
+    <span class="md_line">形式<br /></span>
+    <span class="md_line">用户名：huodeming<br><br /></span>
+    <span class="md_line">Email 地址：huodeming1@163.com</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">作用：区分不同开发人员的身份</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">辨析：这里设置的签名和登录远程库(代码托管中心)的账号、密码没有任何关系。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">命令<br /></span>
+    <span class="md_line">项目级别/仓库级别：仅在当前本地库范围内有效<br /></span>
+    <span class="md_line">git config user.name qq56928691<br /></span>
+    <span class="md_line">git config user.email 56928691@qq.com<br /></span>
+    <span class="md_line">信息保存位置：./.git/config 文件</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">系统用户级别：登录当前操作系统的用户范围<br /></span>
+    <span class="md_line">git config --global user.name huodeming<br /></span>
+    <span class="md_line">git config --global huodeming1@163.com<br /></span>
+    <span class="md_line">信息保存位置：~/.gitconfig 文件</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">级别优先级<br /></span>
+    <span class="md_line">就近原则：项目级别优先于系统用户级别，二者都有时采用项目级别的签名<br /></span>
+    <span class="md_line">如果只有系统用户级别的签名，就以系统用户级别的签名为准<br /></span>
+    <span class="md_line">二者都没有 : Git不允许这么操作,必须设置一个.</span>
+</p>
+
+
+<h3 id="toc_21">基本操作</h3>
+
+<h4 id="toc_22">状态查看</h4>
+
+<p class="md_block">
+    <span class="md_line">git status<br /></span>
+    <span class="md_line">查看工作区、暂存区状态</span>
+</p>
+
+
+<h4 id="toc_23">添加到暂存区</h4>
+
+<p class="md_block">
+    <span class="md_line">git add [文件名]<br /></span>
+    <span class="md_line">将工作区的“新建/修改”添加到暂存区</span>
+</p>
+
+
+<h5 id="toc_24">思考,如果项目中新增了多个文件,怎么操作:</h5>
+
+<p class="md_block">
+    <span class="md_line">通常会想到：git add [file1] [file2]   ；<br /></span>
+    <span class="md_line">这个方法添加文件比较慢，如果文件比较多怎么办？<br /></span>
+    <span class="md_line">git add *.扩展名<br /></span>
+    <span class="md_line">这条命令可以添加同类型的所有文件，是方便了不少；但是如果要添加不同类型文件怎么办？或者不完全add所有同类型文件怎么办？<br /></span>
+    <span class="md_line">接下来整理高级用法：（注意有个小数点）<br /></span>
+    <span class="md_line">git add .   这条命令可以探测到新增、修改、删除；应该比较常用；</span>
+</p>
+
+
+<h4 id="toc_25">清除暂存区</h4>
+
+<p class="md_block">
+    <span class="md_line">1 仅仅删除暂存区里的文件, 此时你想撤销错误添加到暂存区里的文件，可以输入以下命令：<br /></span>
+    <span class="md_line">git rm --cache 文件名<br /></span>
+    <span class="md_line">命令仅仅删除暂存区的文件而已，不会影响工作区的文件,用git status查看状态</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">2 删除暂存区和工作区的文件<br /></span>
+    <span class="md_line">git rm -f 文件名<br /></span>
+    <span class="md_line">工作区的文件也被删除了。用git status查看状态</span>
+</p>
+
+
+<h4 id="toc_26">提交</h4>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><code>git commit -m &quot;commit message&quot; [文件名可选]</code><br /></span>
+    <span class="md_line">如果没有新增文件,只是对文件进行了修改,可以加 -a参数<br /></span>
+    <span class="md_line md_line_dom_embed"><code>git commit -a -m &quot;commit message&quot; [文件名可选]</code><br /></span>
+    <span class="md_line">将暂存区的内容提交到本地库,注意要用-m参数,否它自动启动Vim编辑器,要你在第一行填写提交备注.</span>
+</p>
+
+
+<h4 id="toc_27">查看历史记录</h4>
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">git log</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意:先说如,如果版本号多,进入了多屏显示方式,那上面有提到,在这再写下处理多屏显示<br /></span>
+    <span class="md_line">多屏显示控制方式：<br /></span>
+    <span class="md_line">空格向下翻页<br /></span>
+    <span class="md_line">b 向上翻页<br /></span>
+    <span class="md_line">q 退出</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">git不是以数字为版本号,而是以Hash(散列)值显示版本号.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-17-35-40.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-17-35-40.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">如果查看全部信息,版本多了根本显示不下来.下面我们用参数来显示<br /></span>
+    <span class="md_line">git log --pretty=oneline # 单行显示,版本号<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-17-38-19.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-17-38-19.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">git log --oneline # 比上面更好看,单行显示版本号,且版本号只显示部分,显示hash前7位.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-17-39-28.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-17-39-28.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">git reflog #显示版本号,且告诉我们到当前个版本需要移动指针次数.对版本回滚帮助大.相比git log命令,他能显示所有版本(过去现在与未来),而git log只显示比当前版本更旧的版本(现在与过去).如果回滚了版本,则此命令更方便.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-17-42-00.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-17-42-00.jpg" alt="" title="" ></span>
+</p>
+
+
+<h4 id="toc_28">版本回退</h4>
+
+<h5 id="toc_29">基于索引值操作[推荐]</h5>
+
+<p class="md_block">
+    <span class="md_line">git reset --hard [局部索引值,一般前几位表示唯一值的就行]<br /></span>
+    <span class="md_line">git reset --hard a6ace91</span>
+</p>
+
+
+<h5 id="toc_30">使用^符号：只能后退</h5>
+
+<p class="md_block">
+    <span class="md_line">git reset --hard HEAD^ <br /></span>
+    <span class="md_line">注：一个^符号表示后退一步，n个表示后退 n 步,如git reset --hard HEAD^^^,不禁想起万百千先生.</span>
+</p>
+
+
+<h5 id="toc_31">使用~符号：只能后退</h5>
+
+<p class="md_block">
+    <span class="md_line">git reset --hard HEAD~n<br /></span>
+    <span class="md_line">注：表示后退 n 步,就是化解^尴尬的.如后退三步:git reset --hard HEAD~3</span>
+</p>
+
+
+<h5 id="toc_32">reset 命令的三个参数对比 -- 以删除错误的提交举例</h5>
+
+<p class="md_block">
+    <span class="md_line">有时，不仅添加到了暂存区，而且commit到了版本库，这个时候就不能使用git rm了，需要使用git reset命令。<br /></span>
+    <span class="md_line">错误提交到了版本库，此时无论工作区、暂存区，还是版本库，这三者的内容都是一样的，所以在这种情况下，只是删除了工作区和暂存区的文件，下一次用该版本库回滚那个误添加的文件还会重新生成。<br /></span>
+    <span class="md_line">这个时候，我们必须撤销版本库的修改才能解决问题！<br /></span>
+    <span class="md_line">git reset有三个选项，--hard、--mixed、--soft。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">//仅仅只是撤销已提交的版本库，不会修改暂存区和工作区<br /></span>
+    <span class="md_line">git reset --soft 版本库ID</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">//仅仅只是撤销已提交的版本库和暂存区，不会修改工作区<br /></span>
+    <span class="md_line">git reset --mixed 版本库ID</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">//彻底将工作区、暂存区和版本库记录恢复到指定的版本库<br /></span>
+    <span class="md_line">git reset --hard 版本库ID</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">那我们到底应该用哪个选项好呢？</span>
+</p>
+
+
+<ol>
+<li>如果你是在提交了后，对工作区的代码做了修改，并且想保留这些修改，那么可以使用git reset --mixed 版本库ID，注意这个版本库ID应该不是你刚刚提交的版本库ID，而是刚刚提交版本库的上一个版本库。如下图：</li>
+<li>如果不想保留这些修改，可以直接使用彻底的恢复命令，git reset --hard 版本库ID。</li>
+<li>为什么不使用--soft呢，因为它只是恢复了版本库，暂存区仍然存在你错误提交的文件索引，还需要进一步使用上一节的删除错误添加到暂存区的文件，详细见上文。</li>
+</ol>
+
+<h6 id="toc_33">删除文件并找回,用git reset --hard [指针位置]</h6>
+
+<p class="md_block">
+    <span class="md_line">前提：删除前，文件存在时的状态提交到了本地库。<br /></span>
+    <span class="md_line">操作：git reset --hard [指针位置]<br /></span>
+    <span class="md_line">删除操作已经提交到本地库：指针位置指向历史记录<br /></span>
+    <span class="md_line">删除操作尚未提交到本地库：指针位置使用 HEAD</span>
+</p>
+
+
+<h4 id="toc_34">比较文件差异</h4>
+
+<p class="md_block">
+    <span class="md_line">git diff [文件名]<br /></span>
+    <span class="md_line">将工作区中的文件和暂存区进行比较(修改工作区文件)<br /></span>
+    <span class="md_line md_line_dom_embed"><code>vim test.txt</code><br /></span>
+    <span class="md_line"><code>git diff test.txt</code> <br /></span>
+    <span class="md_line">我把把文件进行git add 操作,再进行比较,就没有差异了.(修改工作区文件并加入到暂存区)<br /></span>
+    <span class="md_line md_line_dom_embed"><code>git add test.txt</code><br /></span>
+    <span class="md_line md_line_dom_embed"><code>git diff test.txt</code></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">git diff [本地库中历史版本] [文件名]<br /></span>
+    <span class="md_line md_line_dom_embed"><code>git diff HEAD test.txt</code><br /></span>
+    <span class="md_line md_line_dom_embed"><code>git diff HEAD~2 test.txt</code><br /></span>
+    <span class="md_line">将工作区中的文件和本地库历史记录比较</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意,命令不带文件名比较多个文件</span>
+</p>
+
+</blockquote>
+
+<h2 id="toc_35">分支管理</h2>
+
+<h3 id="toc_36">什么是分支</h3>
+
+<p class="md_block">
+    <span class="md_line">在版本控制过程中，使用多条线同时推进多个任务。<br /></span>
+    <span class="md_line">举例说明:<br /></span>
+    <span class="md_line">1.有个项目:刚开始只有主干分支:master<br /></span>
+    <span class="md_line">2.这时我们想要增加功能,请了两个新团队,一个新团队开发个blue(蓝色)的主题模板,另一个团队开发小游戏,这时我们创建分支feature_blue,与feture_game,这时我们开发我们的,新团队开发自己的分支,互不污染代码.完成后合并,万一新团队失败了,我们删掉分支就行了.<br /></span>
+    <span class="md_line">3.又如我们软件开发过程中线上项止发现有BUG,想进行热修复,我们也可以创建一个分支hot_fix,修复好后合并进master就行.<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-19-50-03.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-19-50-03.jpg" alt="" title="" ></span>
+</p>
+
+
+<h3 id="toc_37">分支的好处</h3>
+
+<p class="md_block">
+    <span class="md_line">同时并行推进多个功能开发，提高开发效率<br /></span>
+    <span class="md_line">各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任   何影响。失败的分支删除重新开始即可。</span>
+</p>
+
+
+<h3 id="toc_38">4.4.3   分支操作</h3>
+
+<h4 id="toc_39">创建分支</h4>
+
+<p class="md_block">
+    <span class="md_line">git branch [分支名]</span>
+</p>
+
+
+<h4 id="toc_40">查看分支</h4>
+
+<p class="md_block">
+    <span class="md_line">git branch -v</span>
+</p>
+
+
+<h4 id="toc_41">切换分支</h4>
+
+<p class="md_block">
+    <span class="md_line">git checkout [分支名]</span>
+</p>
+
+
+<h4 id="toc_42">合并分支</h4>
+
+<p class="md_block">
+    <span class="md_line">第一步：切换到接受修改的分支（被合并，增加新内容）上<br /></span>
+    <span class="md_line">git checkout [被合并分支名]<br /></span>
+    <span class="md_line">第二步：执行 merge 命令<br /></span>
+    <span class="md_line">git merge [有新内容分支名]</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">例:我们想把dev分支合并到master上,所以我们要先切换到master分支上.然后合并</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>git checkout master
+git merge dev
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_43">解决冲突</h4>
+
+<p class="md_block">
+    <span class="md_line">冲突的表现<br /></span>
+    <span class="md_line">两个分支修改同一个文件的同一个地方时,此时合并就是产生冲突<br /></span>
+    <span class="md_line">如下:<br /></span>
+    <span class="md_line">1.先修改dev分支的test.txt第二行,内容为:edit-dev,然后提交,<br /></span>
+    <span class="md_line">2.切换到master分支,修改test.txt第二行,内容为:edit-master然后提交.<br /></span>
+    <span class="md_line">3.合并dev分支到master分支,提示如下: <br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-21-22-17.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-21-22-17.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">冲突的解决<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-21-26-28.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-21-26-28.jpg" alt="" title="" ></span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD  <span class="c1"># 这是当前分支(master)中的内容</span>
+bbbbbbb -- ecit <span class="nv">master</span>
+<span class="o">=======</span>  <span class="c1"># 冲突分界线</span>
+bbbbbbb --edit dev
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; dev <span class="c1">#这是dev分支中的内容....</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">第一步：编辑文件，删除特殊符号(,如上面有注释的行.)<br /></span>
+    <span class="md_line">第二步：把文件修改到满意的程度，保存退出<br /></span>
+    <span class="md_line">第三步：git add [文件名]<br /></span>
+    <span class="md_line">第四步：git commit -m &quot;日志信息&quot; <br /></span>
+    <span class="md_line md_line_dom_embed"><strong>注意：此时 commit 一定不能带具体文件名</strong><br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-21-35-54.jpg';this.onerror=null;"  class="" src="/_image/2019-05-25-21-35-54.jpg" alt="" title="" ></span>
+</p>
+
+
+<h2 id="toc_44">Git 基本原理[了解]</h2>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">哈希<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-21-39-07.png';this.onerror=null;"  class="" src="/_image/2019-05-25-21-39-07.png" alt="" title="" ><br /></span>
+    <span class="md_line">哈希是一个系列的加密算法，各个不同的哈希算法虽然加密强度不同，但是有以下    几个共同点：</span>
+</p>
+
+
+<ul>
+<li>不管输入数据的数据量有多大，输入同一个哈希算法，得到的加密结果长度固定。</li>
+<li>哈希算法确定，输入数据确定，输出数据能够保证不变</li>
+<li>哈希算法确定，输入数据有变化，输出数据一定有变化，而且通常变化很大</li>
+<li>哈希算法不可逆</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">Git 底层采用的是 SHA-1 算法。<br /></span>
+    <span class="md_line">哈希算法可以被用来验证文件。原理如下图所示：<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-25-21-40-43.png';this.onerror=null;"  class="" src="/_image/2019-05-25-21-40-43.png" alt="" title="" ><br /></span>
+    <span class="md_line">Git 就是靠这种机制来从根本上保证数据完整性的。</span>
+</p>
+
+
+<h2 id="toc_45">GitHub</h2>
+
+<h3 id="toc_46">账号信息</h3>
+
+<p class="md_block">
+    <span class="md_line">每个用户名绑定一个电子邮箱<br /></span>
+    <span class="md_line">注册(操作)<br /></span>
+    <span class="md_line">1.打开主页,第一次直接提示注册<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-26-07-13-28.jpg';this.onerror=null;"  class="" src="/_image/2019-05-26-07-13-28.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">2.验证真人,而不是机器人操作,可以选择普通或声音验证.(下图个人已汉化)<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-26-07-14-49.jpg';this.onerror=null;"  class="" src="/_image/2019-05-26-07-14-49.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">完成三张片的旋转,验证成功,或启用声音验证码..(下图个人已汉化)<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-26-07-16-43.jpg';this.onerror=null;"  class="" src="/_image/2019-05-26-07-16-43.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">3.选择版本订阅,当然用免费版...哈哈,<br /></span>
+    <span class="md_line">4.来到个人信息采集页面,上面问题编程水平如何,下面问你如何使用GitHub?最后要你输入兴趣爱好.<br /></span>
+    <span class="md_line">5.要求邮件验证</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">登陆(操作)--&gt;修改头像<br /></span>
+    <span class="md_line">输出用户名密码--&gt;登陆--&gt;下拉用户选项--&gt;settings--&gt;profile picture--&gt;edit</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">或者</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">登陆后--&gt;下拉用户选项--&gt;your profile--&gt;edit profile</span>
+</p>
+
+
+<h3 id="toc_47">创建远程库</h3>
+
+<p class="md_block">
+    <span class="md_line">登陆后--&gt;下拉用户选项前的+号--&gt;new repository--&gt;输入:Repository name(建议与本地项目同名)--&gt;权限选开放的--&gt;不创建readme(创建后需要先拉取,不创建可以把本地项目直接推送上去)</span>
+</p>
+
+
+<h3 id="toc_48">在本地设置远程地址别名</h3>
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>git remote -v <span class="c1">#查看远程库链接地址</span>
+git branch -r  <span class="c1"># 查看远程库分支信息</span>
+git branch -vv <span class="c1">#查看本地分支与远程分支的关系</span>
+git remote -add 别名 远程地址 <span class="c1">#设置远程库别名</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_49">把本地项目推送到远程</h3>
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1">#推送到远程</span>
+git push 别名 分支名
+<span class="c1">#下面三种请况供参考,实际上面一种就够用了(第二种，万能的，还能创建本地与远程的分支关联)==============================</span>
+<span class="c1">#1.远程已有remote_branch分支并且已经关联本地分支local_branch且本地已经切换到local_branch</span>
+git push
+<span class="c1">#2.远程已有remote_branch分支但未关联本地分支local_branch且本地已经切换到local_branch</span>
+ git push -u origin 分支名
+<span class="c1">#3.远程没有有remote_branch分支并，本地已经切换到local_branch</span>
+git push origin local_branch:remote_branch
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_50">本地分支与远程分支建议关联</h3>
+
+<p class="md_block">
+    <span class="md_line">1.查看 本地分支与远程分支的关系<br /></span>
+    <span class="md_line">git remote -v #查看远程库链接地址<br /></span>
+    <span class="md_line">git branch -r  # 查看远程库分支信息<br /></span>
+    <span class="md_line">git branch -vv #查看本地分支与远程分支的关系</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">2.把本地分支与远程origin的分支进行关联处理(通过 –set-upstream-to 命令) <br /></span>
+    <span class="md_line">用下面命令</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>git branch --set-upstream-to<span class="o">=</span>origin/dev dev
+<span class="c1"># 或者直接(先要在本地切换到所在路径)</span>
+git branch --set-upstream-to<span class="o">=</span>origin/dev
+
+<span class="c1"># 用如上方式可能会提示 远程仓库/分支 不存在, 总结一下：本地仓库有文件，远程仓库也有文件，正确姿势(分四步走,第二步要注意,pull一下就行了,没必要强行合并)：</span>
+git remote add origin 远程仓库地址
+git pull origin master --allow-unrelated-histories
+git branch --set-upstream-to<span class="o">=</span>origin/master master
+git push
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_51">克隆远程版本库项目</h3>
+
+<p class="md_block">
+    <span class="md_line">git clone 远程版本库项目地址<br /></span>
+    <span class="md_line">注意:如果远程库有多个分支,克隆下来后只有master分支,原因是git clone默认会把远程仓库整个给clone下来,但只会在本地默认创建一个master分支,如果你想克隆下来整个分支,则需要进行如下操作:<br /></span>
+    <span class="md_line">1.查看所有分支:<br /></span>
+    <span class="md_line">git branch -a<br /></span>
+    <span class="md_line">或者<br /></span>
+    <span class="md_line">git branch -r<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-26-09-37-26.jpg';this.onerror=null;"  class="" src="/_image/2019-05-26-09-37-26.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">2.除master分支外的进行checkout操作,就会自动创建并切换到当前分支.如上图所示,我们需要切换到dev分支就行.如有多个请多次操作即可.</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1">#使用checkout命令来把远程分支origin/dev取到本地，并自动建立dev分支.</span>
+git checkout -b dev  origin/dev  <span class="c1">#或者使用-t参数，它默认会在本地建立一个和远程分支名字一样的分支$ git checkout -t origin/dev</span>
+
+<span class="c1">#好像下面命令更简单更直接</span>
+git checkout dev
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_52">团队合作,Github邀请开发成员.</h3>
+
+<p class="md_block">
+    <span class="md_line">1.进入版本库项目--&gt;Settings--&gt;Collaborators(有可能要确认登陆密码)--&gt;输入别人的github帐号(说是可以用记名,全名或电子邮件,但发现办有用户名有效.)<br /></span>
+    <span class="md_line">2.此时会给朋友发送一份邀请邮件,或把邀请链接发给朋友微信或QQ什么的,让朋友加入此项目就行了.</span>
+</p>
+
+
+<h3 id="toc_53">拉取</h3>
+
+<p class="md_block">
+    <span class="md_line">pull=fetch+merge<br /></span>
+    <span class="md_line">git fetch [远程库地址别名] [远程分支名]<br /></span>
+    <span class="md_line">git merge [远程库地址别名/远程分支名]</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果不担心冲突什么的,直接pull更方便.不需要fetch+merge<br /></span>
+    <span class="md_line">git pull [远程库地址别名] [远程分支名]</span>
+</p>
+
+
+<h3 id="toc_54">解决冲突</h3>
+
+<p class="md_block">
+    <span class="md_line">要点<br /></span>
+    <span class="md_line">如果不是基于 GitHub 远程库的最新版所做的修改，不能推送，必须先拉取。<br /></span>
+    <span class="md_line">拉取下来后如果进入冲突状态，则按照“分支冲突解决”操作解决即可。</span>
+</p>
+
+
+<h3 id="toc_55">跨团队协作[麻烦些]</h3>
+
+<h4 id="toc_56">Fork</h4>
+
+<p class="md_block">
+    <span class="md_line">企业版才好说明:<br /></span>
+    <span class="md_line">用团队外用户打开 项目地址  --&gt; fork --&gt;完成后注意看信息(forked from 来源).<br /></span>
+    <span class="md_line">完成后项目就成 团队外用户的项目了,可以任意操作.</span>
+</p>
+
+
+<h4 id="toc_57">pull request</h4>
+
+<p class="md_block">
+    <span class="md_line">团队外用户的项目弄好后  --&gt;pull requests--&gt;此时版本库中内容有变动才能进一步操作--&gt;Create pull request --&gt;输出消息标题,内容然后Create pull request;<br /></span>
+    <span class="md_line">回到原版本库所有用户项目,--&gt;在项目pull request①--&gt;能看到刚才发过来的消息,点进去(可以用消息对话)--&gt;merge pull request.</span>
+</p>
+
+
+<h3 id="toc_58">SSH 登录</h3>
+
+<p class="md_block">
+    <span class="md_line">1.进入当前用户的家目录<br /></span>
+    <span class="md_line">$ cd ~</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">2.删除.ssh 目录<br /></span>
+    <span class="md_line">$ rm -rvf .ssh</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">这两步可以合并 直接:rm -rvf ~/.ssh</span>
+</p>
+
+</blockquote>
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">3.运行命令生成.ssh 密钥目录<br /></span>
+    <span class="md_line">$ ssh-keygen -t rsa -C huodeming1@163.com</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意：这里-C 这个参数是大写的 C</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">4.进入.ssh 目录查看文件列表<br /></span>
+    <span class="md_line">$ cd .ssh<br /></span>
+    <span class="md_line">$ ls -lF</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">5.查看 id_rsa.pub 文件内容<br /></span>
+    <span class="md_line">$ cat id_rsa.pub</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">这三步可以合并: 生成的文件在用户根目录(C:\Users\当前登陆系统的用户.ssh),所以我们可以直接运行:cat ~/.ssh/id_rsa.pub<br /></span>
+    <span class="md_line">得到公钥:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDd9bIeCHQziRMBF03qU38B2Fn9VgTQH5P3sX3wzq/VFi9f56u4Lu/lDZe8wTSF/vU8zEA/rQ/KejiSimYyUWaxi0jjR5lkOJeU4HX3Iee9/Ru5qcvmrxbh1jmm/gH3hTvagf3VPVaeAhvDjZAi54sd4q/GcbXTjdmPHdjS12jIRWmgjrP6cX8g7MNcdFxzxXkciHVxaeLO+p6anB8kF+5G1133COKjiduHDnNEgq3tMHyE5ChA/RaBwelTmOuhsu9IIRLzB6OxGshP5TCRoUfAyXTzFVYDm0WibeqrrBEtBKSIREqwHGSs0CYu+W/hzsBUoyU8zJeJhypWIyY8ysKt huodeming1@163.com</span>
+</p>
+
+</blockquote>
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">6.复制公钥或 id_rsa.pub 文件内容，登录 GitHub，点击用户头像→Settings→SSH and GPG keys<br /></span>
+    <span class="md_line">New SSH Key<br /></span>
+    <span class="md_line">输入复制的密钥信息<br /></span>
+    <span class="md_line">回到 Git bash 创建远程地址别名<br /></span>
+    <span class="md_line">git remote add origin_ssh 项目完程SSH地址</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">(主要是自己下面搭建的gitblit默认就ssh验证,所在提交关了此功能)如果关了SSH认证,就请打开.如果没关,就不管:git config --global http.sslVerify false</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">推送文件进行测试(演示并操作)</span>
+</p>
+
+
+<h2 id="toc_59">GPG设置防伪造签名</h2>
+
+<p class="md_block">
+    <span class="md_line">在本地的 git 仓库中，我们需要设置用户名和邮箱地址才能提交新的更改。</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;huodeming&quot;</span>
+git config --global user.email <span class="s2">&quot;huodeming1@163.com&quot;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">值得注意的是，这并不需要跟你的 GitHub 账号的 用户名 或者 邮箱地址 一致。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这带来了一个很严重的问题：任何人都可以设置用户名和邮箱地址来伪装成你，由于 GitHub 会自动根据用户名和邮箱地址关联单次的提交为注册的 GitHub 的账户，所以别人可以仿冒你的身份进行提交更改。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">GitHub 使用 GPG 协议来给某次提交进行签名，从而确保了身份的合法性。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">GnuPG（The GNU Privacy Guard）是 OpenGPG 的一个免费的实现版本，通常简称 GPG。本文以 windows 操作系统为例，简单介绍如何结合 GitHub 来使用 GPG。</span>
+</p>
+
+
+<h3 id="toc_60">生成GPG</h3>
+
+<p class="md_block">
+    <span class="md_line">1.生成前确认版本:gpg --version<br /></span>
+    <span class="md_line">2.如果gpg版本在2.1.17以上，就用下面的命令：<br /></span>
+    <span class="md_line">    gpg --full-generate-key  #不建议用 gpg --gen-key<br /></span>
+    <span class="md_line">    如果gpg版本在2.1.17以下，用下面的命令：<br /></span>
+    <span class="md_line">    gpg --default-new-key-algo rsa4096 --gen-key<br /></span>
+    <span class="md_line">3.然后按照提示输入密钥类型(1)、密钥长度(4096)、过期时间(0)、用户名、密码,备注等信息，其中密钥长度推荐4096，其他按需输入即可,最后输入密码,确认密码,密码要记住.</span>
+</p>
+
+
+<h3 id="toc_61">查看公,私钥(内容是一样的)</h3>
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 查看公钥:PUB和SUB分别是主公钥和子公钥</span>
+gpg --list-keys --keyid-format LONG
+<span class="c1"># 查看私钥:SEC和SSB分别是主私钥和子私钥</span>
+gpg --list-secret-keys --keyid-format LONG
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">上面两命令查看到的内容,基本一样</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span>HDMI5@HDMI5-PC MINGW64 /d/temp/test <span class="o">(</span>master<span class="o">)</span>
+$ gpg --list-secret-keys --keyid-format LONG
+/c/Users/HDMI5/.gnupg/pubring.kbx
+---------------------------------
+sec   rsa2048/46716BAEB808ADDD 2019-05-29 <span class="o">[</span>SC<span class="o">]</span>
+      13E8C4E70EEDC02C21034EEA46716BAEB808ADDD
+uid                 <span class="o">[</span>ultimate<span class="o">]</span> huodeming &lt;huodeming1@163.com&gt;
+ssb   rsa2048/A9A80044ACE5C213 2019-05-29 <span class="o">[</span>E<span class="o">]</span>
+
+
+HDMI5@HDMI5-PC MINGW64 /d/temp/test <span class="o">(</span>master<span class="o">)</span>
+$ gpg --list-keys --keyid-format LONG
+/c/Users/HDMI5/.gnupg/pubring.kbx
+---------------------------------
+pub   rsa2048/46716BAEB808ADDD 2019-05-29 <span class="o">[</span>SC<span class="o">]</span>
+      13E8C4E70EEDC02C21034EEA46716BAEB808ADDD
+uid                 <span class="o">[</span>ultimate<span class="o">]</span> huodeming &lt;huodeming1@163.com&gt;
+sub   rsa2048/A9A80044ACE5C213 2019-05-29 <span class="o">[</span>E<span class="o">]</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_62">得到密钥内容填入Github</h3>
+
+<p class="md_block">
+    <span class="md_line">然后就可以查看密钥内容了，你需要将ID替换为自己的：</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># gpg --armor --export &lt;GPG key ID&gt;</span>
+gpg --armor --export 46716BAEB808ADDD
+<span class="c1"># 密钥内容以-----BEGIN PGP PUBLIC KEY BLOCK-----开始，以-----END PGP     PUBLIC KEY BLOCK-----结束.</span>
+<span class="c1"># GPG key ID为私钥ID或公钥ID都可以。输出的内容就是我们要的GPG Keys了。点开GitHub的GPG配置页面，粘贴该内容。</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_63">本地git配置</h3>
+
+<p class="md_block">
+    <span class="md_line">本地配置Git全局开启GPG认证，并配置GPG key ID</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 全局启用gpg签名验证</span>
+git config --global commit.gpgsign <span class="nb">true</span>
+<span class="c1"># git config --global user.signingkey &lt;GPG key ID&gt;  #用哪个ID来验证</span>
+git config --global user.signingkey 46716BAEB808ADDD
+</pre></div>
+
+<!--block_code_end-->
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">我们可以通过以下命令查询本机所有的Key:<br /></span>
+    <span class="md_line">gpg --list-secret-keys<br /></span>
+    <span class="md_line">gpg --list-keys</span>
+</p>
+
+</blockquote>
+
+<h2 id="toc_64">自己搭建远程GIT服务器.</h2>
+
+<h3 id="toc_65">前提[JAVA运行环境],也是补充知识</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">JAVA环境配置</span>
+</p>
+
+
+<ol>
+<li>
+<p class="md_block">
+    <span class="md_line">下载安装jre,建议直接下载JDK,我下载的是windows 64位的JDK1.7UP80</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">下载页面:https://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html<br /></span>
+    <span class="md_line">文件地址(要求登陆后下载):https://download.oracle.com/otn/java/jdk/7u80-b15/jdk-7u80-windows-x64.exe<br /></span>
+    <span class="md_line">下载完成直接安装,注意安装路径尽量不要有中文,空格.</span>
+</p></li>
+<li>
+<p class="md_block">
+    <span class="md_line">在系统环境变量中增加 JAVA_HOME  值是   JDK的安装路径(必须)</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">操作过程: 计算机(右键)--&gt;属性--&gt;高级系统设置--&gt;高级--&gt;环境变量--&gt;新建--&gt;变量名:JAVA_HOME--&gt;值:填写JDK安装路径<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/2019-05-29-21-54-23.jpg';this.onerror=null;"  class="" src="/_image/2019-05-29-21-54-23.jpg" alt="" title="" ></span>
+</p></li>
+<li>
+<p class="md_block md_has_block_below md_has_block_below_img">
+    <span class="md_line">在系统环境变量path的值,在最前面加上 %JAVA_HOME%\bin;    一定记得完了加到分号</span>
+</p>
+
+<img onerror="this.src='../_image/2019-05-29-21-56-08.jpg';this.onerror=null;"  class="" src="/_image/2019-05-29-21-56-08.jpg" alt="" title="" ></li>
+<li>
+<p class="md_block md_has_block_below md_has_block_below_img">
+    <span class="md_line">检测JAVA环境好了没有?打开新的DOS窗口   输入 java -version    查看正确的版本.</span>
+</p>
+
+<img onerror="this.src='../_image/2019-05-29-21-57-33.jpg';this.onerror=null;"  class="" src="/_image/2019-05-29-21-57-33.jpg" alt="" title="" ></li>
+</ol>
+
+<h3 id="toc_66">下载安装Gitblit</h3>
+
+<ol>
+<li>
+<p class="md_block">
+    <span class="md_line">.前提(上面已做)</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">gitblit是JAVA开发的,必须提前安装配置好java环境.<br /></span>
+    <span class="md_line">gitblit是绿色软件,不需要安装,只需要简单配置就能用.</span>
+</p></li>
+<li>
+<p class="md_block">
+    <span class="md_line"> 下载安装</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">1.最新版本下载:http://www.gitblit.com 请选择操作系统下载,我用的windows<br /></span>
+    <span class="md_line">2.把gitblit解压到一个没有中文,路径中没有空格的文件夹中.<br /></span>
+    <span class="md_line">我的解压路径是:D:\programfiles\gitblit-1.8.0</span>
+</p></li>
+</ol>
+
+<h3 id="toc_67">配置gitblit</h3>
+
+<p class="md_block">
+    <span class="md_line">找到D:\programfiles\gitblit-1.8.0\data\defaults.properties 用Notepad++打开.进行修改 如下</span>
+</p>
+
+<div class="codehilite code_lang_shell  highlight"><pre><span></span><span class="c1"># 编辑文件D:\programfiles\gitblit-1.8.0\data\defaults.properties</span>
+    <span class="c1"># (建议修改)31行:配置托管中心版本为存放路径:${baseFolder}/git指向的是:D:\programfiles\gitblit-1.8.0\data\git\</span>
+    git.repositoriesFolder <span class="o">=</span> D:/programfiles/gitblit-1.8.0/myreps <span class="c1"># 此路径等同于 ${baseFolder}/../myreps</span>
+    
+    <span class="c1"># (必须)1993行:配置http协议的网络端口</span>
+    server.httpPort <span class="o">=</span> 888
+
+    <span class="c1"># (了解)2001行:配置https协议的网络端口(默认值为8443,我们记一下,不改也行)</span>
+    server.httpsPort <span class="o">=</span> 8443
+
+    <span class="c1"># (了解)2020行:如果服务器是多IP配置,我们就可以用它指定用某个IP,注意:动态IP千万别配</span>
+    server.httpBindInterface <span class="o">=</span> http协议使用的IP地址  
+    server.httpsBindInterface <span class="o">=</span> https协议使用的IP地址
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_68">启动gitblit</h3>
+
+<p class="md_block">
+    <span class="md_line">配置好后,可以双击<code>gitblit.cmd</code>进行启动gitblit,注意,启动后查看操作系统端口 888 与 8443开了没了,查看端口DOS命令: netstat -ano,注意防火墙设置<br /></span>
+    <span class="md_line">如果启动正常,我们可以用浏览器访问:http://localhost:888   或 https://localhost:8443</span>
+</p>
+
+
+<h3 id="toc_69">把gitblit安装成操作系统服务</h3>
+
+<p class="md_block">
+    <span class="md_line">每次双击<code>gitblit.cmd</code>进行启动特别麻烦,且DOS窗口不能关闭,我们可以安装成操作系统服务,让它每次开机自动启动<br /></span>
+    <span class="md_line">修改D:\programfiles\gitblit-1.8.0\installService.cmd        #安装到操作系统服务<br /></span>
+    <span class="md_line">修改D:\programfiles\gitblit-1.8.0\uninstallService.cmd   #卸载操作系统服务</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在文件中找到:@REM arch = x86, amd64, or ia32  32位系统用x86 64位用amd64 位置,修改成如下:增加SET CD = XXXX这行.</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">安装服务时要记得installService.cmd--&gt;鼠标右键--&gt;以管理员身份运行.<br /></span>
+    <span class="md_line">启动服务:net start gitblit   </span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意:如果启动不成功,记得防火墙设置一下....(直接关闭防火墙),你也可以单独设置:    64位操作系统:D:\programfiles\gitblit-1.8.0\ia64\gitblit.exe 允许入站</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">我们可以访问自己安装的托管中心了...<br /></span>
+    <span class="md_line">浏览器访问:http://localhost:888    或 https://localhost:8443<br /></span>
+    <span class="md_line">操作:<br /></span>
+    <span class="md_line">在网页上创建空仓库.<br /></span>
+    <span class="md_line">从本地进行推送.</span>
+</p>
+
+
+<h4 id="toc_70">如果启不动服务</h4>
+
+<p class="md_block">
+    <span class="md_line">1.试着把installService.cmd中的两个变量(CD 与 ARCH)用值替换。替换后如下:</span>
+</p>
+
+
+<pre><code>@REM Install Gitblit as a Windows service.
+
+@REM gitblitw.exe (prunmgr.exe) is a GUI application for monitoring 
+@REM and configuring the Gitblit procrun service.
+@REM
+@REM By default this tool launches the service properties dialog
+@REM but it also has some other very useful functionality.
+@REM
+@REM http://commons.apache.org/daemon/procrun.html
+
+@REM arch = x86, amd64, or ia32
+SET ARCH=amd64
+SET CD=D:\ProgramFiles\gitblit-1.9.1
+@REM Be careful not to introduce trailing whitespace after the ^ characters.
+@REM Use ; or # to separate values in the --StartParams parameter.
+"D:\ProgramFiles\gitblit-1.9.1\amd64\gitblit.exe"  //IS//gitblit ^
+         --DisplayName="gitblit" ^
+         --Description="a pure Java Git solution" ^
+         --Startup=auto ^
+         --LogPath="D:\ProgramFiles\gitblit-1.9.1\logs" ^
+         --LogLevel=INFO ^
+         --LogPrefix=gitblit ^
+         --StdOutput=auto ^
+         --StdError=auto ^
+         --StartPath="D:\ProgramFiles\gitblit-1.9.1" ^
+         --StartClass=com.gitblit.GitBlitServer ^
+         --StartMethod=main ^
+         --StartParams="--storePassword;gitblit;--baseFolder;D:\ProgramFiles\gitblit-1.9.1\data" ^
+         --StartMode=jvm ^
+         --StopPath="D:\ProgramFiles\gitblit-1.9.1" ^
+         --StopClass=com.gitblit.GitBlitServer ^
+         --StopMethod=main ^
+         --StopParams="--stop;--baseFolder;D:\ProgramFiles\gitblit-1.9.1\data" ^
+         --StopMode=jvm ^
+         --Classpath="D:\ProgramFiles\gitblit-1.9.1\gitblit.jar;D:\ProgramFiles\gitblit-1.9.1\ext\*" ^
+         --Jvm=auto ^
+         --JvmMx=1024</code></pre>
+
+<!--block_code_end--><div class="codehilite code_lang_shell  highlight"><pre><span></span>    @REM <span class="nv">arch</span> <span class="o">=</span> x86, amd64, or ia32  32位系统用x86 64位用amd64
+    SET <span class="nv">ARCH</span><span class="o">=</span>amd64
+    @REM 必须增加这个变量,值是gitblit的安装根目录.
+    SET <span class="nv">CD</span><span class="o">=</span>D:<span class="se">\p</span>rogramfiles<span class="se">\g</span>itblit-1.8.0
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">2.是此服务的JAVA虚拟机配置有点小问题，解决办法如下:<br /></span>
+    <span class="md_line">    2.1先安装服务<br /></span>
+    <span class="md_line">    2.2 选中gitblitw.exe右键以管理员身份运行<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/9b8c6ac18f520775ea4b430a797d495e_1524445-20191010192403376-367348276.png';this.onerror=null;"  class="" src="/_image/9b8c6ac18f520775ea4b430a797d495e_1524445-20191010192403376-367348276.png" alt="" title="" ><br /></span>
+    <span class="md_line">点击java 进行配置，去掉Use default的勾选，重新选择Java Virtual Machine，选择本地安装的java版本的虚拟机，点击应用，然后确定，这个路径要看自己JAVA虚拟机的安装路径，不是照图的地址，比如我的:D:\ProgramFiles\Java\jdk1.8.0_251\jre\bin\server\jvm.dll<br /></span>
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../_image/b74c140ba952a72d442375e20e8acd20_1524445-20191010192715143-731174360.png';this.onerror=null;"  class="" src="/_image/b74c140ba952a72d442375e20e8acd20_1524445-20191010192715143-731174360.png" alt="" title="" ></span>
+</p>
+
+
+<h2 id="toc_71">sourcetree 使用</h2>
+
+<h3 id="toc_72">下载安装</h3>
+
+<p class="md_block">
+    <span class="md_line">到官网下载最新版本,是多语言的,不要担心中文问题.<br /></span>
+    <span class="md_line">https://www.sourcetreeapp.com/<br /></span>
+    <span class="md_line">根据操作系统类型下载相应的版本.我们用windows版<br /></span>
+    <span class="md_line">1我们下载的是3.1.3版本,安装需要.net framework 4.7.1支持,所以我们要先下载安装了  .net framework 4.7.2</span>
+</p>
+
+
+<h3 id="toc_73">离线安装免配置文件</h3>
+
+<h4 id="toc_74">　添加 accounts.json 文件</h4>
+
+<p class="md_block">
+    <span class="md_line">方法很简单，只需在固定目录创建一个文件，即可在安装时跳过注册登录环节。<br /></span>
+    <span class="md_line">创建accounts.json文件，accounts.json文件目录位置，在以下目录创建accounts.json文件<br /></span>
+    <span class="md_line">注：%LocalAppData%是一个Windows目录可识别变量<br /></span>
+    <span class="md_line">%LocalAppData%\Atlassian\SourceTree\accounts.json</span>
+</p>
+
+<div class="codehilite code_lang_json  highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;14&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;SourceTree.Model.ScmAccount, SourceTree.Api.Host.Scm&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;IsDefault&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;Authenticate&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;HostInstance&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;SourceTree.Host.Bitbucket.BitbucketInstance, SourceTree.Host.Bitbucket&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Host&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;SourceTree.Host.Bitbucket.BitbucketHost, SourceTree.Host.Bitbucket&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Id&quot;</span><span class="p">:</span> <span class="s2">&quot;bitbucket&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;BaseUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bitbucket.org/&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPS&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;Credentials&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;17&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;SourceTree.Api.Account.OAuth.TwoZero.OAuthTwoZeroCredentials, SourceTree.Api.Account.OAuth.TwoZero&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;AuthenticationScheme&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;SourceTree.Api.Account.OAuth.TwoZero.OAuthTwoZeroBearerAuthenticationScheme, SourceTree.Api.Account.OAuth.TwoZero&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;OAuth&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;OAuth 令牌&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;HeaderValuePrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;UsernameIsRequired&quot;</span><span class="p">:</span> <span class="kc">false</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;Id&quot;</span><span class="p">:</span> <span class="s2">&quot;9e6d04fd-ec62-45c3-82e3-53882691cdb3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Username&quot;</span><span class="p">:</span> <span class="s2">&quot;huodeming&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;DisplayName&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;huodeming1@163.com&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;AvatarURL&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;EmailHash&quot;</span><span class="p">:</span> <span class="s2">&quot;$2b$11$wgr1TJNVKwiK/dQBd3HKm.IffN4.Ag6NJAxAUWmQKR0A2aXWJp3s.&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;18&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;SourceTree.Api.Host.Identity.Model.IdentityAccount, SourceTree.Api.Host.Identity&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;IsDefault&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;Authenticate&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;HostInstance&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;Credentials&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;17&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_75">修改文件user.config</h4>
+
+<p class="md_block">
+    <span class="md_line">所在路径:<br /></span>
+    <span class="md_line">%LocalAppData%\Atlassian\SourceTree.exe_Url_xxxxxxxxxx\3.1.2.3027\user.config<br /></span>
+    <span class="md_line">文件全部内容如下:</span>
+</p>
+
+<div class="codehilite code_lang_xml  highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;userSettings&gt;</span>
+        <span class="nt">&lt;SourceTree.Properties.Settings&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;MainWindowWidth&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>1200<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;MainWindowHeight&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>800<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;MainWindowState&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>Normal<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;MainWindowLeft&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>40<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;MainWindowTop&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>40<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;GitWhichOne&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;AllowModifyConfigFiles&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>True<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;DefaultFullName&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>huodeming<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;DefaultEmail&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>huodeming1@163.com<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;LastOpenTabIndex&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>0<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;AnonymousID&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>b1989f8f-3c0c-48e5-b720-3e76a30e1c3b<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;LastCheckedNews&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>05/30/2019 09:33:08<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;AgreedToEULA&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>True<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;AgreedToEULAVersion&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>20160201<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;FirstLaunch&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>False<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;SSHClientType&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>PuTTY<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;ProxyServerMode&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>OperatingSystem<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;HgWhichOne&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>0<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;EnableGitSupport&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>True<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;EnableHgSupport&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>True<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;HgPostPullAction&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>Update<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;FirstLaunchSinceHgAdded&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>False<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;MainWindowScreenDeviceName&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>\\.\DISPLAY1<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;AnalyticsHasAgreed&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>True<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;AnalyticsDisplayOptIn&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>False<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;AasLastSubmitted&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>05/30/2019 09:33:08<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;GitSystemPath&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>D:\programfiles\Git<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;HgSystemPath&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>C:\Users\ADMIN\AppData\Local\Atlassian\SourceTree\hg_local<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;SidebarIsOpen&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>False<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+            <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&quot;NotificationGettingStartedShown&quot;</span> <span class="na">serializeAs=</span><span class="s">&quot;String&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;value&gt;</span>True<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;/setting&gt;</span>
+        <span class="nt">&lt;/SourceTree.Properties.Settings&gt;</span>
+    <span class="nt">&lt;/userSettings&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_76">配置</h3>
+<img onerror="this.src='../_image/2019-05-30-11-21-29.jpg';this.onerror=null;"  class="" src="/_image/2019-05-30-11-21-29.jpg" alt="" title="" >
+<h3 id="toc_77">操作(演示及操作)</h3> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="./asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

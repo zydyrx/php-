@@ -1,0 +1,3112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>数据表操作</title>
+
+    <meta charset="UTF-8"/>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <meta name="HandheldFriendly" content="true"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link href="../asset/gitbook/style.css" type="text/css" rel="stylesheet"/>
+    <link href="../asset/gitbook/istyle.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">
+        
+            span.md_line{margin-bottom:0.5em; display:block; line-height:1.89}
+            .md_line br{ display: none;}
+            
+    </style>
+
+    <script>
+        var flowchat_options = {
+            'x': 0, 'y': 0, 'line-width': 1, 'line-length': 50, 'text-margin': 10, 'font-size': 13,
+            'font-color': '#3c3c3c', 'line-color': '#666666', 'element-color': '#666666', 'fill': 'transparent',
+            'yes-text': 'yes', 'no-text': 'no', 'arrow-end': 'block', 'class': 'flowchart', 'scale': 1,
+            'symbols': { 'start': {}, 'end': {}, 'condition': {}, 'inputoutput': {}, 'operation': {}, 'subroutine': {}}
+        }
+    </script>
+    <script type="text/javascript" src="../asset/other/raphael-min.js"></script>
+    <script type="text/javascript" src="../asset/other/flowchart.js"></script>
+    <script type="text/javascript" src="../asset/other/echarts.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div data-basepath="/service/gitbook" class="book">
+    <div class="book-summary">
+        <ul class="summary">
+            <li>
+                <a href="../index.html">php笔记2018</a>
+            </li>
+            <li class="divider"></li>
+            
+                
+                
+    
+    <li data-level="1" class="chapter" data-path="001.第一章 环境配置.html">
+        
+        
+        <a href="../001.第一章 环境配置.html" ><b>1</b> 第一章:环境配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="2" class="chapter" data-path="002.开发工具介绍与配置.html">
+        
+        
+        <a href="../002.开发工具介绍与配置.html" ><b>2</b> 开发工具介绍与配置</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="3" class="chapter" data-path="003.PHP基础语法.html">
+        
+        
+        <a href="../003.PHP基础语法.html" ><b>3</b> 03.PHP基础语法</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="4" class="chapter" data-path="004.变量.html">
+        
+        
+        <a href="../004.变量.html" ><b>4</b> 04.变量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="5" class="chapter" data-path="005.数据类型.html">
+        
+        
+        <a href="../005.数据类型.html" ><b>5</b> 05.数据类型</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="6" class="chapter" data-path="006.数据类型转换.html">
+        
+        
+        <a href="../006.数据类型转换.html" ><b>6</b> 06.数据类型转换</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="7" class="chapter" data-path="007.变量与数据类型常用函数.html">
+        
+        
+        <a href="../007.变量与数据类型常用函数.html" ><b>7</b> 07.变量与数据类型常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="8" class="chapter" data-path="008.常量.html">
+        
+        
+        <a href="../008.常量.html" ><b>8</b> 008.常量</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="9" class="chapter" data-path="009.运算符.html">
+        
+        
+        <a href="../009.运算符.html" ><b>9</b> 09.运算符</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="10" class="chapter" data-path="010.条件结构.html">
+        
+        
+        <a href="../010.条件结构.html" ><b>10</b> 10.条件结构</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="11" class="chapter" data-path="011.循环结构及特殊流程.html">
+        
+        
+        <a href="../011.循环结构及特殊流程.html" ><b>11</b> 11.循环结构及特殊流程</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="12" class="chapter" data-path="012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html">
+        
+        
+        <a href="../012.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试.html" ><b>12</b> 12.开启PHP的XDebug或zend_debugger配合Hbuilder进行断点调试</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="13" class="chapter" data-path="013.数组.html">
+        
+        
+        <a href="../013.数组.html" ><b>13</b> 13.数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="14" class="chapter" data-path="014.九大超全局数组.html">
+        
+        
+        <a href="../014.九大超全局数组.html" ><b>14</b> 14.九大超全局数组</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="15" class="chapter" data-path="015.函数.html">
+        
+        
+        <a href="../015.函数.html" ><b>15</b> 15.函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="16" class="chapter" data-path="016.常用函数.html">
+        
+        
+        <a href="../016.常用函数.html" ><b>16</b> 16.常用函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="17" class="chapter" data-path="017.面向对象.html">
+        
+        
+        <a href="../017.面向对象.html" ><b>17</b> 17.面向对象</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="18" class="chapter" data-path="018.Trait.html">
+        
+        
+        <a href="../018.Trait.html" ><b>18</b> 18.Trait</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="19" class="chapter" data-path="019.namespace命名空间.html">
+        
+        
+        <a href="../019.namespace命名空间.html" ><b>19</b> 19.namespace命名空间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="20" class="chapter" data-path="020.自定义分页类.html">
+        
+        
+        <a href="../020.自定义分页类.html" ><b>20</b> 020.自定义分页类</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="21" class="chapter" data-path="021.PHP操作数据库.html">
+        
+        
+        <a href="../021.PHP操作数据库.html" ><b>21</b> 021.PHP操作数据库</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="22" class="chapter" data-path="022.错误报告级别设置及自定义处理函数.html">
+        
+        
+        <a href="../022.错误报告级别设置及自定义处理函数.html" ><b>22</b> 022.错误报告级别设置及自定义处理函数</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="23" class="chapter" data-path="023.异常处理类 Exception.html">
+        
+        
+        <a href="../023.异常处理类 Exception.html" ><b>23</b> 23.异常处理类 Exception</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="24" class="chapter" data-path="024.文件系统.html">
+        
+        
+        <a href="../024.文件系统.html" ><b>24</b> 24.文件系统</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="25" class="chapter" data-path="025.文件的上传与下载.html">
+        
+        
+        <a href="../025.文件的上传与下载.html" ><b>25</b> 025.文件的上传与下载</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="26" class="chapter" data-path="026.GD库的使用-图片处理及验证码.html">
+        
+        
+        <a href="../026.GD库的使用-图片处理及验证码.html" ><b>26</b> 026.GD库的使用-图片处理及验证码</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="27" class="chapter" data-path="027.版本控制-SVN.html">
+        
+        
+        <a href="../027.版本控制-SVN.html" ><b>27</b> 027.版本控制-SVN</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="28" class="chapter" data-path="028.版本控制-GIT.html">
+        
+        
+        <a href="../028.版本控制-GIT.html" ><b>28</b> 028.版本控制-GIT</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="29" class="chapter" data-path="029.日期与时间.html">
+        
+        
+        <a href="../029.日期与时间.html" ><b>29</b> 029.日期与时间</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="30" class="chapter" data-path="030.PHP字符串处理与正则表达式.html">
+        
+        
+        <a href="../030.PHP字符串处理与正则表达式.html" ><b>30</b> 30.PHP字符串处理与正则表达式</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="31" class="chapter" data-path="031.XML操作.html">
+        
+        
+        <a href="../031.XML操作.html" ><b>31</b> 032.XML操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="32" class="chapter" data-path="032.邮件与短信发送.html">
+        
+        
+        <a href="../032.邮件与短信发送.html" ><b>32</b> 031.邮件与短信发送</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="33" class="chapter" data-path="033.在线支付.html">
+        
+        
+        <a href="../033.在线支付.html" ><b>33</b> 033.在线支付</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="34" class="chapter" data-path="034.HTML协议.html">
+        
+        
+        <a href="../034.HTML协议.html" ><b>34</b> 033.HTML协议</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="35" class="chapter" data-path="035.会话控制之-Cookei.html">
+        
+        
+        <a href="../035.会话控制之-Cookei.html" ><b>35</b> 034.会话控制之-Cookei</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="36" class="chapter" data-path="036.会话控制之-Session.html">
+        
+        
+        <a href="../036.会话控制之-Session.html" ><b>36</b> 035.会话控制之-Session</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="37" class="chapter" data-path="037.缓存之-Memcache.html">
+        
+        
+        <a href="../037.缓存之-Memcache.html" ><b>37</b> 036.缓存之-Memcache</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="38" class="chapter" data-path="038.redis01-下载安装启动.html">
+        
+        
+        <a href="../038.redis01-下载安装启动.html" ><b>38</b> 041.redis01-下载安装启动</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="39" class="chapter" data-path="038.redis02-对于KEY的操作命令(公共命令).html">
+        
+        
+        <a href="../038.redis02-对于KEY的操作命令(公共命令).html" ><b>39</b> 042.redis-对于KEY的操作命令(公共命令)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="40" class="chapter" data-path="038.redis03-字符串类型的操作.html">
+        
+        
+        <a href="../038.redis03-字符串类型的操作.html" ><b>40</b> 043.Redis字符串类型的操作</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="41" class="chapter" data-path="038.redis04-link链表结构(列表list).html">
+        
+        
+        <a href="../038.redis04-link链表结构(列表list).html" ><b>41</b> 044.redis-link链表结构(就像自动整理索引值的索引数组. 下标 到 len-1)</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="42" class="chapter" data-path="038.redis05-set无序集合.html">
+        
+        
+        <a href="../038.redis05-set无序集合.html" ><b>42</b> 045.redis-set无序集合</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="43" class="chapter" data-path="039.配置Apache2.4+PHP7.3+多站点.html">
+        
+        
+        <a href="../039.配置Apache2.4+PHP7.3+多站点.html" ><b>43</b> 039.配置Apache2.4+PHP7.3+多站点</a>
+        
+            
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="44" class="chapter" data-path="MySQL笔记/index.html">
+        
+        
+        <a href="#" ><b>44</b> MySQL笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="44.1" class="chapter" data-path="MySQL笔记/01.MySQL的下载与安装.html">
+        
+        
+        <a href="../MySQL笔记/01.MySQL的下载与安装.html" ><b>44.1</b> 01.MySQL的下载与安装配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.2" class="chapter" data-path="MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html">
+        
+        
+        <a href="../MySQL笔记/02.MySQL配置-DOS管理工具登陆与退出.html" ><b>44.2</b> 02.MySQL配置-DOS管理工具登陆与退出</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.3" class="chapter" data-path="MySQL笔记/03.数据库操作-语句规范与常用命令.html">
+        
+        
+        <a href="../MySQL笔记/03.数据库操作-语句规范与常用命令.html" ><b>44.3</b> mysql语句规范与常用命令</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.4" class="chapter active" data-path="MySQL笔记/04.数据表操作.html">
+        
+        
+        <a href="../MySQL笔记/04.数据表操作.html" ><b>44.4</b> 数据表操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.5" class="chapter" data-path="MySQL笔记/05.数据操作-增删改.html">
+        
+        
+        <a href="../MySQL笔记/05.数据操作-增删改.html" ><b>44.5</b> 05.数据操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.6" class="chapter" data-path="MySQL笔记/06.数据操作 简单查询.html">
+        
+        
+        <a href="../MySQL笔记/06.数据操作 简单查询.html" ><b>44.6</b> 06.数据操作 简单查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.7" class="chapter" data-path="MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html">
+        
+        
+        <a href="../MySQL笔记/07.高级查询-排序 多表联合 聚合与分组 限制条数.html" ><b>44.7</b> 07.高级查询-排序 多表联合 聚合与分组 限制条数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.8" class="chapter" data-path="MySQL笔记/08.多表连接查询.html">
+        
+        
+        <a href="../MySQL笔记/08.多表连接查询.html" ><b>44.8</b> 08.多表连接查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="44.9" class="chapter" data-path="MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html">
+        
+        
+        <a href="../MySQL笔记/09.子查询 ANY ALL [NOT] IN [NOT]EXISTS.html" ><b>44.9</b> 09.子查询 ANY ALL [NOT] IN [NOT]EXISTS</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="45" class="chapter" data-path="ThinkPHP3.1.2笔记/index.html">
+        
+        
+        <a href="#" ><b>45</b> ThinkPHP3.1.2笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="45.1" class="chapter" data-path="ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/01_ThinkPHP3.1.2介绍及安装.html" ><b>45.1</b> ThinkPHP3.1.2介绍及安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.2" class="chapter" data-path="ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/02_ThinkPHP3.1.2MVC模式和URL访问.html" ><b>45.2</b> ThinkPHP 3.1.2 MVC模式和URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.3" class="chapter" data-path="ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/03_ThinkPHP3.1.2输出和模型使用.html" ><b>45.3</b> ThinkPHP 3.1.2 输出和模型使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.4" class="chapter" data-path="ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/04_ThinkPHP3.1.2_CURD特性.html" ><b>45.4</b> ThinkPHP中CURD特性</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.5" class="chapter" data-path="ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/05_ThinkPHP3.1.2_CURD实例.html" ><b>45.5</b> ThinkPHP_CURD实例,操作数据</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.6" class="chapter" data-path="ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/06_ThinkPHP3.1.2_查询方式的一般使用.html" ><b>45.6</b> 查询方式的一般使用</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.7" class="chapter" data-path="ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/07_ThinkPHP3.1.2_查询方式实例.html" ><b>45.7</b> 07_ThinkPHP3.1.2_查询方式实例</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.8" class="chapter" data-path="ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/08_ThinkPHP3.2.1_连惯操作.html" ><b>45.8</b> 08_ThinkPHP3.1.2_连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.9" class="chapter" data-path="ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/09_ThinkPHP3.1.2_视图.html" ><b>45.9</b> 视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.10" class="chapter" data-path="ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/10_ThinkPHP3.1.2_视图实例_用户登陆.html" ><b>45.10</b> 视图实例_用户登陆</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.11" class="chapter" data-path="ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/11_ThinkPHP3.1.2_模板变量详解.html" ><b>45.11</b> 模板变量详解</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.12" class="chapter" data-path="ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/12_ThinkPHP3.1.2_模板中的语法知识.html" ><b>45.12</b> 模板中的语法知识</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.13" class="chapter" data-path="ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/13_ThinkPHP3.1.2_模板的使用技巧.html" ><b>45.13</b> 模板的使用技巧</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="45.14" class="chapter" data-path="ThinkPHP3.1.2笔记/配置项.html">
+        
+        
+        <a href="../ThinkPHP3.1.2笔记/配置项.html" ><b>45.14</b> 配置项</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="46" class="chapter" data-path="bootstrap笔记/index.html">
+        
+        
+        <a href="#" ><b>46</b> bootstrap笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="46.1" class="chapter" data-path="bootstrap笔记/01. Bootstrap 介绍.html">
+        
+        
+        <a href="../bootstrap笔记/01. Bootstrap 介绍.html" ><b>46.1</b> 01. Bootstrap 介绍</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.2" class="chapter" data-path="bootstrap笔记/02. Bootstrap 排版样式.html">
+        
+        
+        <a href="../bootstrap笔记/02. Bootstrap 排版样式.html" ><b>46.2</b> Bootstrap 排版样式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.3" class="chapter" data-path="bootstrap笔记/03. Bootstrap 表格和按钮.html">
+        
+        
+        <a href="../bootstrap笔记/03. Bootstrap 表格和按钮.html" ><b>46.3</b> 03. Bootstrap 表格和按钮</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.4" class="chapter" data-path="bootstrap笔记/04. Bootstrap 栅格系统.html">
+        
+        
+        <a href="../bootstrap笔记/04. Bootstrap 栅格系统.html" ><b>46.4</b> Bootstrap 栅格系统</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.5" class="chapter" data-path="bootstrap笔记/05.  Bootstrap 表单和图片.html">
+        
+        
+        <a href="../bootstrap笔记/05.  Bootstrap 表单和图片.html" ><b>46.5</b> 04.  Bootstrap 表单和图片</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.6" class="chapter" data-path="bootstrap笔记/06. 辅组类和响应式工具.html">
+        
+        
+        <a href="../bootstrap笔记/06. 辅组类和响应式工具.html" ><b>46.6</b> 辅组类和响应式工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.7" class="chapter" data-path="bootstrap笔记/07. 图标菜单按钮组件.html">
+        
+        
+        <a href="../bootstrap笔记/07. 图标菜单按钮组件.html" ><b>46.7</b> 图标菜单按钮组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.8" class="chapter" data-path="bootstrap笔记/08. 输入框和导航组件.html">
+        
+        
+        <a href="../bootstrap笔记/08. 输入框和导航组件.html" ><b>46.8</b> 输入框和导航组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.9" class="chapter" data-path="bootstrap笔记/09. 路径分页标签和徽章组件.html">
+        
+        
+        <a href="../bootstrap笔记/09. 路径分页标签和徽章组件.html" ><b>46.9</b> 路径分页标签和徽章组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.10" class="chapter" data-path="bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html">
+        
+        
+        <a href="../bootstrap笔记/10. 巨幕页头缩略图和警告框组件.html" ><b>46.10</b> 巨幕页头缩略图和警告框组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.11" class="chapter" data-path="bootstrap笔记/11. 进度条媒体对象和Well组件.html">
+        
+        
+        <a href="../bootstrap笔记/11. 进度条媒体对象和Well组件.html" ><b>46.11</b> 进度条媒体对象和Well组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.12" class="chapter" data-path="bootstrap笔记/12. 列表组面板和嵌入组件.html">
+        
+        
+        <a href="../bootstrap笔记/12. 列表组面板和嵌入组件.html" ><b>46.12</b> 列表组面板和嵌入组件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.13" class="chapter" data-path="bootstrap笔记/13. 模态框插件.html">
+        
+        
+        <a href="../bootstrap笔记/13. 模态框插件.html" ><b>46.13</b> 模态框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.14" class="chapter" data-path="bootstrap笔记/14. 下拉菜单和滚动监听插件.html">
+        
+        
+        <a href="../bootstrap笔记/14. 下拉菜单和滚动监听插件.html" ><b>46.14</b> 下拉菜单和滚动监听插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.15" class="chapter" data-path="bootstrap笔记/15. 标签页和工具提示插件.html">
+        
+        
+        <a href="../bootstrap笔记/15. 标签页和工具提示插件.html" ><b>46.15</b> 标签页和工具提示插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.16" class="chapter" data-path="bootstrap笔记/16. 弹出框和警告框插件.html">
+        
+        
+        <a href="../bootstrap笔记/16. 弹出框和警告框插件.html" ><b>46.16</b> 弹出框和警告框插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.17" class="chapter" data-path="bootstrap笔记/17. 按钮和折叠插件.html">
+        
+        
+        <a href="../bootstrap笔记/17. 按钮和折叠插件.html" ><b>46.17</b> 按钮和折叠插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.18" class="chapter" data-path="bootstrap笔记/18. 轮播插件.html">
+        
+        
+        <a href="../bootstrap笔记/18. 轮播插件.html" ><b>46.18</b> 轮播插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="46.19" class="chapter" data-path="bootstrap笔记/19. 附加导航插件.html">
+        
+        
+        <a href="../bootstrap笔记/19. 附加导航插件.html" ><b>46.19</b> 附加导航插件</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="47" class="chapter" data-path="es6/index.html">
+        
+        
+        <a href="#" ><b>47</b> es6</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="47.1" class="chapter" data-path="es6/01-项目目录创建.html">
+        
+        
+        <a href="../es6/01-项目目录创建.html" ><b>47.1</b> 01-项目目录创建</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="48" class="chapter" data-path="jquery笔记/index.html">
+        
+        
+        <a href="#" ><b>48</b> jquery笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="48.1" class="chapter" data-path="jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16.14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.1</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.2" class="chapter" data-path="jquery笔记/01.JQUERY入门.html">
+        
+        
+        <a href="../jquery笔记/01.JQUERY入门.html" ><b>48.2</b> 01.JQUERY入门</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.3" class="chapter" data-path="jquery笔记/02.jQuery基础核心.html">
+        
+        
+        <a href="../jquery笔记/02.jQuery基础核心.html" ><b>48.3</b> 02.jQuery基础核心</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.4" class="chapter" data-path="jquery笔记/03.jQuery常规选择器.html">
+        
+        
+        <a href="../jquery笔记/03.jQuery常规选择器.html" ><b>48.4</b> 03.jQuery常规选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.5" class="chapter" data-path="jquery笔记/04.jQuery过滤选择器.html">
+        
+        
+        <a href="../jquery笔记/04.jQuery过滤选择器.html" ><b>48.5</b> 04.jQuery过滤选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.6" class="chapter" data-path="jquery笔记/05.jQuery基础DOM和CSS操作.html">
+        
+        
+        <a href="../jquery笔记/05.jQuery基础DOM和CSS操作.html" ><b>48.6</b> 05. 基础DOM和CSS操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.7" class="chapter" data-path="jquery笔记/06.jQuery DOM节点操作.html">
+        
+        
+        <a href="../jquery笔记/06.jQuery DOM节点操作.html" ><b>48.7</b> 06.jQuery DOM节点操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.8" class="chapter" data-path="jquery笔记/07. jQuery表单选择器.html">
+        
+        
+        <a href="../jquery笔记/07. jQuery表单选择器.html" ><b>48.8</b> 07. jQuery表单选择器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.9" class="chapter" data-path="jquery笔记/08. jQuery基础事件.html">
+        
+        
+        <a href="../jquery笔记/08. jQuery基础事件.html" ><b>48.9</b> jQuery基础事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.10" class="chapter" data-path="jquery笔记/09. jQuery事件对象.html">
+        
+        
+        <a href="../jquery笔记/09. jQuery事件对象.html" ><b>48.10</b> 09. jQuery事件对象</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.11" class="chapter" data-path="jquery笔记/10. jQuery高级事件.html">
+        
+        
+        <a href="../jquery笔记/10. jQuery高级事件.html" ><b>48.11</b> 10. jQuery高级事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.12" class="chapter" data-path="jquery笔记/11.jQuery动画效果.html">
+        
+        
+        <a href="../jquery笔记/11.jQuery动画效果.html" ><b>48.12</b> 11.jQuery动画效果</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.13" class="chapter" data-path="jquery笔记/12.jQuery-Ajax.html">
+        
+        
+        <a href="../jquery笔记/12.jQuery-Ajax.html" ><b>48.13</b> 12.jQuery-Ajax</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.14" class="chapter" data-path="jquery笔记/13. jQuery-Ajax 进阶.html">
+        
+        
+        <a href="../jquery笔记/13. jQuery-Ajax 进阶.html" ><b>48.14</b> 13. jQuery-Ajax 进阶</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.15" class="chapter" data-path="jquery笔记/14. jQquery工具函数.html">
+        
+        
+        <a href="../jquery笔记/14. jQquery工具函数.html" ><b>48.15</b> 14. jQquery工具函数</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.16" class="chapter" data-path="jquery笔记/15. jQuery 插件.html">
+        
+        
+        <a href="../jquery笔记/15. jQuery 插件.html" ><b>48.16</b> 15. jQuery 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.17" class="chapter" data-path="jquery笔记/16. 01  jQuery-UI 知问前端概述 .html">
+        
+        
+        <a href="../jquery笔记/16. 01  jQuery-UI 知问前端概述 .html" ><b>48.17</b> jQuery-UI 概述及下载安装</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.18" class="chapter" data-path="jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html">
+        
+        
+        <a href="../jquery笔记/16. 02 jQuery-UI 知问前端--创建 header 区.html" ><b>48.18</b> jQuery-UI 知问前端--创建 header 区</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.19" class="chapter" data-path="jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html">
+        
+        
+        <a href="../jquery笔记/16. 03jQuery-UI 知问前端--对话框UI.html" ><b>48.19</b> jQuery-UI 知问前端--对话框UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.20" class="chapter" data-path="jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html">
+        
+        
+        <a href="../jquery笔记/16. 04 jQuery-UI 知问前端 - 按钮UI.html" ><b>48.20</b> jQuery-UI 知问前端 - 按钮UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.21" class="chapter" data-path="jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 05 jQuery-UI 知问前端--创建注册表单.html" ><b>48.21</b> jQuery-UI 知问前端--创建注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.22" class="chapter" data-path="jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 06 jQuery-UI 知问前端--工具提示 UI.html" ><b>48.22</b> jQuery-UI 知问前端--工具提示 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.23" class="chapter" data-path="jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html">
+        
+        
+        <a href="../jquery笔记/16. 07 jQuery-UI 知问前端 - 自动补全UI.html" ><b>48.23</b> jQuery-UI 知问前端 - 自动补全UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.24" class="chapter" data-path="jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html">
+        
+        
+        <a href="../jquery笔记/16. 08 jQuery-UI 知问前端--邮箱自动补全.html" ><b>48.24</b> jQuery-UI 知问前端--邮箱自动补全</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.25" class="chapter" data-path="jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html">
+        
+        
+        <a href="../jquery笔记/16. 09 jQuery-UI 知问前端--日历UI.html" ><b>48.25</b> 16. 09 jQuery-UI 知问前端--日历UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.26" class="chapter" data-path="jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html">
+        
+        
+        <a href="../jquery笔记/16. 10 jQuery-UI 知问前端--验证插件.html" ><b>48.26</b> jQuery-UI 知问前端--验证插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.27" class="chapter" data-path="jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html">
+        
+        
+        <a href="../jquery笔记/16. 11 jQuery-UI 知问前端--验证注册表单.html" ><b>48.27</b> jQuery-UI 知问前端--验证注册表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.28" class="chapter" data-path="jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html">
+        
+        
+        <a href="../jquery笔记/16. 12 jQuery-UI 知问前端--Ajax 表单插件.html" ><b>48.28</b> jQuery-UI 知问前端--Ajax 表单插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.29" class="chapter" data-path="jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html">
+        
+        
+        <a href="../jquery笔记/16. 13 jQuery-UI 知问前端--Ajax 提交表单.html" ><b>48.29</b> jQuery-UI 知问前端--Ajax 提交表单</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.30" class="chapter" data-path="jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html">
+        
+        
+        <a href="../jquery笔记/16. 14 jQuery-UI 知问前端--cookie 插件.html" ><b>48.30</b> jQuery-UI 知问前端--cookie 插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.31" class="chapter" data-path="jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html">
+        
+        
+        <a href="../jquery笔记/16. 15 jQuery-UI 知问前端--Ajax 登录.html" ><b>48.31</b> jQuery-UI 知问前端--Ajax 登录</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.32" class="chapter" data-path="jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 16 jQuery-UI 知问前端--选项卡 UI.html" ><b>48.32</b> jQuery-UI 知问前端--选项卡 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.33" class="chapter" data-path="jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html">
+        
+        
+        <a href="../jquery笔记/16. 17 jQuery-UI 知问前端--折叠菜单 UI.html" ><b>48.33</b> jQuery-UI 知问前端--折叠菜单 UI</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.34" class="chapter" data-path="jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html">
+        
+        
+        <a href="../jquery笔记/16. 18 jQuery-UI 知问前端--编辑器插件.html" ><b>48.34</b> jQuery-UI 知问前端--编辑器插件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.35" class="chapter" data-path="jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html">
+        
+        
+        <a href="../jquery笔记/16. 19 jQuery-UI 知问前端--Ajax 提问.html" ><b>48.35</b> jQuery-UI 知问前端--Ajax 提问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.36" class="chapter" data-path="jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html">
+        
+        
+        <a href="../jquery笔记/16. 20 jQquery-UI 知问前端--Ajax 显示.html" ><b>48.36</b> jQquery-UI 知问前端--Ajax 显示</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.37" class="chapter" data-path="jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html">
+        
+        
+        <a href="../jquery笔记/16. 21 jQuery-UI 知问前端--Ajax 提交评论.html" ><b>48.37</b> jQuery-UI 知问前端--Ajax 提交评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.38" class="chapter" data-path="jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html">
+        
+        
+        <a href="../jquery笔记/16. 22 jQuery-UI 知问前端--Ajax 显示评论.html" ><b>48.38</b> jQuery-UI 知问前端--Ajax 显示评论</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.39" class="chapter" data-path="jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html">
+        
+        
+        <a href="../jquery笔记/16. 23 jQuery-UI 知问前端--Ajax 加载更多.html" ><b>48.39</b> jQuery-UI 知问前端--Ajax 加载更多</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="48.40" class="chapter" data-path="jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html">
+        
+        
+        <a href="../jquery笔记/16. 24 jQuery-UI 知问前端--总结及屏蔽低版 IE.html" ><b>48.40</b> jQuery-UI 知问前端--总结及屏蔽低版 IE</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="49" class="chapter" data-path="thinkphp3.2备课笔记/index.html">
+        
+        
+        <a href="#" ><b>49</b> thinkphp3.2备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="49.1" class="chapter" data-path="thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/01.ThinkPHP-为什么要使用框架.html" ><b>49.1</b> 01.ThinkPHP-为什么要使用框架</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.2" class="chapter" data-path="thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/02.ThinkPHP-安装与配置.html" ><b>49.2</b> 02.ThinkPHP-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.3" class="chapter" data-path="thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/03.ThinkPHP--模块化和URL模式.html" ><b>49.3</b> 03.ThinkPHP--模块化和URL模式</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.4" class="chapter" data-path="thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/04.ThinkPHP-数据库模型初级.html" ><b>49.4</b> 04.ThinkPHP-数据库模型初级</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.5" class="chapter" data-path="thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/05.ThinkPHP-SQL查询语句.html" ><b>49.5</b> 05.ThinkPHP-SQL查询语句</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.6" class="chapter" data-path="thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/06.ThinkPHP-SQL连惯操作.html" ><b>49.6</b> ThinkPHP-SQL连惯操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.7" class="chapter" data-path="thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/07.ThinkPHP-CURD操作.html" ><b>49.7</b> 07.ThinkPHP-CURD操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.8" class="chapter" data-path="thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/08.ThinkPHP-自动验证.html" ><b>49.8</b> 08.ThinkPHP-自动验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.9" class="chapter" data-path="thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/09.ThinkPHP-自动完成.html" ><b>49.9</b> 09.ThinkPHP-自动完成</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.10" class="chapter" data-path="thinkphp3.2备课笔记/10.ThinkPHP-视图.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/10.ThinkPHP-视图.html" ><b>49.10</b> 10.ThinkPHP-视图</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.11" class="chapter" data-path="thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/11.ThinkPHP-模板基础.html" ><b>49.11</b> 11.ThinkPHP-模板基础</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.12" class="chapter" data-path="thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/12.ThinkPHP-内置标签.html" ><b>49.12</b> 12.ThinkPHP-内置标签</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.13" class="chapter" data-path="thinkphp3.2备课笔记/13.ThinkPHP-标签库.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/13.ThinkPHP-标签库.html" ><b>49.13</b> 13.ThinkPHP-标签库</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.14" class="chapter" data-path="thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/14.ThinkPHP-路由功能.html" ><b>49.14</b> 14.ThinkPHP-路由功能</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.15" class="chapter" data-path="thinkphp3.2备课笔记/15.Thinkphp-URL操作.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/15.Thinkphp-URL操作.html" ><b>49.15</b> 15.ThinkPHP-URL操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.16" class="chapter" data-path="thinkphp3.2备课笔记/16.ThinkPHP-控制器.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/16.ThinkPHP-控制器.html" ><b>49.16</b> 16.ThinkPHP-控制器</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.17" class="chapter" data-path="thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/17.ThinkPHP-session与cookie.html" ><b>49.17</b> 17.ThinkPHP-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.18" class="chapter" data-path="thinkphp3.2备课笔记/18.ThinkPHP图像处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/18.ThinkPHP图像处理.html" ><b>49.18</b> 18.ThinkPHP图像处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.19" class="chapter" data-path="thinkphp3.2备课笔记/19.ThinkPHP-验证码.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/19.ThinkPHP-验证码.html" ><b>49.19</b> 19.ThinkPHP-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.20" class="chapter" data-path="thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/20.ThinkPHP-文件上传.html" ><b>49.20</b> 20.ThinkPHP-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.21" class="chapter" data-path="thinkphp3.2备课笔记/21.ThinkPHP-多语言.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/21.ThinkPHP-多语言.html" ><b>49.21</b> 21.ThinkPHP-多语言</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.22" class="chapter" data-path="thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/22.ThinkPHP-auth权限控制.html" ><b>49.22</b> 22.ThinkPHP-auth权限控制</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.23" class="chapter" data-path="thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/23.ThinkPHP-关联模型.html" ><b>49.23</b> 23.ThinkPHP-关联模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.24" class="chapter" data-path="thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/24.ThinkPHP-视图模型与分页.html" ><b>49.24</b> 24.ThinkPHP-视图模型与分页</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.25" class="chapter" data-path="thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/25.ThinkPHP-缓存处理.html" ><b>49.25</b> 25.ThinkPHP-缓存处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="49.26" class="chapter" data-path="thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html">
+        
+        
+        <a href="../thinkphp3.2备课笔记/26.ThinkPHP-调试方法.html" ><b>49.26</b> 26.ThinkPHP-调试方法</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="50" class="chapter" data-path="thinkphp5备课笔记/index.html">
+        
+        
+        <a href="#" ><b>50</b> thinkphp5备课笔记</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="50.1" class="chapter" data-path="thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html">
+        
+        
+        <a href="../thinkphp5备课笔记/01.ThinkPHP5.0-安装与配置.html" ><b>50.1</b> 01.ThinkPHP5.0-安装与配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.2" class="chapter" data-path="thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html">
+        
+        
+        <a href="../thinkphp5备课笔记/02.ThinkPHP5.0-模块化与URL访问.html" ><b>50.2</b> 0.2ThinkPHP5.0-模块化与URL访问</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.3" class="chapter" data-path="thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html">
+        
+        
+        <a href="../thinkphp5备课笔记/03.ThinkPHP5.0-URL访问与路由.html" ><b>50.3</b> 03.ThinkPHP5.0-URL访问与路由</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.4" class="chapter" data-path="thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html">
+        
+        
+        <a href="../thinkphp5备课笔记/04.ThinkPHP5.0-请求与向应.html" ><b>50.4</b> 04.ThinkPHP5.0-请求与向应</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.5" class="chapter" data-path="thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html">
+        
+        
+        <a href="../thinkphp5备课笔记/05.ThinkPHP5.0-数据库基本操作.html" ><b>50.5</b> 05.ThinkPHP5.0-数据库基本操作</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.6" class="chapter" data-path="thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html">
+        
+        
+        <a href="../thinkphp5备课笔记/06.ThinkPHP5.0-数据库操作-增删改.html" ><b>50.6</b> 06.Thinkphp5.0-数据库操作-增删改</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.7" class="chapter" data-path="thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html">
+        
+        
+        <a href="../thinkphp5备课笔记/07.ThinkPHP5.0-数据库查询.html" ><b>50.7</b> ThinkPHP5.0-数据库查询</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.8" class="chapter" data-path="thinkphp5备课笔记/08.ThinkPHP5.0-模型.html">
+        
+        
+        <a href="../thinkphp5备课笔记/08.ThinkPHP5.0-模型.html" ><b>50.8</b> ThinkPHP5.0-模型</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.9" class="chapter" data-path="thinkphp5备课笔记/09.ThinkPHP5.0-验证.html">
+        
+        
+        <a href="../thinkphp5备课笔记/09.ThinkPHP5.0-验证.html" ><b>50.9</b> 09.ThinkPHP5.0-验证</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.10" class="chapter" data-path="thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html">
+        
+        
+        <a href="../thinkphp5备课笔记/10.ThinkPHP5.0-视图和模板.html" ><b>50.10</b> 10.ThinkPHP5.0-视图和模板</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.11" class="chapter" data-path="thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html">
+        
+        
+        <a href="../thinkphp5备课笔记/11.ThinkPHP5.0-模板引擎.html" ><b>50.11</b> 11.ThinkPHP5.0-模板引擎</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.12" class="chapter" data-path="thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html">
+        
+        
+        <a href="../thinkphp5备课笔记/12.ThinkPHP5.0-错误调试与日志.html" ><b>50.12</b> 12.ThinkPHP5.0-错误调试与日志</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.13" class="chapter" data-path="thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html">
+        
+        
+        <a href="../thinkphp5备课笔记/13.ThinkPHP5.0-扩展.html" ><b>50.13</b> 13.ThinkPHP5.0-扩展</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.14" class="chapter" data-path="thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html">
+        
+        
+        <a href="../thinkphp5备课笔记/14.ThinkPHP5.0-session与cookie.html" ><b>50.14</b> 14.ThinkPHP5.0-session与cookie</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.15" class="chapter" data-path="thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html">
+        
+        
+        <a href="../thinkphp5备课笔记/15.ThinkPHP5.0-验证码.html" ><b>50.15</b> 15.ThinkPHP5.0-验证码</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.16" class="chapter" data-path="thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html">
+        
+        
+        <a href="../thinkphp5备课笔记/16.ThinkPHP5.0-文件上传.html" ><b>50.16</b> 16.ThinkPHP5.0-文件上传</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.17" class="chapter" data-path="thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html">
+        
+        
+        <a href="../thinkphp5备课笔记/17.ThinkPHP5.0-图片处理.html" ><b>50.17</b> 17.ThinkPHP5.0-图片处理</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="50.18" class="chapter" data-path="thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html">
+        
+        
+        <a href="../thinkphp5备课笔记/18.ThinkPHP5.0-缓存.html" ><b>50.18</b> 18.ThinkPHP5.0-缓存</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+                
+                
+    
+    <li data-level="51" class="chapter" data-path="微信小程序/index.html">
+        
+        
+        <a href="#" ><b>51</b> 微信小程序</a>
+        
+            
+                    
+                        <ul class="articles">
+                            
+                                
+    
+    <li data-level="51.1" class="chapter" data-path="微信小程序/01-微信小程序账号与工具.html">
+        
+        
+        <a href="../微信小程序/01-微信小程序账号与工具.html" ><b>51.1</b> 微信小程序账号与工具</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.2" class="chapter" data-path="微信小程序/02-微信小程序文件结构.html">
+        
+        
+        <a href="../微信小程序/02-微信小程序文件结构.html" ><b>51.2</b> 微信小程序文件结构</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.3" class="chapter" data-path="微信小程序/03-微信小程序配置-JSON.html">
+        
+        
+        <a href="../微信小程序/03-微信小程序配置-JSON.html" ><b>51.3</b> 微信小程序配置</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.4" class="chapter" data-path="微信小程序/04-页面常用标签-WXML.html">
+        
+        
+        <a href="../微信小程序/04-页面常用标签-WXML.html" ><b>51.4</b> 04-页面结构-WXML</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.5" class="chapter" data-path="微信小程序/05-页面数据与函数-JS.html">
+        
+        
+        <a href="../微信小程序/05-页面数据与函数-JS.html" ><b>51.5</b> 05-页面数据与函数-JS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.6" class="chapter" data-path="微信小程序/06-页面样式-WXSS.html">
+        
+        
+        <a href="../微信小程序/06-页面样式-WXSS.html" ><b>51.6</b> 06-页面样式-WXSS</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.7" class="chapter" data-path="微信小程序/07-页面整体WXML布局.html">
+        
+        
+        <a href="../微信小程序/07-页面整体WXML布局.html" ><b>51.7</b> 07-页面整体WXML布局</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.8" class="chapter" data-path="微信小程序/08-事件.html">
+        
+        
+        <a href="../微信小程序/08-事件.html" ><b>51.8</b> 事件</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.9" class="chapter" data-path="微信小程序/09-WXS脚本.html">
+        
+        
+        <a href="../微信小程序/09-WXS脚本.html" ><b>51.9</b> WXS脚本</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.10" class="chapter" data-path="微信小程序/10-小程序云开发.html">
+        
+        
+        <a href="../微信小程序/10-小程序云开发.html" ><b>51.10</b> 10-小程序云开发</a>
+        
+    </li>
+
+                            
+                                
+    
+    <li data-level="51.11" class="chapter" data-path="微信小程序/11-小程序云开发-云数据库.html">
+        
+        
+        <a href="../微信小程序/11-小程序云开发-云数据库.html" ><b>51.11</b> 11-小程序云开发-云数据库</a>
+        
+    </li>
+
+                            
+                        </ul>
+                    
+                
+        
+    </li>
+
+            
+        </ul>
+
+    </div>
+
+    <div class="book-body">
+        <div class="body-inner">
+
+            <div class="book-header" role="navigation">
+                <h1>
+                    <a href="../index.html" > php笔记2018</a>
+                </h1>
+            </div>
+
+            <div tabindex="-1" class="page-wrapper">
+                <div class="page-inner">
+                    <h2 class="post_title"> 数据表操作 </h2>
+                    <div class="post_body"> <p class="md_block">
+
+<div class="toc"><ul>
+<li>
+<a href="#toc_0">数据表操作</a>
+<ul>
+<li>
+<a href="#toc_1">数据类型</a>
+<ul>
+<li>
+<a href="#toc_2">数字类型:整型</a>
+</li>
+<li>
+<a href="#toc_3">　数字类型:小数型</a>
+</li>
+<li>
+<a href="#toc_4">数字类型 无符号UNSIGNED 零填充ZEROFILL</a>
+</li>
+<li>
+<a href="#toc_5">字符串类型</a>
+<ul>
+<li>
+<a href="#toc_6">text类型</a>
+</li>
+<li>
+<a href="#toc_7">枚举类型ENUM</a>
+</li>
+<li>
+<a href="#toc_8">集合类型 SET</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">　日期时间类型</a>
+<ul>
+<li>
+<a href="#toc_10">TIME类型</a>
+</li>
+<li>
+<a href="#toc_11">YEAR类型</a>
+</li>
+<li>
+<a href="#toc_12">DATETIME TIMESTAMP</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">表引擎</a>
+</li>
+<li>
+<a href="#toc_14">数据表操作</a>
+<ul>
+<li>
+<a href="#toc_15">查看表信息命令</a>
+</li>
+<li>
+<a href="#toc_16">创表表 CREATE TABLE</a>
+<ul>
+<li>
+<a href="#toc_17">基本语法</a>
+</li>
+<li>
+<a href="#toc_18">建表时增加引擎与指定字符集</a>
+</li>
+<li>
+<a href="#toc_19">添加键与约束</a>
+<ul>
+<li>
+<a href="#toc_20">主键 primary key</a>
+</li>
+<li>
+<a href="#toc_21">自动增长　auto_increment</a>
+</li>
+<li>
+<a href="#toc_22">默认值 DEFAULT</a>
+</li>
+<li>
+<a href="#toc_23">非空 NOT NULL</a>
+</li>
+<li>
+<a href="#toc_24">唯一 UNIQUE KEY</a>
+</li>
+<li>
+<a href="#toc_25">外键约束  FOREIGN KEY (列名) REFERENCES 被关联表(被关联表的列名)</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_26">删除表 DROP TABLE</a>
+</li>
+<li>
+<a href="#toc_27">修改表 ALTER TABLE</a>
+<ul>
+<li>
+<a href="#toc_28">修改表名 RENAME</a>
+</li>
+<li>
+<a href="#toc_29">增加字段 ADD</a>
+</li>
+<li>
+<a href="#toc_30">删除字段 DROP</a>
+</li>
+<li>
+<a href="#toc_31">修改字段 MODIFY</a>
+</li>
+<li>
+<a href="#toc_32">修改字段加强版(可重命名字段名) CHANGE</a>
+</li>
+<li>
+<a href="#toc_33">添加或修改默认值 SET DEFAULT</a>
+</li>
+<li>
+<a href="#toc_34">删除默认值 DROP DEFAULT</a>
+</li>
+<li>
+<a href="#toc_35">添加主键 ADD PRIMARY KEY</a>
+</li>
+<li>
+<a href="#toc_36">删除主键 DROP PRIMARY KEY</a>
+</li>
+<li>
+<a href="#toc_37">添加唯一键 ADD INIQUE [INDEX|KEY]</a>
+</li>
+<li>
+<a href="#toc_38">删除唯一键 DROP [INDEX|KEY] index_name</a>
+</li>
+<li>
+<a href="#toc_39">修改表存储引擎 ENGINE=InnoDB</a>
+</li>
+<li>
+<a href="#toc_40">修改表字符集 DEFAULT CHARACTER SET</a>
+</li>
+<li>
+<a href="#toc_41">修改表自增起始值 AUTO_INCREMENT=值</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+
+<h2 id="toc_1">数据类型</h2>
+
+<h3 id="toc_2">数字类型:整型</h3>
+<img onerror="this.src='../../MySQL笔记/_image/2018-03-19-10-49-18.jpg';this.onerror=null;"  class="" src="/MySQL笔记/_image/2018-03-19-10-49-18.jpg" alt="" title="" >
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意:mysql中没有BOOL 或 BOOLEAN类型,以后开发中,用TINYINT(1)表示,0表示FALSE,其它1-9表示TRUE.</span>
+</p>
+
+</blockquote>
+
+<h3 id="toc_3">　数字类型:小数型</h3>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img onerror="this.src='../../MySQL笔记/_image/2018-03-19-10-51-46.jpg';this.onerror=null;"  class="" src="/MySQL笔记/_image/2018-03-19-10-51-46.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">注意在使用时别超出范围：(M,D):M表示总位数(不包含小数点),D表示小数位数.如:</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="c1">-- 表示最大值有8位整数,2位小数:99999999.99</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">(</span><span class="n">test</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">其中DECIMAL或NUMERIC是精确型(它是用字符串形式存储数值)</span>
+</p>
+
+
+<h3 id="toc_4">数字类型 无符号UNSIGNED 零填充ZEROFILL</h3>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="c1">-- 无符号,最小值是0,没有负数,注意插入值.</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">(</span><span class="n">test</span> <span class="nb">INT</span> <span class="n">UNSIGNED</span><span class="p">);</span>
+
+<span class="c1">-- 零填充,注意会自动(强制转换成无符号),如指定的长度(不指定则默认长度)不够在左边填充0</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test3</span><span class="p">(</span><span class="n">test</span> <span class="nb">INT</span> <span class="n">ZEROFILL</span><span class="p">);</span>
+<span class="c1">-- 用上面语句创建表后,查看表结构</span>
+<span class="k">DESC</span> <span class="n">test3</span><span class="p">;</span>
+<span class="cm">/*</span>
+<span class="cm">+-------+---------------------------+------+-----+---------+-------+</span>
+<span class="cm">| Field | Type                      | Null | Key | Default | Extra |</span>
+<span class="cm">+-------+---------------------------+------+-----+---------+-------+</span>
+<span class="cm">| test  | int(10) unsigned zerofill | YES  |     | NULL    |       |</span>
+<span class="cm">+-------+---------------------------+------+-----+---------+-------+</span>
+<span class="cm">1 row in set (0.01 sec)</span>
+<span class="cm">*/</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_5">字符串类型</h3>
+<img onerror="this.src='../../MySQL笔记/_image/2018-03-19-11-04-11.jpg';this.onerror=null;"  class="" src="/MySQL笔记/_image/2018-03-19-11-04-11.jpg" alt="" title="" >
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">注意:CHAR与VARCHAR的区别:<br /></span>
+    <span class="md_line">CHAR是定长字符串,VARCHAR是可变长字符串,在存储上,CHAR速度快,但存储不定长字符串时占用空间大,字符串长度不够时用空格填充,开中发用于存储一些定长字符串,如手机号11位,身份证号18位等,其余用VARCHAR.</span>
+</p>
+
+</blockquote>
+
+<h4 id="toc_6">text类型</h4>
+
+<p class="md_block">
+    <span class="md_line">TEXT类型是一种特殊的字符串类型。只能保存字符数据，而且不能有默认值,</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">(</span><span class="n">test</span> <span class="nb">TEXT</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_7">枚举类型ENUM</h4>
+
+<p class="md_block">
+    <span class="md_line">最多可枚举65535个值.</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test</span><span class="p">(</span><span class="n">test</span> <span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span><span class="s1">&#39;value2&#39;</span><span class="p">,</span><span class="s1">&#39;value3&#39;</span><span class="p">...);</span> <span class="c1">-- 最多65535个值,插入数据时只能选其一插放,</span>
+<span class="c1">-- 在创建时,会忽略枚举值字符串后空格(但不去字符串前空格).</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test4</span><span class="p">(</span><span class="n">test</span> <span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span><span class="s1">&#39;     value2&#39;</span><span class="p">,</span><span class="s1">&#39;value3      &#39;</span><span class="p">));</span>
+<span class="k">DESC</span> <span class="n">test4</span><span class="p">;</span>
+<span class="c1">-- 结果如下所示,value3后的空格自动去了,而value2前的空格还在.</span>
+<span class="cm">/*</span>
+<span class="cm">mysql&gt; desc test4;</span>
+<span class="cm">+-------+------------------------------------+------+-----+---------+-------+</span>
+<span class="cm">| Field | Type                               | Null | Key | Default | Extra |</span>
+<span class="cm">+-------+------------------------------------+------+-----+---------+-------+</span>
+<span class="cm">| test  | enum(&#39;value1&#39;,&#39;  value2&#39;,&#39;value3&#39;) | YES  |     | NULL    |       |</span>
+<span class="cm">+-------+------------------------------------+------+-----+---------+-------+</span>
+<span class="cm">1 row in set (0.00 sec)</span>
+<span class="cm">*/</span>
+
+<span class="c1">-- 也可以用序号插入值.从1开始,到个数.超出范围会出错.</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="n">value</span><span class="p">(</span><span class="s1">&#39;value1&#39;</span><span class="p">);</span> <span class="c1">-- 插入value1</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">-- 插入value1</span>
+<span class="c1">-- 注意,枚举类型不能插入没有举出的值,但NULL是个例外,可以插入</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="n">value</span><span class="p">(</span><span class="k">NULL</span><span class="p">);</span> <span class="c1">-- null大小写都可以.</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_8">集合类型 SET</h4>
+
+<p class="md_block">
+    <span class="md_line">最多能设置64个集合成员.</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test</span><span class="p">(</span><span class="n">test</span> <span class="k">SET</span><span class="p">(</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span><span class="s1">&#39;value2&#39;</span><span class="p">,</span><span class="s1">&#39;value3&#39;</span><span class="p">,</span><span class="s1">&#39;value4&#39;</span><span class="p">,</span><span class="s1">&#39;value5&#39;</span><span class="p">));</span> <span class="c1">-- 最多设置64个值</span>
+<span class="c1">--插入数据时注意,用字符串插入,但也可以用二进制值插入</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">values</span><span class="p">(</span><span class="s1">&#39;value1,value2,value4&#39;</span><span class="p">);</span> <span class="c1">-- 字符串的顺序可以随便.在集合内就行</span>
+<span class="cm">/*</span>
+<span class="cm">mysql&gt; select * from test;</span>
+<span class="cm">+----------------------+</span>
+<span class="cm">| test                 |</span>
+<span class="cm">+----------------------+</span>
+<span class="cm">| value1,value2,value4 |</span>
+<span class="cm">+----------------------+</span>
+<span class="cm">1 row in set (0.00 sec)</span>
+<span class="cm">*/</span>
+
+<span class="c1">-- 也可以用数值插入,以二进制理解,1+2+3 = 7,所以插入的也是value1,value2,value3</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">values</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<span class="cm">/*</span>
+<span class="cm">mysql&gt; select * from test;</span>
+<span class="cm">+----------------------+</span>
+<span class="cm">| test                 |</span>
+<span class="cm">+----------------------+</span>
+<span class="cm">| value1,value2,value4 |</span>
+<span class="cm">| value1,value2,value3 |</span>
+<span class="cm">+----------------------+</span>
+<span class="cm">2 rows in set (0.00 sec)</span>
+<span class="cm">*/</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_9">　日期时间类型</h3>
+<img onerror="this.src='../../MySQL笔记/_image/2018-03-19-11-38-43.jpg';this.onerror=null;"  class="" src="/MySQL笔记/_image/2018-03-19-11-38-43.jpg" alt="" title="" >
+<h4 id="toc_10">TIME类型</h4>
+
+<p class="md_block">
+    <span class="md_line">用来存储时间格式,注意范围.</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test</span><span class="p">(</span><span class="n">test</span> <span class="n">TIME</span><span class="p">);</span>
+<span class="c1">-- 插入或更新数据时,注意以下四种格式</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;15:24:12&#39;</span><span class="p">);</span> <span class="c1">-- 得到:15:24:12</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;15:24&#39;</span><span class="p">);</span> <span class="c1">-- 得到:15:24:00 有分隔符</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;1524&#39;</span><span class="p">);</span> <span class="c1">-- 得到:00:15:24  没有分隔符</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;1 15:24&#39;</span><span class="p">);</span> <span class="c1">-- 得到:39:24:00  天数 时间,其中天数在0-24范围内.,时分秒在00-59范围内</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_11">YEAR类型</h4>
+
+<p class="md_block">
+    <span class="md_line">YEAR年份,一个整数值1901-2155.</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="c1">-- 注意:插入值时格式问题,数字0表示0000年,字符串&#39;0&#39;或&#39;00&#39;-&#39;69&#39;表示2000-2069年,字符串&#39;70&#39;-&#39;99&#39;表示 1970-1999年.</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test</span><span class="p">(</span><span class="n">test</span> <span class="k">YEAR</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">-- 0000</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">);</span> <span class="c1">-- 2000</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;00&#39;</span><span class="p">);</span> <span class="c1">-- 2000</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;70&#39;</span><span class="p">);</span> <span class="c1">-- 1970</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_12">DATETIME TIMESTAMP</h4>
+
+<p class="md_block">
+    <span class="md_line">DATETIME是标准的日期时间<br /></span>
+    <span class="md_line">在日期时间类型中,基本上可以用:current_time或者current_time()或者now()得到当前服务器系统时间。</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">test2</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">t1</span><span class="o">`</span> <span class="n">time</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">t2</span><span class="o">`</span> <span class="nb">date</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">t3</span><span class="o">`</span> <span class="n">datetime</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">t4</span><span class="o">`</span> <span class="k">timestamp</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">t5</span><span class="o">`</span> <span class="k">year</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span>
+<span class="c1">--插入数据测试</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test2</span> <span class="k">VALUES</span><span class="p">(</span><span class="n">NOW</span><span class="p">(),</span><span class="n">NOW</span><span class="p">(),</span><span class="n">NOW</span><span class="p">(),</span><span class="n">NOW</span><span class="p">(),</span><span class="n">NOW</span><span class="p">());</span>
+<span class="cm">/*</span>
+<span class="cm">mysql&gt; select * from test2;</span>
+<span class="cm">+-----------+------------+---------------------+---------------------+------+</span>
+<span class="cm">| t1        | t2         | t3                  | t4                  | t5   |</span>
+<span class="cm">+-----------+------------+---------------------+---------------------+------+</span>
+<span class="cm">| 11:52:32  | 2018-03-19 | 2018-03-19 11:52:32 | 2018-03-19 11:52:32 | 2018 |</span>
+<span class="cm">+-----------+------------+---------------------+---------------------+------+</span>
+<span class="cm">*/</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">timestamp类型</span>
+</p>
+
+
+<ol>
+<li>占用4个字节</li>
+<li>允许为空值，但是不可以自定义值，所以为空值时没有任何意义。</li>
+<li>TIMESTAMP值不能早于1970或晚于2037。这说明一个日期，例如&#39;1968-01-01&#39;，虽然对于DATETIME或DATE值是有效的，但对于TIMESTAMP值却无效，如果分配给这样一个对象将被转换为0。</li>
+<li>值以UTC格式保存（ it stores the number of milliseconds）</li>
+<li>时区转化 ，存储时对当前的时区进行转换，检索时再转换回当前的时区。</li>
+<li>默认值为CURRENT_TIMESTAMP()，其实也就是当前的系统时间。</li>
+<li>数据库会自动修改其值，所以在插入记录时不需要指定timestamp字段的名称和timestamp字段的值，你只需要在设计表的时候添加一个timestamp字段即可，插入后该字段的值会自动变为当前系统时间。</li>
+<li>默认情况下以后任何时间修改表中的记录时，对应记录的timestamp值会自动被更新为当前的系统时间。</li>
+<li>如果需要可以设置timestamp不自动更新。通过设置DEFAULT CURRENT_TIMESTAMP 可以实现。</li>
+</ol>
+
+<p class="md_block">
+    <span class="md_line">注意:timestamp如果创创建时不指定任何约束,它自带默认值default current_timestamp与更改表时自动更新 on update time_timestamp 与非空 not null三个参数.</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test8</span><span class="p">(</span><span class="n">test</span> <span class="k">TIMESTAMP</span><span class="p">);</span>
+<span class="k">SHOW</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test8</span><span class="p">;</span> <span class="c1">-- 查看表创建信息如下,自带NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP三个完整性约束</span>
+<span class="cm">/*</span>
+<span class="cm">+-------+-----------------------------------------------------------------------</span>
+<span class="cm">CREATE TABLE `test8` (</span>
+<span class="cm">  `test` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP) ENGINE=InnoDB DEFAULT CHARSET=utf8 |</span>
+<span class="cm">*/</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">注意:在MYSQL5.5中,不支持如下格式,(两个timestamp列,一个字段用于记录创建时间,一个字段用于记录最后更改时间,但在MYSQL5.6中就完美支持.</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="c1">-- 以下语句在MYSQL5.5下失败,在MYSQL5.6中成功</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test6</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">INT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span>   <span class="c1">-- ID 自增主键</span>
+<span class="p">,</span><span class="n">test</span> <span class="k">TIMESTAMP</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="c1">--记录插入数据时间</span>
+<span class="p">,</span><span class="n">test1</span> <span class="k">TIMESTAMP</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="c1">-- 记录最后修改时间 </span>
+<span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h2 id="toc_13">表引擎</h2>
+
+<p class="md_block">
+    <span class="md_line">存储引擎就是指表的类型。数据库的存储类型决定了表在计算机中的存储方式。用户可以根据不同的存储方式、是否进行事务处理等来选择合适的存储引擎。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如何查看MySQL的存储引擎?<br /></span>
+    <span class="md_line">查看MySQL支持的存储引擎：SHOW ENGINES; -- 如果查看不方便 加上 \G参数</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">SHOW</span> <span class="n">ENGINES</span><span class="p">;</span>
+<span class="k">SHOW</span> <span class="n">ENGINES</span> <span class="err">\</span><span class="k">G</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line">查看默认的存储引擎：SHOW VARIABLES LIKE &#39;storage_engine&#39;</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">MySQL常用引擎:<br /></span>
+    <span class="md_line">InnoDB:5.1以后版本默认引擎,支持事务<br /></span>
+    <span class="md_line">MyISAM:5.1以前版本默认引擎,不支持事务,速度快<br /></span>
+    <span class="md_line">MEMORY:内存表,速度超快,不支持事务,怕停止,用作于缓存等.</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">表引擎的区别与选择<br /></span>
+    <span class="md_line">InnoDB：<br /></span>
+    <span class="md_line">支持事务处理等<br /></span>
+    <span class="md_line">不加锁读取<br /></span>
+    <span class="md_line">支持外键<br /></span>
+    <span class="md_line">支持行锁<br /></span>
+    <span class="md_line">不支持FULLTEXT类型的索引<br /></span>
+    <span class="md_line">不保存表的具体行数，扫描表来计算有多少行<br /></span>
+    <span class="md_line">DELETE 表时，是一行一行的删除<br /></span>
+    <span class="md_line">InnoDB 把数据和索引存放在表空间里面<br /></span>
+    <span class="md_line">跨平台可直接拷贝使用<br /></span>
+    <span class="md_line">InnoDB中必须包含AUTO_INCREMENT类型字段的索引<br /></span>
+    <span class="md_line">表格很难被压缩</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">MyISAM：<br /></span>
+    <span class="md_line">不支持事务，回滚将造成不完全回滚，不具有原子性<br /></span>
+    <span class="md_line">不支持外键<br /></span>
+    <span class="md_line">不支持外键<br /></span>
+    <span class="md_line">支持全文搜索<br /></span>
+    <span class="md_line">保存表的具体行数,不带where时，直接返回保存的行数<br /></span>
+    <span class="md_line">DELETE 表时，先drop表，然后重建表<br /></span>
+    <span class="md_line">MyISAM 表被存放在三个文件 。frm 文件存放表格定义。 数据文件是MYD (MYData) 。 索引文件是MYI (MYIndex)引伸<br /></span>
+    <span class="md_line">跨平台很难直接拷贝<br /></span>
+    <span class="md_line">MyISAM中可以使AUTO_INCREMENT类型字段建立联合索引<br /></span>
+    <span class="md_line">表格可以被压缩</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">选择：<br /></span>
+    <span class="md_line">因为MyISAM相对简单所以在效率上要优于InnoDB.如果系统读多，写少。对原子性要求低。那么MyISAM最好的选择。且MyISAM恢复速度快。可直接用备份覆盖恢复。<br /></span>
+    <span class="md_line">如果系统读少，写多的时候，尤其是并发写入高的时候。InnoDB就是首选了。<br /></span>
+    <span class="md_line">两种类型都有自己优缺点，选择那个完全要看自己的实际类弄。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">结果：两种类型最主要的差别就是Innodb 支持事务处理与外键和行级锁.而MyISAM不支持.所以MyISAM往往就容易被人认为只适合在小项目中使用。</span>
+</p>
+
+
+<h2 id="toc_14">数据表操作</h2>
+
+<h3 id="toc_15">查看表信息命令</h3>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="c1">-- 查看创建信息</span>
+<span class="k">SHOW</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">;</span>
+<span class="c1">-- 查看表结构信息</span>
+<span class="k">DESC</span> <span class="err">表名</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_16">创表表 CREATE TABLE</h3>
+
+<h4 id="toc_17">基本语法</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="c1">-- 创建最简单的表</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">;</span>
+
+<span class="c1">-- 创建表时增加字段</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">int</span> <span class="n">auto_increment</span> <span class="k">primary</span> <span class="k">key</span>
+<span class="p">,</span><span class="n">uname</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">,</span><span class="n">age</span> <span class="n">tinyint</span> <span class="n">unsigned</span>  <span class="k">default</span> <span class="mi">1</span>
+<span class="p">,</span><span class="n">sex</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">default</span> <span class="mi">0</span>
+<span class="p">,</span><span class="n">tel</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">,</span><span class="n">email</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">,</span><span class="n">addr</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="p">,</span><span class="n">qq</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_18">建表时增加引擎与指定字符集</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span><span class="n">id</span> <span class="nb">int</span><span class="p">,</span> <span class="n">uname</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">innodb</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">UTF8</span><span class="p">;</span> <span class="c1">--DEFAULT可以省略  ENGINE=innodb DEFAULT CHARSET=UTF8;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_19">添加键与约束</h4>
+
+<h5 id="toc_20">主键 primary key</h5>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="c1">-- 创建表时增加主键</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">int</span> <span class="n">auto_increment</span> <span class="k">primary</span> <span class="k">key</span> <span class="c1">-- auto_increment 自动增长;primary key 主键</span>
+<span class="p">,</span><span class="n">uname</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> 
+<span class="p">)</span> 
+<span class="c1">-- 第二种方法</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">int</span> <span class="n">auto_increment</span> 
+<span class="p">,</span><span class="n">uname</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> 
+<span class="p">,</span><span class="k">primary</span> <span class="k">key</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="c1">-- 增加主键,常用于创建多列主键</span>
+<span class="p">)</span> 
+</pre></div>
+
+<!--block_code_end-->
+<h5 id="toc_21">自动增长　auto_increment</h5>
+
+<p class="md_block">
+    <span class="md_line">auto_increment ：只用于整数。一般从1开始，每行增加1.一个表最多只能有一个这样的列。对于要使用auto_increment的列应该定义为not null并定义为primary key或unique键</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">INT</span> <span class="n">auto_increment</span>  <span class="c1">-- 自动增长</span>
+<span class="p">,</span><span class="n">age</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="c1">-- 在插入修改数据时必须有数据.不能是空的</span>
+<span class="p">)</span> 
+</pre></div>
+
+<!--block_code_end-->
+<h5 id="toc_22">默认值 DEFAULT</h5>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">int</span> <span class="n">auto_increment</span> 
+<span class="p">,</span><span class="n">age</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="mi">1</span> <span class="c1">-- 如果插入数据时没有此列数据,它就会用默认值.如果不写,默认是NULL</span>
+<span class="p">)</span> 
+</pre></div>
+
+<!--block_code_end-->
+<h5 id="toc_23">非空 NOT NULL</h5>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">INT</span> <span class="n">auto_increment</span> 
+<span class="p">,</span><span class="n">age</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="c1">-- 在插入修改数据时必须有数据.不能是空的</span>
+<span class="p">)</span> 
+</pre></div>
+
+<!--block_code_end-->
+<h5 id="toc_24">唯一 UNIQUE KEY</h5>
+
+<p class="md_block">
+    <span class="md_line">注意:与主键不同,一个表中可以有多个,UNIQUE KEY,可以省略KEY 写成UNIQUE.注意,NULL不在唯一约束中,可以有多个.</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user_info</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">INT</span> <span class="k">UNIQUE</span> <span class="k">KEY</span>
+<span class="p">,</span><span class="n">age</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="c1">-- 在插入修改数据时必须有数据.不能是空的</span>
+<span class="p">);</span>
+<span class="c1">-- 第二种写法</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">INT</span> 
+<span class="p">,</span><span class="n">age</span> <span class="nb">INT</span>
+<span class="p">,</span><span class="k">UNIQUE</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h5 id="toc_25">外键约束  FOREIGN KEY (列名) REFERENCES 被关联表(被关联表的列名)</h5>
+
+<p class="md_block">
+    <span class="md_line">外键中的级联关系有以下几种情况：<br /></span>
+    <span class="md_line">ON DELETE CASCADE 删除主表中的数据时，从表中的数据随之删除<br /></span>
+    <span class="md_line">ON DELETE SET NULL 删除主表中的数据时，从表中的数据置为空<br /></span>
+    <span class="md_line">ON UPDATE CASCADE 更新主表中的数据时，从表中的数据随之更新<br /></span>
+    <span class="md_line">用法:在外键后面加上如下关键字,完成如下练习</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">注意外键有可能不生效，具体原因如下:</span>
+</p>
+
+
+<ol>
+<li> 两个字段的类型或者大小不严格匹配。例如，如果一个是int(10)，那么外键也必须设置成int(10)，而不是int(11)，也不能是tinyint。另外，你还必须确定两个字段是否一个为 signed，而另一个又是unsigned（即：无符号），这两字段必须严格地一致匹配。</li>
+<li>试图设置外键的字段没有建立起索引，或者不是一个primary key（主键）。如果其中一个不是primary key的话，你必须先为它创建一个索引。</li>
+<li>其中一个或者两个表是MyISAM引擎的表。若想要使用外键约束，表必须是InnoDB引擎（实际上，如果两个表都是MyISAM 引擎的，这个错误根本不会发生，但也不会产生外键，只会建立索引）你需要检查表的引擎类型。</li>
+<li>外键的名字不能重复。你应该检查你的数据库以确保外健名字是唯一的，或者你在键名后面加上几个随机的字符以测试是否是这个原因。</li>
+<li>你可能设置了ON DELETE SET NULL，但是相关的键的字段又设置成了NOTS NULL值。你可能通过修改cascade的属性值或者把字段属性设置成允许null来解决。</li>
+<li>请确定你的表charset和以双collate选项在表级和字段级上的一致。</li>
+<li>你可能设置为外键设置了一个默认值，如default=0。</li>
+</ol>
+
+<p class="md_block">
+    <span class="md_line">————————————————<br /></span>
+    <span class="md_line">版权声明：本文为CSDN博主「wangpeng047」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br /></span>
+    <span class="md_line">原文链接：https://blog.csdn.net/wangpeng047/article/details/19624351</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="p">[[</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="p">][</span><span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span><span class="p">]]</span> <span class="p">[</span><span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">]</span>
+<span class="c1">-- 如下为练习表外键:</span>
+    <span class="c1">-- 创建数据库</span>
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">kp_test</span> <span class="k">DEFAULT</span> <span class="nb">CHARACTER</span> <span class="k">SET</span> <span class="n">UTF8</span> <span class="k">COLLATE</span> <span class="n">UTF8_GENERAL_CI</span><span class="p">;</span>
+
+<span class="c1">-- 选择数据库</span>
+<span class="n">USE</span> <span class="n">kp_test</span><span class="p">;</span>
+
+<span class="c1">-- 创建表</span>
+
+<span class="c1">-- 1. 班级表,</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_class</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">SMALLINT</span> <span class="n">UNSIGNED</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="k">COMMENT</span> <span class="s1">&#39;班级ID&#39;</span>
+<span class="p">,</span><span class="n">classname</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;班级名&#39;</span>
+<span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;班级表&#39;</span><span class="p">;</span>
+
+
+<span class="c1">-- 2.创建用户资料表</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_user</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">INT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span> <span class="k">COMMENT</span> <span class="s1">&#39;学号,主键&#39;</span><span class="p">,</span> 
+<span class="n">useranme</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;姓名&#39;</span><span class="p">,</span>
+<span class="n">age</span> <span class="n">TINYINT</span> <span class="n">UNSIGNED</span> <span class="k">COMMENT</span> <span class="s1">&#39;年龄&#39;</span><span class="p">,</span>
+<span class="n">sex</span> <span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;性别&#39;</span><span class="p">,</span>
+<span class="n">classid</span> <span class="nb">SMALLINT</span> <span class="n">UNSIGNED</span> <span class="k">COMMENT</span> <span class="s1">&#39;班级ID&#39;</span><span class="p">,</span>
+<span class="n">tel</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;电话&#39;</span><span class="p">,</span>
+<span class="n">addr</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;地址&#39;</span><span class="p">,</span>
+<span class="n">email</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;邮箱&#39;</span><span class="p">,</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">classid</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">kp_class</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span> <span class="c1">-- 测试本列在构建时不加删除与更新测试</span>
+<span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;用户资料班&#39;</span><span class="p">;</span>
+
+<span class="c1">-- 3.创建科目表</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_subject</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">SMALLINT</span> <span class="n">UNSIGNED</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="k">COMMENT</span> <span class="s1">&#39;科目ID,主键&#39;</span>
+<span class="p">,</span><span class="n">subname</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;科目名&#39;</span>
+<span class="p">);</span>
+
+<span class="c1">-- 4.创建成绩表</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">kp_score</span><span class="p">(</span>
+<span class="n">cid</span> <span class="nb">SMALLINT</span> <span class="n">UNSIGNED</span> <span class="k">COMMENT</span> <span class="s1">&#39;科目ID&#39;</span><span class="p">,</span>
+<span class="n">uid</span> <span class="nb">INT</span> <span class="k">COMMENT</span> <span class="s1">&#39;外键,用户ID&#39;</span><span class="p">,</span>
+<span class="n">score1</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;理论成绩&#39;</span><span class="p">,</span>
+<span class="n">score2</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;上机成绩&#39;</span><span class="p">,</span>
+<span class="n">score</span> <span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">COMMENT</span> <span class="s1">&#39;总成绩&#39;</span><span class="p">,</span>
+<span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">cid</span><span class="p">,</span><span class="n">uid</span><span class="p">),</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">uid</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">kp_user</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span><span class="p">,</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">cid</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">kp_subject</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+<span class="p">);</span> 
+
+<span class="c1">-- 插入数据</span>
+<span class="c1">-- 1.班级数据</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;鲲鹏一班&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;鲲鹏二班&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;鲲鹏三班&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;鲲鹏四班&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;鲲鹏五班&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;鲲鹏六班&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;鲲鹏七班&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_class</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;鲲鹏八班&#39;</span><span class="p">);</span>
+<span class="c1">-- 2.科目数据</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;计算机基础CTB&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;软件基础STB&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;PHOTOSHOP&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;HTML+CSS&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;HTML5+CSS3&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;JAVA基础&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;MS-SQL&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;C语言&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;JAVASCRIPT&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;PHP基础&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s1">&#39;一年级上学期末&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s1">&#39;一年级下学期末&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s1">&#39;二年级上学期末&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_subject</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s1">&#39;二年级下学期末&#39;</span><span class="p">);</span>
+<span class="c1">-- 3.用户数据</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_user</span> <span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;邓厚强&#39;</span><span class="p">,</span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;13838383838&#39;</span><span class="p">,</span><span class="s1">&#39;邵阳&#39;</span><span class="p">,</span><span class="s1">&#39;123456@qq.com&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_user</span> <span class="k">values</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;孙涛&#39;</span><span class="p">,</span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;13838383838&#39;</span><span class="p">,</span><span class="s1">&#39;邵阳&#39;</span><span class="p">,</span><span class="s1">&#39;123457@qq.com&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_user</span> <span class="k">values</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;王拓&#39;</span><span class="p">,</span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;13838383838&#39;</span><span class="p">,</span><span class="s1">&#39;邵阳&#39;</span><span class="p">,</span><span class="s1">&#39;123458@qq.com&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_user</span> <span class="k">values</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;刘帅&#39;</span><span class="p">,</span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;13838383838&#39;</span><span class="p">,</span><span class="s1">&#39;邵阳&#39;</span><span class="p">,</span><span class="s1">&#39;123459@qq.com&#39;</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_user</span> <span class="k">values</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;肖菲&#39;</span><span class="p">,</span><span class="s1">&#39;16&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;13838383838&#39;</span><span class="p">,</span><span class="s1">&#39;邵阳&#39;</span><span class="p">,</span><span class="s1">&#39;123460@qq.com&#39;</span><span class="p">);</span>
+<span class="c1">-- 4.成绩</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">60</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">70</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">80</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">63</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">73</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">83</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">64</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">74</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">84</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">65</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">75</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">85</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">66</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">76</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">kp_score</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">86</span><span class="p">);</span>
+
+<span class="c1">-- 第二大步:重新构建表,删除如下</span>
+
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">kp_score</span><span class="p">;</span>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">kp_user</span><span class="p">;</span>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">kp_class</span><span class="p">;</span>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">kp_subject</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_26">删除表 DROP TABLE</h3>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">DROP</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">;</span>
+<span class="c1">-- 一次删除多个表</span>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">,</span><span class="err">表名</span><span class="p">....;</span>
+<span class="c1">-- 删除不存在的表时会报错,建议加上IF EXISTS后就好了</span>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">EXISTS</span> <span class="err">表名</span><span class="p">,</span><span class="err">表名</span><span class="p">....;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h3 id="toc_27">修改表 ALTER TABLE</h3>
+
+<h4 id="toc_28">修改表名 RENAME</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">RENAME</span> <span class="p">[</span><span class="k">AS</span> <span class="o">|</span> <span class="k">TO</span><span class="p">]</span> <span class="err">新表名</span><span class="p">;</span>
+<span class="k">RENAME</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">TO</span> <span class="err">新表名</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_29">增加字段 ADD</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">ADD</span> <span class="err">列名</span> <span class="err">列类型</span> <span class="p">[</span><span class="err">完整性约束</span><span class="p">]</span> <span class="p">[</span><span class="err">位置</span><span class="k">FIRST</span><span class="o">|</span> <span class="k">AFTER</span><span class="p">];</span>
+<span class="c1">-- 在test表中增加col字段</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">test</span> <span class="k">ADD</span> <span class="n">col</span> <span class="nb">INT</span><span class="p">;</span>
+<span class="c1">-- 一次增加多个字段</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">test</span> <span class="k">ADD</span> <span class="n">col</span> <span class="nb">INT</span><span class="p">,</span><span class="k">ADD</span> <span class="n">col1</span> <span class="nb">INT</span><span class="p">...;</span>
+<span class="c1">-- 增加列时指定位置: 把col列放在开始位置,把col1列放在id列后面</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">test</span> <span class="k">ADD</span> <span class="n">col</span> <span class="nb">INT</span> <span class="k">FIRST</span><span class="p">,</span><span class="k">ADD</span> <span class="n">col1</span> <span class="nb">INT</span> <span class="k">AFTER</span> <span class="n">id</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_30">删除字段 DROP</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">DROP</span> <span class="err">列名</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_31">修改字段 MODIFY</h4>
+
+<p class="md_block">
+    <span class="md_line">不包括索引与主键,外键</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">MODIFY</span> <span class="err">列名</span> <span class="err">类型</span> <span class="err">完整性约束</span> <span class="p">[</span><span class="err">位置</span> <span class="k">FIRST</span> <span class="o">|</span> <span class="k">AFTER</span> <span class="err">列名</span><span class="p">];</span>
+<span class="c1">-- 修改列类型</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">test1</span> <span class="k">MODIFY</span> <span class="n">addr</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;邵阳&#39;</span><span class="p">;</span>
+<span class="c1">-- 把addr列移动到id列后面.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">test1</span> <span class="k">MODIFY</span> <span class="n">addr</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;邵阳&#39;</span> <span class="k">AFTER</span> <span class="n">id</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_32">修改字段加强版(可重命名字段名) CHANGE</h4>
+
+<p class="md_block">
+    <span class="md_line">MODEFY的加强版</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="n">CHANGE</span> <span class="err">列名</span> <span class="err">新列名</span> <span class="err">类型</span> <span class="err">完整性约束</span> <span class="p">[</span><span class="err">位置</span> <span class="k">FIRST</span> <span class="o">|</span> <span class="k">AFTER</span> <span class="err">列名</span><span class="p">];</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_33">添加或修改默认值 SET DEFAULT</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">ALTER</span> <span class="err">列名</span> <span class="k">SET</span> <span class="k">DEFAULT</span> <span class="err">默认值</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_34">删除默认值 DROP DEFAULT</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">ALTER</span> <span class="err">列名</span> <span class="k">DROP</span> <span class="k">DEFAULT</span><span class="p">;</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">ALTER</span> <span class="err">列名</span> <span class="k">SET</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">;</span> <span class="c1">-- 一般没默认值的就是NULL类型</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_35">添加主键 ADD PRIMARY KEY</h4>
+
+<p class="md_block">
+    <span class="md_line">一个表只能有一个主键,在开发中而且建议必须给.<br /></span>
+    <span class="md_line">在后续用ALTER TABLE增加主键时,要注意如果表里有数据得符合主键要求.(NOT NULL且不能有重复数据)</span>
+</p>
+
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="err">列名</span><span class="p">);</span>
+<span class="c1">-- 完整语法</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">symbol</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">index_type</span><span class="p">(</span><span class="err">列名</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_36">删除主键 DROP PRIMARY KEY</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="k">DROP</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">;</span>
+<span class="c1">-- 一般主键与自增长一起使用,要删除主键,必须先去掉自增长.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">test1</span> <span class="k">MODIFY</span> <span class="n">id</span> <span class="nb">int</span> <span class="n">unsigned</span><span class="p">;</span> <span class="c1">-- 也可以用CHANGE关键字</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_37">添加唯一键 ADD INIQUE [INDEX|KEY]</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span>  <span class="k">ADD</span> <span class="k">UNIQUE</span> <span class="p">[</span><span class="k">INDEX</span><span class="o">|</span><span class="k">KEY</span><span class="p">]</span> <span class="p">[</span><span class="err">索引名</span><span class="p">](</span><span class="err">列名</span><span class="p">);</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_38">删除唯一键 DROP [INDEX|KEY] index_name</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span>  <span class="k">DROP</span>  <span class="err">{</span><span class="k">INDEX</span><span class="o">|</span><span class="k">KEY</span><span class="err">}</span> <span class="p">[</span><span class="err">索引名</span><span class="p">];</span>
+<span class="c1">-- 当不知道键名时,用SHOW CREATE TABLE 表名;查看索引名</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_39">修改表存储引擎 ENGINE=InnoDB</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="err">表名</span> <span class="n">ENGINE</span><span class="o">=</span><span class="err">引擎名</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_40">修改表字符集 DEFAULT CHARACTER SET</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span> <span class="k">DEFAULT</span> <span class="nb">CHARACTER</span> <span class="k">SET</span> <span class="n">utf8</span><span class="p">;</span>
+</pre></div>
+
+<!--block_code_end-->
+<h4 id="toc_41">修改表自增起始值 AUTO_INCREMENT=值</h4>
+<div class="codehilite code_lang_sql  highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tbl_name</span> <span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="err">值</span><span class="p">;</span>
+<span class="c1">-- 注意,在创建表时如果不指定表的自增长最小值,默认从1开始,也不会显示表的AUTO_INCREMENT属性.</span>
+<span class="c1">-- 1.创建好表</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test2</span><span class="p">(</span><span class="n">id</span> <span class="nb">INT</span> <span class="n">UNSIGNED</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span><span class="n">uname</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+<span class="c1">-- 2.查看它的创建信息:看不到表有AUTO_INCREMENT=值.</span>
+<span class="k">SHOW</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test2</span><span class="p">;</span>
+<span class="cm">/*</span>
+<span class="cm">CREATE TABLE `test2` (</span>
+<span class="cm">  `id` int(10) unsigned NOT NULL AUTO_I</span>
+<span class="cm">  `uname` varchar(20) DEFAULT NULL,</span>
+<span class="cm">  PRIMARY KEY (`id`)</span>
+<span class="cm">) ENGINE=InnoDB DEFAULT CHARSET=utf8 |</span>
+<span class="cm">*/</span>
+<span class="c1">-- 3.我们往表中插入数据</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">test2</span><span class="p">(</span><span class="n">uname</span><span class="p">)</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;aa&#39;</span><span class="p">);</span>
+<span class="c1">-- 4.我们再次查看表创建信息:多出来: AUTO_INCREMENT=2  就是告诉我们下一次插入数据自增列的值是2</span>
+<span class="k">SHOW</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test2</span><span class="p">;</span>
+<span class="cm">/*</span>
+<span class="cm">CREATE TABLE `test2` (</span>
+<span class="cm">  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,</span>
+<span class="cm">  `uname` varchar(20) DEFAULT NULL,</span>
+<span class="cm">  PRIMARY KEY (`id`)</span>
+<span class="cm">) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8</span>
+<span class="cm">*/</span>
+<span class="c1">-- 5.修改表的自增最小值:(自增列下一次插入数据的默认值)</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">tbl_name</span> <span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">500</span><span class="p">;</span>
+<span class="c1">-- 6.用SHOW CREATE TABLE  表名;查看表创建信息....同时插入新的数据去测试.</span>
+</pre></div>
+
+<!--block_code_end--> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="../asset/gitbook/app.js"></script>
+
+<script>require(["gitbook"], function (gitbook) {
+    var config = {"fontSettings": {"theme": null, "family": "sans", "size": 2}};
+    gitbook.start(config);
+});
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
